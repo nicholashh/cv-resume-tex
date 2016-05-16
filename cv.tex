@@ -1,5 +1,5 @@
 
-\documentclass[12pt]{article}
+\documentclass[a4paper]{article}
 
 % this is written in English
 \usepackage[english]{babel}
@@ -25,20 +25,34 @@
 \fancyhf{}
 \fancyhead[L]{Curriculum Vitae}
 \fancyhead[R]{Nicholas Hanson-Holtry}
+\fancyfoot[C]{\thepage}
 
 
 
 
 
-% begin the document contents
 \begin{document}
 
-% create title
+\begin{titlepage}
+
 \title{Curriculum Vitae}
-\author{\Large{Nicholas Hanson-Holtry}}
-\date{Email: nicholashh@rice.edu
-\\ Cell Phone: 503.360.3148}
+\author{Nicholas Hanson-Holtry
+\\ Rice University
+\\
+\\ \normalsize{nicholashh@rice.edu}}
+\date{\normalsize{\today}}
 \maketitle
+
+\vfill
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\vfill
+
+\thispagestyle{empty}
+
+\end{titlepage}
 
 
 
@@ -46,14 +60,18 @@
 
 \section{Education}
 
-\subsection{Undergrad Schooling}
+\subsection{Undergraduate}
 
 \subsubsection{Bachelor of Science in Computer Science}
 
 \begin{itemize}
-    \item{Rice University, Houston Texas}
-    \item{Expected Spring 2016}
-    \item{Cumulative GPA: 3.55/4.00}
+
+    \item{Rice University, Houston, Texas (Expected Spring 2016)}
+
+    \item{Cumulative GPA: 3.61/4.00}
+
+    \item{Computer Science GPA: 3.74/4.00}
+
 \end{itemize}
 
 
@@ -66,33 +84,77 @@
 
     \item{Fall 2014}
     \begin{itemize}
-        \item{Compiler Construction}
-        \item{Reasoning about Algorithms}
-        \item{Object-Oriented Design}
+
+        \item{Compiler Construction (COMP 412)}
+        \begin{itemize}
+            \item{topics in the design of programming language translators, parsing, run-time storage management, error recovery, code generation, and optimization}
+        \end{itemize}
+
+        \item{Reasoning about Algorithms (COMP 382)}
+        \begin{itemize}
+            \item{elementary logic, analysis of the correctness and efficiency of algorithms, formal computational models, and algorithm design techniques}
+        \end{itemize}
+
+        \item{Object-Oriented Design (COMP 310)}
+        \begin{itemize}
+            \item{object-orient programming and design techniques, software design patterns, programming paradigms, highly decoupled systems, and dynamically configurable behaviors}
+        \end{itemize}
+
     \end{itemize}
 
     \item{Spring 2014}
     \begin{itemize}
-        \item{Principles of Parallel Programming}
-        \item{Introduction to Computer Systems}
+
+        \item{Principles of Parallel Programming (COMP 322)}
+        \begin{itemize}
+            \item{fundamentals of parallel programming, abstract models of parallel computers, parallel algorithms and data structures, and common parallel programming patterns}
+        \end{itemize}
+
+        \item{Introduction to Computer Systems (COMP 221)}
+        \begin{itemize}
+            \item{computer systems, data representation, the compilation process, and system-level programming concepts such as interrupts and concurrency}
+        \end{itemize}
+
     \end{itemize}
 
     \item{Fall 2013}
     \begin{itemize}
-        \item{Introduction to Program Design}
-        \item{Pedagogy for Rice Learning Assistants}
+
+        \item{Introduction to Program Design (COMP 215)}
+        \begin{itemize}
+            \item{principles of programming and program design, encapsulation, abstraction, test-driven development, and functional and object-oriented programming}
+        \end{itemize}
+
     \end{itemize}
 
     \item{Spring 2013}
     \begin{itemize}
-        \item{Algorithmic Thinking}
-        \item{Fundamentals of Computer Engineering}
+
+        \item{Algorithmic Thinking (COMP 182)}
+        \begin{itemize}
+            \item{reasoning about systems, algorithmic techniques, correctness, and efficiency}
+        \end{itemize}
+
+        \item{Fundamentals of Computer Engineering (ELEC 220)}
+        \begin{itemize}
+            \item{transistors, bits, data representation, logic and state machines, computer organization, instruction sets, interrupts, input/output, assembly language programming, linkage conventions, architectural performance enhancements, and computing services}
+        \end{itemize}
+
     \end{itemize}
 
     \item{Fall 2012}
     \begin{itemize}
-        \item{Computational Thinking}
-        \item{Introduction to Computational Engineering}
+
+        \item{Computational Thinking (COMP 140)}
+        \begin{itemize}
+            \item{modeling computational artifacts operating in the world, designing and implementing algorithmic solutions, evaluating performance of computational systems}
+        \end{itemize}
+
+        \item{Introduction to Computational Engineering (CAAM 210)}
+        \begin{itemize}
+            \item{modeling, simulation, and visualization of problems in science and engineering}
+        \end{itemize}
+
     \end{itemize}
 
 \end{itemize}
@@ -104,8 +166,26 @@
 \subsubsection{Extracurricular Activities}
 
 \begin{itemize}
-    \item{Fall 2014 to present: Academic Fellow and Mentor}
-    \item{Spring 2013 to present: Peer Academic Advisor}
+
+    \item{The Rice Queer Resource Center}
+    \begin{itemize}
+        \item{Co-Founder and President}
+        \item{Fall 2014 to present}
+        % \item{TODO: description}
+    \end{itemize}
+
+    \item{Academic Fellow and Mentor}
+    \begin{itemize}
+        \item{Fall 2014 to present}
+        % \item{TODO: description}
+    \end{itemize}
+
+    \item{Peer Academic Advisor}
+    \begin{itemize}
+        \item{Spring 2013 to present}
+        % \item{TODO: description}
+    \end{itemize}
+
 \end{itemize}
 
 
@@ -117,9 +197,11 @@
 \subsubsection{International Baccalaureate Diploma}
 
 \begin{itemize}
-    \item{Southridge High School, Portland Oregon}
-    \item{Graduated Spring 2012}
+
+    \item{Southridge High School, Portland, Oregon (Graduated Spring 2012)}
+
     \item{Cumulative GPA: 3.97/4.00}
+
 \end{itemize}
 
 
@@ -160,10 +242,11 @@
 
 
 
-\section{Test Scores}
+\pagebreak
+\section{Standardized Test Scores}
 
 \begin{itemize}
-    \item{GRE: -?- /340}
+    % \item{GRE: TODO: ???/340}
     \item{SAT: 2300/2400}
 \end{itemize}
 
@@ -183,35 +266,77 @@
 
 \section{Research Experience}
 
+\subsection{Dr. Vivek Sarkar}
 \begin{itemize}
-    \item{Spring-Summer 2014: Dr. Vivek Sarkar}
-    \item{Summer 2014: Dr. Luay Nakhleh}
-    \item{Spring 2013: Dr. Devika Subramanian}
+    \item{Spring 2014 to Summer 2014}
+    % \item{TODO: description}
+\end{itemize}
+
+\subsection{Dr. Luay Nakhleh}
+\begin{itemize}
+    \item{Summer 2014}
+    % \item{TODO: description}
+\end{itemize}
+
+\subsection{Dr. Devika Subramanian}
+\begin{itemize}
+    \item{Spring 2013}
+    % \item{TODO: description}
 \end{itemize}
 
 
 
 
 
+\pagebreak
 \section{Work Experience}
 
-\subsection{TA Positions}
+\subsection{Teaching Positions}
 
 \begin{itemize}
-    \item{Introduction to Computational Engineering (four times)}
-    \item{Computational Thinking (two times)}
-    \item{Principles of Parallel Programming (one time)}
+
+    \item{Introduction to Computational Engineering}
+    \begin{itemize}
+        \item{Spring 2013, Fall 2013, Spring 2014, Fall 2014, Spring 2015}
+        % \item{TODO: description}
+    \end{itemize}
+
+    \item{Computational Thinking}
+    \begin{itemize}
+        \item{Fall 2013, Fall 2014}
+        % \item{TODO: description}
+    \end{itemize}
+
+    \item{Principles of Parallel Programming}
+    \begin{itemize}
+        \item{Spring 2015}
+        % \item{TODO: description}
+    \end{itemize}
+
 \end{itemize}
 
 
 
 
 
-\subsection{Internships}
+\subsection{Industry Internships}
 
 \begin{itemize}
-    \item{Summer 2013: Jones McClure Publishing, Software Development Intern}
-    \item{Spring 2013: World STEM Works, Web Development Intern}
+
+    \item{Jones McClure Publishing}
+    \begin{itemize}
+        \item{Software Development Intern}
+        \item{Summer 2013}
+        % \item{TODO: description}
+    \end{itemize}
+
+    \item{World STEM Works}
+    \begin{itemize}
+        \item{Web Development Intern}
+        \item{Spring 2013}
+        % \item{TODO: description}
+    \end{itemize}
+
 \end{itemize}
 
 
@@ -221,9 +346,28 @@
 \subsection{Other Jobs}
 
 \begin{itemize}
-    \item{Fall 2014 to Spring 2015: Sid Richardson College, Webmaster}
-    \item{Fall 2009 to Summer 2012: Solid Rock - A Jesus Church, Audio-Video Technician}
-    \item{Summer 2010 to present: various pools, Swim Coach / Swim Instructor / Lifeguard}
+
+    \item{Sid Richardson College}
+    \begin{itemize}
+        \item{Webmaster}
+        \item{Fall 2014 to Spring 2015}
+        % \item{TODO: description}
+    \end{itemize}
+
+    \item{Solid Rock Church}
+    \begin{itemize}
+        \item{Audio-Video Technician}
+        \item{Fall 2009 to Summer 2012}
+        % \item{TODO: description}
+    \end{itemize}
+
+    \item{various pools}
+    \begin{itemize}
+        \item{Swim Coach / Swim Instructor / Lifeguard}
+        \item{Summer 2010 to present}
+        % \item{TODO: description}
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
