@@ -1,12 +1,4 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV - RESUME CLASS FILE
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% This class file defines the structure and design of the template. 
-%
-% Original header:
 % Copyright (C) 2010 by Trey Hunner
 %
 % Copying and distribution of this file, with or without modification,
@@ -14,23 +6,32 @@
 % notice and this notice are preserved. This file is offered as-is,
 % without any warranty.
 %
-% Created by Trey Hunner and modified by www.LaTeXTemplates.com
+% Created by Trey Hunner
+% Modified by www.LaTeXTemplates.com
+% Modified by Nicholas Hanson-Holtry
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
+\ProvidesClass{resume}[2015/06/22 v0.9.1 CV/Resume Class]
 
-\LoadClass[11pt,letterpaper]{article} % Font size and paper type
+\LoadClass[12pt,letterpaper]{article} % Font size and paper type
 
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
+\usepackage[left=0.75in,top=0.75in,right=0.75in,bottom=0.75in]{geometry}
 
-\pagestyle{empty} % Suppress page numbers
+\usepackage{etoolbox} % easier than ifthenelses
+\newtoggle{cv} % create a toggle variable "cv"
+\ifdefined \iscv % check if "iscv" was passed from the command line
+\toggletrue{cv} % if so, compile the doc to a cv (more information)
+\else \togglefalse{cv} \fi % if not, compile to a resume (less information)
 
-%----------------------------------------------------------------------------------------
-%	HEADINGS COMMANDS: Commands for printing name and address
-%----------------------------------------------------------------------------------------
+\iftoggle{cv}{}{\pagestyle{empty}} % Suppress page numbers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	CUSTOM COMMANDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def \name#1{\def\@name{#1}} % Defines the \name command to set name
 \def \@name {} % Sets \@name to empty by default
@@ -66,16 +67,22 @@
 
 % \printname is used to print the name as a page header
 \def \printname {
-  \begingroup
-    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-    \nameskip\break
-  \endgroup
+  \iftoggle{cv}{
+    \hfil\emph{\large Curriculum Vitae}\newline\newline\nameskip
+    \hfil{\namesize\bf \@name}\newline
+  }{
+    \hfil{\namesize\bf \@name}\nameskip\newline
+  }
 }
 
-%----------------------------------------------------------------------------------------
-%	PRINT THE HEADING LINES
-%----------------------------------------------------------------------------------------
+% The below commands define the whitespace after certain things in the document
+\def\namesize{\LARGE} % Size of the name at the top of the document
+\def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
+\def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
+\def\nameskip{\bigskip} % The space after your name at the top
+\def\sectionskip{\medskip} % The space after the heading section
 
+% Print the header
 \let\ori@document=\document
 \renewcommand{\document}{
   \ori@document  % Begin document
@@ -88,44 +95,47 @@
     \printaddress{\@addressthree}}
 }
 
-%----------------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	SECTION FORMATTING
-%----------------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
   \sectionskip
-  \MakeUppercase{\bf #1} % Section title
+  {\bf #1} % Section title
   \sectionlineskip
   \hrule % Horizontal line
+  \sectionskip
   \begin{list}{}{ % List for each individual item in the section
     \setlength{\leftmargin}{1.5em} % Margin within the section
   }
+  \par\nobreak
   \item[]
 }{
   \end{list}
 }
 
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE FORMATTING
-%----------------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	SUBSECTION FORMATTING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\bf #1} \hfill {#2} % Bold company name and date on the right
- \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-  \\
-  {\em #3} \hfill {\em #4} % Italic job title and location
-  }\smallskip
+% bold on the left, normal on the right
+\newcommand{\TwoTitle}[2]{{\bf#1}\hfill{\em#2}}
+
+% bold on top left, normal on top right, emph on bottom
+\newcommand{\FourTitle}[4] {
+  \TwoTitle{#1}{#2} % same first line as above
+  \ifthenelse{ % check before printing the third argument
+  \equal{#3}{}}{}{\\{#3}\hfill{\em#4}}}
+
+\newenvironment{rSubSection}[4]{ % 4 input arguments
+  \FourTitle{#1}{#2}{#3}{#4}\smallskip
   \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
-  }{
+  \itemsep -0.5em \vspace{-0.75em} % Compress items in list together for aesthetics
+}{
   \end{list}
   \vspace{0.5em} % Some space after the list of bullet points
 }
 
-% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
-\def\namesize{\huge} % Size of the name at the top of the document
-\def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
-\def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
-\def\nameskip{\bigskip} % The space after your name at the top
-\def\sectionskip{\medskip} % The space after the heading section
+% normal on the left, emph on the right
+\newcommand{\Event}[2]{{#1}\hfill{\em#2}}
