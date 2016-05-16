@@ -1,26 +1,37 @@
 
 \documentclass{resume}
 
+\newcommand{\Rice}[0]{\UniversityTitle{Rice University}{Houston, Texas}}
+\newcommand{\COMP}[0]{\DepartmentTitle{Department of Computer Science}{}}
+\newcommand{\CAAM}[0]{\DepartmentTitle{Department of Computational and Applied Mathematics}{}}
+
+
+
+
+
 \name{Nicholas Hanson-Holtry}
-\address{nicholashh@rice.edu \\ 503.360.3148 \\ 6360 Main Street, Houston, Texas, 77005}
+
+\address{%
+nicholashh@rice.edu \\
+503.360.3148 \\
+6360 Main Street, Houston, Texas, 77005}
+
+
+
+
 
 \begin{document}
 
-
-
-
-
 \begin{rSection}{Education}
 
-\begin{rSubSection}{Bachelor of Science in Computer Science}
-{expected Spring 2016}{Rice University, Houston, Texas}{}
-    % \item GPA: $3.58/4.00$, GRE: ???/170
-    \item GPA: $3.58/4.00$
+\begin{rSubSection}{Rice University}{Houston, Texas}
+{Bachelor of Science in Computer Science}{expected Spring 2016}
+\item GPA: $3.65/4.00$
 \end{rSubSection}
 
-\begin{rSubSection}{International Baccalaureate Diploma}
-{Spring 2012}{Southridge High School, Portland, Oregon}{}
-    \item GPA: $3.97/4.00$, SAT: $2300/2400$
+\begin{rSubSection}{Southridge High School}{Portland, Oregon}
+{International Baccalaureate Diploma}{Spring 2012}
+\item GPA: $3.97/4.00$
 \end{rSubSection}
 
 \end{rSection}
@@ -29,57 +40,98 @@
 
 
 
-\iftoggle{cv}{\begin{rSection}{Pertinent Coursework}
+\begin{rSection}{Research Experience} \iftoggle{cv}{
 
-    \Event{class 1}{Fall 2015} \\
-    \Event{class 2}{Fall 2015} \\
-    \Event{class 3}{Fall 2015} \\
-    \Event{Operating Systems and Concurrent Programing (B)}{Spring 2015} \\
-    \Event{Introduction to Computer Security (A+)}{Spring 2015} \\
-    \Event{Reasoning about Algorithms (A)}{Fall 2014} \\
-    \Event{Compiler Construction (A-)}{Fall 2014} \\
-    \Event{Object-Oriented Design (A)}{Fall 2014} \\
-    \Event{Principles of Parallel Programming (B)}{Spring 2014} \\
-    \Event{Introduction to Computer Systems (A-)}{Spring 2014} \\
-    \Event{Introduction to Program Design (A)}{Fall 2013} \\
-    \Event{Algorithmic Thinking (A-)}{Spring 2013} \\
-    \Event{Fundamentals of Computer Engineering (B-)}{Spring 2013} \\
-    \Event{Computational Thinking (A)}{Fall 2012} \\
-    \Event{Introduction to Computational Engineering (A+)}{Fall 2012}
+\Rice
 
-\end{rSection}}{}
+\COMP
 
+\begin{UnivDeptItem}{Dr.~Swarat Chaudhuri}{Summer 2015 to Fall 2015}{}{}
+\item Investigated a computational definition of ethical fairness \\
+(hiring practices sensitive to personal attributes like race, etc).
+\item Investigated formal methods techniques to ensure fairness \\
+in probabilistic or machine learning classification algorithms.
+\item Investigated post hoc verification of fairness of a classification result.
+\end{UnivDeptItem}
 
+\begin{UnivDeptItem}{Dr.~Vivek Sarkar}{Spring 2015}{}{}
+\item Investigated tradeoffs among parallel \texttt{map} implementations.
+\item Optimized the parallel computing suite Habanero Java.
+\end{UnivDeptItem}
 
+\begin{UnivDeptItem}{Dr.~Luay Nakhleh}{Summer 2014}{}{}
+\item Researched introgressed genes in the \emph{mus musculus} genome.
+\item Applied clustering algorithms to protein-protein interaction \\
+network data to confirm previously identified genome patterns.
+\item Identified previously unknown introgressed gene candidates \\
+to be further investigated by an adjacent group in the lab.
+\end{UnivDeptItem}
 
+\begin{UnivDeptItem}{Dr.~Devika Subramanian}{Spring 2013}{}{}
+\item Applied machine learning algorithms to medical data.
+\end{UnivDeptItem}
 
-\begin{rSection}{Research Positions}
+}{
 
-    % \iftoggle{cv}{
-    %     \begin{rSubSection}{Dr. Swarat Chaudhuri}{Summer 2015}{}{}
-    %         \item automatic program verification
-    %     \end{rSubSection}
-    % }{
-        \Event{Dr.~Swarat Chaudhuri, program verification and fairness}{Summer 2015 to present} \\
-    % }
-    \Event{Dr.~Vivek Sarkar, parallel computing suite development}{Spring 2015} \\
-    \Event{Dr.~Luay Nakhleh, bioinformatics and graph theory}{Summer 2014} \\
-    \Event{Dr.~Devika Subramanian, machine learning and medicine}{Spring 2013}
+\Event{{\bf Dr.~Swarat Chaudhuri}, program verification and fairness}{Summer 2015 to Fall 2015} \\
+\Event{{\bf Dr.~Vivek Sarkar}, parallel computing suite development}{Spring 2015} \\
+\Event{{\bf Dr.~Luay Nakhleh}, bioinformatics and graph theory}{Summer 2014} \\
+\Event{{\bf Dr.~Devika Subramanian}, machine learning and medicine}{Spring 2013}
 
-\end{rSection}
-
-
-
+} \end{rSection}
 
 
-\iftoggle{cv}{\begin{rSection}{Teaching Positions}
 
-    \Event{Reasoning about Algorithms, teaching assistant}{Fall 2015} \\
-    \Event{Introduction to Computational Engineering, lecturer}{Spring 2013 to present} \\
-    \Event{Principles of Parallel Programming, teaching assistant}{Spring 2015} \\
-    \Event{Computational Thinking, in-class teaching assistant}{Fall 2013, Fall 2014}
 
-\end{rSection}}{}
+
+\iftoggle{cv}{\pagebreak
+\begin{rSection}{Teaching Experience}
+
+\Rice
+
+\CAAM
+
+\begin{UnivDeptItem}{Introduction to Computational Engineering}
+{Spring 2013 to present}{with Dr.~Steven Cox, Dr.~Franklin Kenter, Dr.~Illya Hicks}{}
+\item Taught one hour-long break-out section of the course once \\
+per week; each section contained between five and twenty students.
+\item Taught the main section of the course when the professor \\
+was unavailable; contained approximately one hundred students.
+\item Created original course content including two homework assignments.
+\item Held weekly office hours and graded assignments and exams.
+\end{UnivDeptItem}
+
+\COMP
+
+\begin{UnivDeptItem}{Principles of Parallel Programming}
+{Spring 2015, Spring 2016}{with Dr.~Vivek Sarkar, Dr.~Eric Allen}{}
+\item Held weekly office hours and graded assignments and exams.
+\end{UnivDeptItem}
+
+\begin{UnivDeptItem}{Reasoning About Algorithms}
+{Fall 2015}{with Dr.~Swarat Chaudhuri}{}
+\item Taught one hour-long tutorial session approximately bi-weekly; \\
+each session contained between five and twenty five students.
+\item Held weekly office hours and graded assignments and exams.
+\end{UnivDeptItem}
+
+\begin{UnivDeptItem}{Computational Thinking}
+{Fall 2013, Fall 2014}{with Dr.~Scott Rixner}{}
+\item Supervised a flipped-classroom environment; interacted with \\
+approximately fifteen students approximately ten times a week.
+\item Held weekly office hours and graded assignments and exams.
+\end{UnivDeptItem}
+
+\end{rSection} }{}
+
+% {
+
+% \Event{Reasoning About Algorithms, teaching assistant}{Fall 2015} \\
+% \Event{Introduction to Computational Engineering, lecturer}{Spring 2013 to present} \\
+% \Event{Principles of Parallel Programming, teaching assistant}{Spring 2015} \\
+% \Event{Computational Thinking, in-class teaching assistant}{Fall 2013, Fall 2014}
+
+% }
 
 
 
@@ -87,17 +139,11 @@
 
 \begin{rSection}{Work Experience}
 
-    \FourTitle{Sid Richardson College}{Houston, Texas}
-    {Webmaster}{Spring 2014 to present}
-
-    \begin{rSubSection}{Jones McClure Publishing}{Houston, Texas}
-    {Software Development Intern}{Summer 2013}
-        \item Created a mobile version of the O'Connor's Online platform from scratch.
-        \item Created administrative tools for managing the behavior of the mobile site.
-    \end{rSubSection}
-
-    \FourTitle{World STEM Works}{Houston, Texas}
-    {Web Development Intern}{Spring 2013}
+\begin{rSubSection}{Jones McClure Publishing}{Houston, Texas}
+{Software Development Intern}{Summer 2013}
+\item Created a mobile version of the O'Connor's Online platform.
+\item Created administrative tools governing the behavior of the mobile site.
+\end{rSubSection}
 
 \end{rSection}
 
@@ -105,52 +151,57 @@
 
 
 
-\iftoggle{cv}{\begin{rSection}{Publications}
-
-    \Event{TODO: get published}{Summer 2015}
-
-\end{rSection}}{}
-
-
-
-
-
-\iftoggle{cv}{\begin{rSection}{Awards and Honors}
-
-    \Event{Lon Wilson Service Award}{Spring 2015} \\
-    \Event{President's Honor Roll}{Fall 2014} \\
-    \Event{National Merit Quarterfinalist}{Spring 2012} \\
-    \Event{AP Scholar with Honor}{Spring 2012} \\
-    \Event{National Honor Society}{2011 to 2012}
-
-\end{rSection}}{}
-
-
-
-
-
+\iftoggle{cv}{\pagebreak}{}
 \begin{rSection}{Personal Projects}
 
-    \begin{rSubSection}{YASP.co (YASP Another Stats Page)}{}
-    {Co-Founder, Software Developer, Public Relations}{Fall 2014 to present}
-        \item A free, volunteer-developed, open-source, student project.
-        \item Provides game- and player-specific statistics for the video game DOTA.
-        \item I develop new features, maintain the codebase, and market the platform.
-    \end{rSubSection}
+\begin{rSubSection}{YASP: Another Stats Page (\texttt{yasp.co})}{}
+{Co-Founder, Software Developer, Public Relations}{Fall 2014 to present}
+\item Developed new features, maintained existing codebase, and marketed \\
+YASP: a free, volunteer-developed, open-source, project that provides \\
+game- and player-specific statistics for the video game Dota 2.
+\end{rSubSection}
 
 \end{rSection}
 
+
+
+
+
+\begin{rSection}{Hackathons}
+
+\Event{HackRice (hosted by The Rice CS Club)}{Spring 2015, Spring 2016}
+
+\end{rSection}
 
 
 
 
 \begin{rSection}{Extracurricular Activities}
 
-    \Event{The Rice Queer Resource Center, Co-Founder and President}{Fall 2014 to present} \\
-    \Event{Query (queer theory, discussion, and advocacy group)}{Spring 2014 to present} \\
-    \Event{Academic Fellow and Mentor}{Fall 2014 to present} \\
-    \Event{Peer Academic Advisor}{Spring 2013 to present} \\
-    \Event{Rice Ambassador}{Spring 2013 to present}
+\iftoggle{cv}{
+
+\begin{rSubSection}{The Rice Queer Resource Center (QRC)}{Houston, Texas}
+{Co-Founder and President}{Fall 2014 to present}
+\item Facilitated discussion among approximately twenty disparate committees.
+\item Wrote a funding proposal to the Rice Undergraduate Student Association \\
+to found the QRC and was approved by the student body to receive \$5,000.
+\item Headed the Sexual Assault Committee, worked to update Ally Training, \\
+worked to potentially hire a part-time staff person to support the QRC, \\
+investigated founding a queer support group, and created the QRC's website.
+\end{rSubSection}
+
+\begin{rSubSection}{Out for Undergrad Technology Conference}{San Francisco, California}
+{Student Participant}{25-27 September 2015}
+\item Attended OUTC: a non-profit conference dedicated to helping \\ 
+high-achieving LGBTQ undergraduates in technologically-relevant \\
+STEM fields reach their full potential in their careers.
+\end{rSubSection}}{
+
+\Event{The Rice Queer Resource Center, Co-Founder and President}{Fall 2014 to present} \\
+\Event{Out for Undergrad Technology Conference, participant}{25-27 September 2015} \\}
+\Event{Academic Fellow and Mentor}{Fall 2014 to present} \\
+\Event{Peer Academic Advisor}{Spring 2013 to present} \\
+\Event{Rice Student Ambassador}{Spring 2013 to present}
 
 \end{rSection}
 
@@ -158,9 +209,81 @@
 
 
 
-\iftoggle{cv}{\begin{rSection}{Citizenship}
+\iftoggle{cv}{
+\begin{rSection}{Awards and Honors}
 
-    \Event{United State of America}{}
+\Event{Rice Alumni Pride Award}{Fall 2015} \\
+\Event{President's Honor Roll}{Fall 2014, Fall 2015} \\
+\Event{John and Harriet Millington Scholarship}{Fall 2014, Fall 2015} \\
+\Event{Lon Wilson Service Award}{Spring 2015} \\
+\Event{Genevieve Parkhill Lykes Scholarship}{Fall 2014} \\
+\Event{Bracht-Verlander Scholarship}{Fall 2012} \\
+\Event{National Merit Quarterfinalist}{Spring 2012} \\
+\Event{AP Scholar with Honor}{Spring 2012} \\
+\Event{National Honor Society}{2011 to 2012}
+
+\end{rSection}
+}{}
+
+
+
+
+
+\iftoggle{cv}{\pagebreak
+\begin{rSection}{Pertinent Coursework}
+
+\Rice
+
+\BeginUnivEvents
+\Event{Advanced Topics in Object-Oriented Design}{Spring 2016} \\
+\Event{Advanced Computer Game Creation}{Spring 2016} \\
+\Event{Tools and Models for Data Science (A)}{Fall 2015} \\
+\Event{Functional Programming (A)}{Fall 2015} \\
+\Event{Operating Systems and Concurrent Programing (B)}{Spring 2015} \\
+\Event{Introduction to Computer Security (A+)}{Spring 2015} \\
+\Event{Reasoning about Algorithms (A)}{Fall 2014} \\
+\Event{Compiler Construction (A-)}{Fall 2014} \\
+\Event{Object-Oriented Design (A)}{Fall 2014} \\
+\Event{Principles of Parallel Programming (B)}{Spring 2014} \\
+\Event{Introduction to Computer Systems (A-)}{Spring 2014} \\
+\Event{Introduction to Program Design (A)}{Fall 2013} \\
+\Event{Algorithmic Thinking (A-)}{Spring 2013} \\
+\Event{Fundamentals of Computer Engineering (B-)}{Spring 2013} \\
+\Event{Computational Thinking (A)}{Fall 2012} \\
+\Event{Introduction to Computational Engineering (A+)}{Fall 2012}
+\EndUnivEvents
+
+\end{rSection}}{}
+
+
+
+
+
+\iftoggle{cv}{
+\begin{rSection}{Standardized Test Scores}
+
+\begin{rSubSection}{GRE}{November 2015}{}{}
+\item Quantitative: \tab{$164/170$} \tab{(\nth{88} percentile)}
+\item Verbal: \tab{} \tab{$161/170$} \tab{(\nth{87} percentile)}
+\item Writing: \tab{} \tab{$4.5/6.0$} \tab{(\nth{80} percentile)}
+\end{rSubSection}
+
+\begin{rSubSection}{SAT}{October 2011}{}{}
+\item Mathematics: \tab{$750/800$} \tab{(\nth{97} percentile)}
+\item Reading: \tab{} \tab{$790/800$} \tab{(\nth{99} percentile)}
+\item Writing: \tab{} \tab{$760/800$} \tab{(\nth{99} percentile)}
+\end{rSubSection}
+
+\end{rSection}}{}
+
+
+
+
+
+\iftoggle{cv}{
+\begin{rSection}{Miscellaneous Information}
+
+Citizenship: USA
 
 \end{rSection}}{}
 

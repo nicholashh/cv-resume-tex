@@ -1,14 +1,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Created by Trey Hunner
+% Modified by www.LaTeXTemplates.com
+% Modified by Nicholas Hanson-Holtry
+%
 % Copyright (C) 2010 by Trey Hunner
 %
 % Copying and distribution of this file, with or without modification,
 % are permitted in any medium without royalty provided the copyright
 % notice and this notice are preserved. This file is offered as-is,
 % without any warranty.
-%
-% Created by Trey Hunner
-% Modified by www.LaTeXTemplates.com
-% Modified by Nicholas Hanson-Holtry
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -19,7 +20,6 @@
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
-\usepackage[left=0.75in,top=0.75in,right=0.75in,bottom=0.75in]{geometry}
 
 \usepackage{etoolbox} % easier than ifthenelses
 \newtoggle{cv} % create a toggle variable "cv"
@@ -27,7 +27,13 @@
 \toggletrue{cv} % if so, compile the doc to a cv (more information)
 \else \togglefalse{cv} \fi % if not, compile to a resume (less information)
 
-\iftoggle{cv}{}{\pagestyle{empty}} % Suppress page numbers
+\iftoggle{cv}{\setlength{\footskip}{4\baselineskip}} % CVs need extra space for page numbers
+{\pagestyle{empty}} % Resumes don't have page numbers (only one page)
+
+\usepackage[super]{nth} % Required for ifthenelse statements
+
+\usepackage{tabto}
+\NumTabs{11}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	CUSTOM COMMANDS
@@ -65,10 +71,12 @@
   \addressskip
 }
 
+\def\CV{Curriculum Vitae}
+
 % \printname is used to print the name as a page header
 \def \printname {
   \iftoggle{cv}{
-    \hfil\emph{\large Curriculum Vitae}\newline\newline\nameskip
+    \hfil\emph{\large \CV}\newline\newline\nameskip
     \hfil{\namesize\bf \@name}\newline
   }{
     \hfil{\namesize\bf \@name}\nameskip\newline
@@ -82,10 +90,30 @@
 \def\nameskip{\bigskip} % The space after your name at the top
 \def\sectionskip{\medskip} % The space after the heading section
 
+% change the margins of the paper
+\usepackage{geometry}
+\geometry{
+    tmargin    = 1.00 in,
+    lmargin    = 0.75 in,
+    rmargin    = 0.75 in,
+    bmargin    = 0.75 in,
+    headheight = 8.00 in,
+    headsep    = 0.25 in
+}
+
+\usepackage{fancyhdr} % define a header across the top of the page
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\emph{\@name, \CV, Page \thepage}}
+% \fancyhead[R]{\underline{\@name, \emph{\CV}, Page \thepage}}
+
 % Print the header
 \let\ori@document=\document
 \renewcommand{\document}{
   \ori@document  % Begin document
+  \thispagestyle{empty} % Suppress the header on this (the first) page
+  \vspace*{-.75in} % Move the content up to where the header usually is
   \printname % Print the name specified with \name
   \@ifundefined{@addressone}{}{ % Print the first address if specified
     \printaddress{\@addressone}}
@@ -116,17 +144,19 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	SUBSECTION FORMATTING
+%	SUB-SECTION FORMATTING
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% bold on the left, normal on the right
-\newcommand{\TwoTitle}[2]{{\bf#1}\hfill{\em#2}}
+% bold on the left, emph on the right
+\newcommand{\BoldEmph}[2]{{\bf#1}\hfill{\em#2}}
+% normal on the left, emph on the right
+\newcommand{\NormalEmph}[2]{{#1}\hfill{\em#2}}
 
-% bold on top left, normal on top right, emph on bottom
-\newcommand{\FourTitle}[4] {
-  \TwoTitle{#1}{#2} % same first line as above
-  \ifthenelse{ % check before printing the third argument
-  \equal{#3}{}}{}{\\{#3}\hfill{\em#4}}}
+% bold on top left, normal on bottom right, emph on right
+\newcommand{\FourTitle}[4]{%
+  \ifthenelse{\equal{#1}{}}{}{\BoldEmph{#1}{#2}% maybe print first two
+  \ifthenelse{\equal{#3}{}}{}{\\}}% put in the line break if printing all four
+  \ifthenelse{\equal{#3}{}}{}{\NormalEmph{#3}{#4}}}% maybe print second two
 
 \newenvironment{rSubSection}[4]{ % 4 input arguments
   \FourTitle{#1}{#2}{#3}{#4}\smallskip
@@ -137,5 +167,32 @@
   \vspace{0.5em} % Some space after the list of bullet points
 }
 
-% normal on the left, emph on the right
-\newcommand{\Event}[2]{{#1}\hfill{\em#2}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ( SUB * k )-SECTION FORMATTING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
+
+\newcommand{\Event}[2]{\NormalEmph{#1}{#2}}
+
+\newcommand{\UniversityTitle}[2]{%
+\BoldEmph{#1}{#2}}
+
+\newcommand{\BeginUnivEvents}{%
+\begin{changemargin}{1.5em}{0em}}
+\newcommand{\EndUnivEvents}{%
+\end{changemargin}}
+
+\newcommand{\DepartmentTitle}[2]{%
+\begin{changemargin}{1.5em}{0em}%
+\BoldEmph{#1}{#2}%
+\end{changemargin}}
+
+\newenvironment{UnivDeptItem}[4]{
+  \begin{changemargin}{3.0em}{0em}
+  \begin{rSubSection}{#1}{#2}{#3}{#4}
+}{
+  \end{rSubSection}
+  \end{changemargin}
+}
