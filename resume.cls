@@ -158,6 +158,8 @@
   \ifthenelse{\equal{#3}{}}{}{\\}}% put in the line break if printing all four
   \ifthenelse{\equal{#3}{}}{}{\NormalEmph{#3}{#4}}}% maybe print second two
 
+\newcommand{\EventWithSubtitle}[4]{\FourTitle{#1}{#2}{#3}{#4}}
+
 \newenvironment{rSubSection}[4]{ % 4 input arguments
   \FourTitle{#1}{#2}{#3}{#4}\smallskip
   \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
@@ -175,18 +177,24 @@
 \let\endchangemargin=\endlist
 
 \newcommand{\Event}[2]{\NormalEmph{#1}{#2}}
+\newcommand{\Thing}[1]{\NormalEmph{#1}{  }}
 
 \newcommand{\UniversityTitle}[2]{%
 \BoldEmph{#1}{#2}}
+
+\newcommand{\DepartmentTitle}[1]{%
+\begin{changemargin}{1.5em}{0em}%
+\BoldEmph{#1}{}%
+\end{changemargin}}
 
 \newcommand{\BeginUnivEvents}{%
 \begin{changemargin}{1.5em}{0em}}
 \newcommand{\EndUnivEvents}{%
 \end{changemargin}}
 
-\newcommand{\DepartmentTitle}[2]{%
-\begin{changemargin}{1.5em}{0em}%
-\BoldEmph{#1}{#2}%
+\newcommand{\BeginDeptEvents}{%
+\begin{changemargin}{3.0em}{0em}}
+\newcommand{\EndDeptEvents}{%
 \end{changemargin}}
 
 \newenvironment{UnivDeptItem}[4]{

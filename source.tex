@@ -1,9 +1,11 @@
 
 \documentclass{resume}
 
-\newcommand{\Rice}[0]{\UniversityTitle{Rice University}{Houston, Texas}}
-\newcommand{\COMP}[0]{\DepartmentTitle{Department of Computer Science}{}}
-\newcommand{\CAAM}[0]{\DepartmentTitle{Department of Computational and Applied Mathematics}{}}
+\newcommand{\Rice}[0]{\UniversityTitle{Rice University}{Houston, Texass}}
+
+\newcommand{\COMP}[0]{\DepartmentTitle{Department of Computer Science}}
+\newcommand{\CAAM}[0]{\DepartmentTitle{Department of Computational and Applied Mathematics}}
+\newcommand{\PHIL}[0]{\DepartmentTitle{Department of Philosophy}}
 
 
 
@@ -12,9 +14,9 @@
 \name{Nicholas Hanson-Holtry}
 
 \address{%
-nicholashh@rice.edu \\
-503.360.3148 \\
-6360 Main Street, Houston, Texas, 77005}
+nicholashh@alumni.rice.edu \\
+\{personal website coming soon\} \\
+503.360.3148}
 
 
 
@@ -24,17 +26,37 @@ nicholashh@rice.edu \\
 
 \begin{rSection}{Education}
 
-\begin{rSubSection}{Rice University}{Houston, Texas}
-{Bachelor of Science in Computer Science}{expected Spring 2016}
-\item GPA: $3.65/4.00$
+\begin{rSubSection}{Bachelor of Science in Computer Science}{Fall 2012 to Spring 2016}
+{\bf Rice University\normalfont, Sid Richardson College}{Houston, Texas}
+\item GPA: $3.61/4.00$ (Major GPA: $3.68/4.00$)
 \end{rSubSection}
 
-\begin{rSubSection}{Southridge High School}{Portland, Oregon}
-{International Baccalaureate Diploma}{Spring 2012}
-\item GPA: $3.97/4.00$
+\EventWithSubtitle{International Baccalaureate Diploma}
+{Fall 2010 to Spring 2012}{Southridge High School}{Portland, Oregon}
+
+\end{rSection}
+
+
+
+
+
+\iftoggle{cv}{}{
+
+\begin{rSection}{Work Experience}
+
+\begin{rSubSection}{YASP: Another Stats Page (\texttt{https://yasp.co})}{}
+{Co-Founder, Software Developer, Public Relations}{Fall 2014 to present}
+\item YASP provides statistics for the video game Dota 2.
+\end{rSubSection}
+
+\begin{rSubSection}{Jones McClure Publishing}{Houston, Texas}
+{Software Development Intern}{Summer 2013}
+\item Created a mobile version of O'Connor's Online.
 \end{rSubSection}
 
 \end{rSection}
+    
+}
 
 
 
@@ -46,7 +68,7 @@ nicholashh@rice.edu \\
 
 \COMP
 
-\begin{UnivDeptItem}{Dr.~Swarat Chaudhuri}{Summer 2015 to Fall 2015}{}{}
+\begin{UnivDeptItem}{Dr.~Swarat Chaudhuri}{Summer 2015}{}{}
 \item Investigated a computational definition of ethical fairness \\
 (hiring practices sensitive to personal attributes like race, etc).
 \item Investigated formal methods techniques to ensure fairness \\
@@ -73,10 +95,10 @@ to be further investigated by an adjacent group in the lab.
 
 }{
 
-\Event{{\bf Dr.~Swarat Chaudhuri}, program verification and fairness}{Summer 2015 to Fall 2015} \\
-\Event{{\bf Dr.~Vivek Sarkar}, parallel computing suite development}{Spring 2015} \\
-\Event{{\bf Dr.~Luay Nakhleh}, bioinformatics and graph theory}{Summer 2014} \\
-\Event{{\bf Dr.~Devika Subramanian}, machine learning and medicine}{Spring 2013}
+\Event{Dr.~Swarat Chaudhuri, program verification and fairness}{Summer 2015} \\
+\Event{Dr.~Vivek Sarkar, parallel computing suite development}{Spring 2015} \\
+\Event{Dr.~Luay Nakhleh, bioinformatics and graph theory}{Summer 2014} \\
+\Event{Dr.~Devika Subramanian, machine learning and medicine}{Spring 2013}
 
 } \end{rSection}
 
@@ -84,15 +106,18 @@ to be further investigated by an adjacent group in the lab.
 
 
 
-\iftoggle{cv}{\pagebreak
+\iftoggle{cv}{\pagebreak}{}
+
 \begin{rSection}{Teaching Experience}
+
+\iftoggle{cv}{
 
 \Rice
 
 \CAAM
 
 \begin{UnivDeptItem}{Introduction to Computational Engineering}
-{Spring 2013 to present}{with Dr.~Steven Cox, Dr.~Franklin Kenter, Dr.~Illya Hicks}{}
+{Spring 2013 to Spring 2016}{with Dr.~Steven Cox, Dr.~Franklin Kenter, Dr.~Illya Hicks}{}
 \item Taught one hour-long break-out section of the course once \\
 per week; each section contained between five and twenty students.
 \item Taught the main section of the course when the professor \\
@@ -122,20 +147,22 @@ approximately fifteen students approximately ten times a week.
 \item Held weekly office hours and graded assignments and exams.
 \end{UnivDeptItem}
 
-\end{rSection} }{}
+}{
 
-% {
+\Event{Introduction to Computational Engineering, lecturer}{Spring 2013 to Spring 2016} \\
+\Event{Principles of Parallel Programming, teaching assistant}{Spring 2015, Spring 2016} \\
+\Event{Reasoning About Algorithms, teaching assistant}{Fall 2015} \\
+\Event{Computational Thinking, in-class teaching assistant}{Fall 2013, Fall 2014}
 
-% \Event{Reasoning About Algorithms, teaching assistant}{Fall 2015} \\
-% \Event{Introduction to Computational Engineering, lecturer}{Spring 2013 to present} \\
-% \Event{Principles of Parallel Programming, teaching assistant}{Spring 2015} \\
-% \Event{Computational Thinking, in-class teaching assistant}{Fall 2013, Fall 2014}
+}
 
-% }
-
-
+\end{rSection}
 
 
+
+
+
+\iftoggle{cv}{
 
 \begin{rSection}{Work Experience}
 
@@ -151,10 +178,11 @@ approximately fifteen students approximately ten times a week.
 
 
 
-\iftoggle{cv}{\pagebreak}{}
+\pagebreak
+
 \begin{rSection}{Personal Projects}
 
-\begin{rSubSection}{YASP: Another Stats Page (\texttt{yasp.co})}{}
+\begin{rSubSection}{YASP: Another Stats Page (\texttt{https://yasp.co})}{}
 {Co-Founder, Software Developer, Public Relations}{Fall 2014 to present}
 \item Developed new features, maintained existing codebase, and marketed \\
 YASP: a free, volunteer-developed, open-source, project that provides \\
@@ -163,25 +191,59 @@ game- and player-specific statistics for the video game Dota 2.
 
 \end{rSection}
 
+}
 
 
 
 
+
+\iftoggle{cv}{
 \begin{rSection}{Hackathons}
 
 \Event{HackRice (hosted by The Rice CS Club)}{Spring 2015, Spring 2016}
+
+\end{rSection}
+}
+
+
+
+
+
+\iftoggle{cv}{}{
+
+\begin{rSection}{Extracurricular Activities}
+
+\Event{Sid Richardson College Academic Fellows Program, fellow}{Fall 2014 to Spring 2016} \\
+\Event{Rice University Queer Resource Center, co-founder and president}{Fall 2014 to Spring 2016} \\
+\Event{Rice University Student Ambassador Program, ambassador}{Spring 2013 to Spring 2016} \\
+\Event{Rice University Peer Academic Advisor Program, advisor}{Spring 2013 to Spring 2016}
+
+\end{rSection}
+
+}
+
+
+
+
+
+\begin{rSection}{Technical Proficiency}
+
+\Thing{Mastery ($\geq5$ classes): Java} \\
+\Thing{Proficiency ($2-4$ classes): Python, C, Matlab} \\
+\Thing{Familiarity ($\leq1$ class): JavaScript/HTML/CSS, SQL, Scala, OCaml, Dafny}
 
 \end{rSection}
 
 
 
 
-\begin{rSection}{Extracurricular Activities}
 
 \iftoggle{cv}{
 
-\begin{rSubSection}{The Rice Queer Resource Center (QRC)}{Houston, Texas}
-{Co-Founder and President}{Fall 2014 to present}
+\begin{rSection}{Extracurricular Activities}
+
+\begin{rSubSection}{Rice University Queer Resource Center \normalfont(QRC)}{Houston, Texas}
+{Co-Founder and President}{Fall 2014 to Spring 2016}
 \item Facilitated discussion among approximately twenty disparate committees.
 \item Wrote a funding proposal to the Rice Undergraduate Student Association \\
 to found the QRC and was approved by the student body to receive \$5,000.
@@ -190,28 +252,31 @@ worked to potentially hire a part-time staff person to support the QRC, \\
 investigated founding a queer support group, and created the QRC's website.
 \end{rSubSection}
 
+% TODO: make a conferences section (after going to another conference)
 \begin{rSubSection}{Out for Undergrad Technology Conference}{San Francisco, California}
 {Student Participant}{25-27 September 2015}
 \item Attended OUTC: a non-profit conference dedicated to helping \\ 
 high-achieving LGBTQ undergraduates in technologically-relevant \\
 STEM fields reach their full potential in their careers.
-\end{rSubSection}}{
+\end{rSubSection}
 
-\Event{The Rice Queer Resource Center, Co-Founder and President}{Fall 2014 to present} \\
-\Event{Out for Undergrad Technology Conference, participant}{25-27 September 2015} \\}
-\Event{Academic Fellow and Mentor}{Fall 2014 to present} \\
-\Event{Peer Academic Advisor}{Spring 2013 to present} \\
-\Event{Rice Student Ambassador}{Spring 2013 to present}
+\Event{Sid Richardson College Academic Fellows Program, fellow}{Fall 2014 to Spring 2016} \\
+\Event{Rice University Student Ambassador Program, ambassador}{Spring 2013 to Spring 2016} \\
+\Event{Rice University Peer Academic Advisor Program, advisor}{Spring 2013 to Spring 2016}
 
 \end{rSection}
 
+}
 
 
 
 
-\iftoggle{cv}{
+
+\iftoggle{cv}{\pagebreak
+
 \begin{rSection}{Awards and Honors}
 
+\Event{Sid Richardson Athenian Award}{Spring 2016} \\
 \Event{Rice Alumni Pride Award}{Fall 2015} \\
 \Event{President's Honor Roll}{Fall 2014, Fall 2015} \\
 \Event{John and Harriet Millington Scholarship}{Fall 2014, Fall 2015} \\
@@ -223,20 +288,24 @@ STEM fields reach their full potential in their careers.
 \Event{National Honor Society}{2011 to 2012}
 
 \end{rSection}
-}{}
+
+}
 
 
 
 
 
-\iftoggle{cv}{\pagebreak
+\iftoggle{cv}{
+
 \begin{rSection}{Pertinent Coursework}
 
 \Rice
 
-\BeginUnivEvents
-\Event{Advanced Topics in Object-Oriented Design}{Spring 2016} \\
-\Event{Advanced Computer Game Creation}{Spring 2016} \\
+\COMP
+
+\BeginDeptEvents
+\Event{Advanced Topics in Object-Oriented Design (B)}{Spring 2016} \\
+\Event{Advanced Computer Game Creation (B+)}{Spring 2016} \\
 \Event{Tools and Models for Data Science (A)}{Fall 2015} \\
 \Event{Functional Programming (A)}{Fall 2015} \\
 \Event{Operating Systems and Concurrent Programing (B)}{Spring 2015} \\
@@ -251,7 +320,19 @@ STEM fields reach their full potential in their careers.
 \Event{Fundamentals of Computer Engineering (B-)}{Spring 2013} \\
 \Event{Computational Thinking (A)}{Fall 2012} \\
 \Event{Introduction to Computational Engineering (A+)}{Fall 2012}
-\EndUnivEvents
+\EndDeptEvents
+
+\PHIL
+
+\BeginDeptEvents
+\Event{Continental Philosophy (A-)}{Spring 2016} \\
+\Event{Mathematical Logic (audit)}{Fall 2014} \\
+\Event{History of Philosophy II (audit)}{Spring 2014} \\
+\Event{History of Philosophy I (B+)}{Fall 2013} \\
+\Event{Social and Political Philosophy (A-)}{Spring 2013} \\
+\Event{Theory of Knowledge (transfer)}{2011 to 2012} \\
+\Event{Ethics (transfer)}{2011 to 2012}
+\EndDeptEvents
 
 \end{rSection}}{}
 
@@ -259,7 +340,8 @@ STEM fields reach their full potential in their careers.
 
 
 
-\iftoggle{cv}{
+\iftoggle{cv}{\pagebreak
+
 \begin{rSection}{Standardized Test Scores}
 
 \begin{rSubSection}{GRE}{November 2015}{}{}
@@ -274,17 +356,26 @@ STEM fields reach their full potential in their careers.
 \item Writing: \tab{} \tab{$760/800$} \tab{(\nth{99} percentile)}
 \end{rSubSection}
 
-\end{rSection}}{}
+\end{rSection}
+
+}
 
 
 
 
 
 \iftoggle{cv}{
+
 \begin{rSection}{Miscellaneous Information}
 
 Citizenship: USA
 
-\end{rSection}}{}
+\end{rSection}
+
+}
+
+
+
+
 
 \end{document}
