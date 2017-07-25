@@ -1,26 +1,38 @@
 
 name = "nicholas-hanson-holtry"
 
-all: resume cv
-
-resume:
-	pdflatex -file-line-error \
-		--jobname=$(name).resume "source.tex"
+all: cv resume
 
 cv:
-	pdflatex -file-line-error \
-		--jobname=$(name).cv "\def\iscv{1} \input{source.tex}"
+	xelatex -file-line-error \
+	--jobname=$(name).cv \
+	"\def\iscv{1} \input{source.tex}"
 
-resume-open: resume
-	open $(name).resume.pdf
+resume:
+	xelatex -file-line-error \
+	--jobname=$(name).resume \
+	"\input{source.tex}"
+
+resume-programming:
+	xelatex -file-line-error \
+	--jobname=$(name).resume.programming-focus \
+	"\def\programming{1} \input{source.tex}"
+
+r: resume
+rp: resume-programming
 
 cv-open: cv
 	open $(name).cv.pdf
+resume-open: resume
+	open $(name).resume.pdf
+resume-programming-open: resume-programming
+	open $(name).resume.programming-focus.pdf
 
-r: resume
-ro: resume-open
 cvo: cv-open
+ro: resume-open
+rpo: resume-programming-open
 
 clean:
-	rm $(name).resume.*
 	rm $(name).cv.*
+	rm $(name).resume.*
+	rm $(name).resume.programming-focus.*

@@ -1,381 +1,419 @@
 
+% project version:    3.0
+% project started:    2012-09-10
+% this file created:  2017-07-24
+% this file archived: ?
+
 \documentclass{resume}
 
-\newcommand{\Rice}[0]{\UniversityTitle{Rice University}{Houston, Texass}}
+\newtoggle{programmingFocus} \ifdefined \programming
+\toggletrue{programmingFocus} \else \togglefalse{programmingFocus} \fi
+
+\newcommand{\Rice}[0]{\UniversityTitle{Rice University}{}}
+\newcommand{\Brandeis}[0]{\UniversityTitle{Brandeis University}{}}
 
 \newcommand{\COMP}[0]{\DepartmentTitle{Department of Computer Science}}
-\newcommand{\CAAM}[0]{\DepartmentTitle{Department of Computational and Applied Mathematics}}
+\newcommand{\CAAM}[0]{\DepartmentTitle{Department of Applied Mathematics}}
 \newcommand{\PHIL}[0]{\DepartmentTitle{Department of Philosophy}}
 
-
-
-
+\newcommand{\ToPresent}[0]{\textbf{to present}}
 
 \name{Nicholas Hanson-Holtry}
 
 \address{%
-nicholashh@alumni.rice.edu \\
-\{personal website coming soon\} \\
+nicholas.hanson.holtry@gmail.com \\
+www.nicholashh.com \\
 503.360.3148}
 
-
-
-
+% \address{\small%
+% nicholas.hanson.holtry@gmail.com \\
+% 503.360.3148 \\
+% 907 Euclid Ave, Apt \#5, Miami Beach, FL}
 
 \begin{document}
 
-\begin{rSection}{Education}
+\begin{rSection}{Educational History}
 
-\begin{rSubSection}{Bachelor of Science in Computer Science}{Fall 2012 to Spring 2016}
-{\bf Rice University\normalfont, Sid Richardson College}{Houston, Texas}
-\item GPA: $3.61/4.00$ (Major GPA: $3.68/4.00$)
-\end{rSubSection}
+  \iftoggle{cv}{
+    \begin{rSubSection}
+  }{
+    \EventWithSubtitle
+  }
+  {Brandeis University}
+  {Fall 2017 \bf to Spring 2019}
+  {\bf Master of Arts \normalfont in Philosophy}
+  {Boston, Massachusetts}
+  \iftoggle{cv}{
+    \item GPA: TBD$/4.00$
+    \item Thesis: TBD
+    \end{rSubSection}
+  }{}
 
-\EventWithSubtitle{International Baccalaureate Diploma}
-{Fall 2010 to Spring 2012}{Southridge High School}{Portland, Oregon}
+  \iftoggle{cv}{
+    \begin{rSubSection}
+  }{
+    \EventWithSubtitle
+  }
+  {Rice University\normalfont, Sid Richardson College}
+  {Fall 2012 to Spring 2016}
+  {\bf Bachelor of Science \normalfont in Computer Science}
+  {Houston, Texas}
+  \iftoggle{cv}{
+    \item Overall GPA:~$3.61/4.00$
+    \item Major GPA:~$3.68/4.00$
+    \end{rSubSection}
+  }{}
+
+  \iftoggle{cv}{
+    \begin{rSubSection}
+    {\normalfont Southridge High School}
+    {Fall 2010 to Spring 2012}
+    {International Baccalaureate Diploma}
+    {Portland, Oregon}
+    \item GPA:~$3.97/4.00$
+    \end{rSubSection}
+  }{}
 
 \end{rSection}
-
-
-
-
-
-\iftoggle{cv}{}{
-
-\begin{rSection}{Work Experience}
-
-\begin{rSubSection}{YASP: Another Stats Page (\texttt{https://yasp.co})}{}
-{Co-Founder, Software Developer, Public Relations}{Fall 2014 to present}
-\item YASP provides statistics for the video game Dota 2.
-\end{rSubSection}
-
-\begin{rSubSection}{Jones McClure Publishing}{Houston, Texas}
-{Software Development Intern}{Summer 2013}
-\item Created a mobile version of O'Connor's Online.
-\end{rSubSection}
-
-\end{rSection}
-    
-}
-
-
-
-
-
-\begin{rSection}{Research Experience} \iftoggle{cv}{
-
-\Rice
-
-\COMP
-
-\begin{UnivDeptItem}{Dr.~Swarat Chaudhuri}{Summer 2015}{}{}
-\item Investigated a computational definition of ethical fairness \\
-(hiring practices sensitive to personal attributes like race, etc).
-\item Investigated formal methods techniques to ensure fairness \\
-in probabilistic or machine learning classification algorithms.
-\item Investigated post hoc verification of fairness of a classification result.
-\end{UnivDeptItem}
-
-\begin{UnivDeptItem}{Dr.~Vivek Sarkar}{Spring 2015}{}{}
-\item Investigated tradeoffs among parallel \texttt{map} implementations.
-\item Optimized the parallel computing suite Habanero Java.
-\end{UnivDeptItem}
-
-\begin{UnivDeptItem}{Dr.~Luay Nakhleh}{Summer 2014}{}{}
-\item Researched introgressed genes in the \emph{mus musculus} genome.
-\item Applied clustering algorithms to protein-protein interaction \\
-network data to confirm previously identified genome patterns.
-\item Identified previously unknown introgressed gene candidates \\
-to be further investigated by an adjacent group in the lab.
-\end{UnivDeptItem}
-
-\begin{UnivDeptItem}{Dr.~Devika Subramanian}{Spring 2013}{}{}
-\item Applied machine learning algorithms to medical data.
-\end{UnivDeptItem}
-
-}{
-
-\Event{Dr.~Swarat Chaudhuri, program verification and fairness}{Summer 2015} \\
-\Event{Dr.~Vivek Sarkar, parallel computing suite development}{Spring 2015} \\
-\Event{Dr.~Luay Nakhleh, bioinformatics and graph theory}{Summer 2014} \\
-\Event{Dr.~Devika Subramanian, machine learning and medicine}{Spring 2013}
-
-} \end{rSection}
-
-
-
-
-
-\iftoggle{cv}{\pagebreak}{}
-
-\begin{rSection}{Teaching Experience}
 
 \iftoggle{cv}{
-
-\Rice
-
-\CAAM
-
-\begin{UnivDeptItem}{Introduction to Computational Engineering}
-{Spring 2013 to Spring 2016}{with Dr.~Steven Cox, Dr.~Franklin Kenter, Dr.~Illya Hicks}{}
-\item Taught one hour-long break-out section of the course once \\
-per week; each section contained between five and twenty students.
-\item Taught the main section of the course when the professor \\
-was unavailable; contained approximately one hundred students.
-\item Created original course content including two homework assignments.
-\item Held weekly office hours and graded assignments and exams.
-\end{UnivDeptItem}
-
-\COMP
-
-\begin{UnivDeptItem}{Principles of Parallel Programming}
-{Spring 2015, Spring 2016}{with Dr.~Vivek Sarkar, Dr.~Eric Allen}{}
-\item Held weekly office hours and graded assignments and exams.
-\end{UnivDeptItem}
-
-\begin{UnivDeptItem}{Reasoning About Algorithms}
-{Fall 2015}{with Dr.~Swarat Chaudhuri}{}
-\item Taught one hour-long tutorial session approximately bi-weekly; \\
-each session contained between five and twenty five students.
-\item Held weekly office hours and graded assignments and exams.
-\end{UnivDeptItem}
-
-\begin{UnivDeptItem}{Computational Thinking}
-{Fall 2013, Fall 2014}{with Dr.~Scott Rixner}{}
-\item Supervised a flipped-classroom environment; interacted with \\
-approximately fifteen students approximately ten times a week.
-\item Held weekly office hours and graded assignments and exams.
-\end{UnivDeptItem}
-
-}{
-
-\Event{Introduction to Computational Engineering, lecturer}{Spring 2013 to Spring 2016} \\
-\Event{Principles of Parallel Programming, teaching assistant}{Spring 2015, Spring 2016} \\
-\Event{Reasoning About Algorithms, teaching assistant}{Fall 2015} \\
-\Event{Computational Thinking, in-class teaching assistant}{Fall 2013, Fall 2014}
-
-}
-
-\end{rSection}
-
-
-
-
-
-\iftoggle{cv}{
-
-\begin{rSection}{Work Experience}
-
-\begin{rSubSection}{Jones McClure Publishing}{Houston, Texas}
-{Software Development Intern}{Summer 2013}
-\item Created a mobile version of the O'Connor's Online platform.
-\item Created administrative tools governing the behavior of the mobile site.
-\end{rSubSection}
-
-\end{rSection}
-
-
-
-
-
-\pagebreak
-
-\begin{rSection}{Personal Projects}
-
-\begin{rSubSection}{YASP: Another Stats Page (\texttt{https://yasp.co})}{}
-{Co-Founder, Software Developer, Public Relations}{Fall 2014 to present}
-\item Developed new features, maintained existing codebase, and marketed \\
-YASP: a free, volunteer-developed, open-source, project that provides \\
-game- and player-specific statistics for the video game Dota 2.
-\end{rSubSection}
-
-\end{rSection}
-
-}
-
-
-
-
-
-\iftoggle{cv}{
-\begin{rSection}{Hackathons}
-
-\Event{HackRice (hosted by The Rice CS Club)}{Spring 2015, Spring 2016}
-
-\end{rSection}
-}
-
-
-
-
-
-\iftoggle{cv}{}{
-
-\begin{rSection}{Extracurricular Activities}
-
-\Event{Sid Richardson College Academic Fellows Program, fellow}{Fall 2014 to Spring 2016} \\
-\Event{Rice University Queer Resource Center, co-founder and president}{Fall 2014 to Spring 2016} \\
-\Event{Rice University Student Ambassador Program, ambassador}{Spring 2013 to Spring 2016} \\
-\Event{Rice University Peer Academic Advisor Program, advisor}{Spring 2013 to Spring 2016}
-
-\end{rSection}
-
-}
-
-
-
-
-
-\begin{rSection}{Technical Proficiency}
-
-\Thing{Mastery ($\geq5$ classes): Java} \\
-\Thing{Proficiency ($2-4$ classes): Python, C, Matlab} \\
-\Thing{Familiarity ($\leq1$ class): JavaScript/HTML/CSS, SQL, Scala, OCaml, Dafny}
-
-\end{rSection}
-
-
-
-
-
-\iftoggle{cv}{
-
-\begin{rSection}{Extracurricular Activities}
-
-\begin{rSubSection}{Rice University Queer Resource Center \normalfont(QRC)}{Houston, Texas}
-{Co-Founder and President}{Fall 2014 to Spring 2016}
-\item Facilitated discussion among approximately twenty disparate committees.
-\item Wrote a funding proposal to the Rice Undergraduate Student Association \\
-to found the QRC and was approved by the student body to receive \$5,000.
-\item Headed the Sexual Assault Committee, worked to update Ally Training, \\
-worked to potentially hire a part-time staff person to support the QRC, \\
-investigated founding a queer support group, and created the QRC's website.
-\end{rSubSection}
-
-% TODO: make a conferences section (after going to another conference)
-\begin{rSubSection}{Out for Undergrad Technology Conference}{San Francisco, California}
-{Student Participant}{25-27 September 2015}
-\item Attended OUTC: a non-profit conference dedicated to helping \\ 
-high-achieving LGBTQ undergraduates in technologically-relevant \\
-STEM fields reach their full potential in their careers.
-\end{rSubSection}
-
-\Event{Sid Richardson College Academic Fellows Program, fellow}{Fall 2014 to Spring 2016} \\
-\Event{Rice University Student Ambassador Program, ambassador}{Spring 2013 to Spring 2016} \\
-\Event{Rice University Peer Academic Advisor Program, advisor}{Spring 2013 to Spring 2016}
-
-\end{rSection}
-
-}
-
-
-
-
-
-\iftoggle{cv}{\pagebreak
-
-\begin{rSection}{Awards and Honors}
-
-\Event{Sid Richardson Athenian Award}{Spring 2016} \\
-\Event{Rice Alumni Pride Award}{Fall 2015} \\
-\Event{President's Honor Roll}{Fall 2014, Fall 2015} \\
-\Event{John and Harriet Millington Scholarship}{Fall 2014, Fall 2015} \\
-\Event{Lon Wilson Service Award}{Spring 2015} \\
-\Event{Genevieve Parkhill Lykes Scholarship}{Fall 2014} \\
-\Event{Bracht-Verlander Scholarship}{Fall 2012} \\
-\Event{National Merit Quarterfinalist}{Spring 2012} \\
-\Event{AP Scholar with Honor}{Spring 2012} \\
-\Event{National Honor Society}{2011 to 2012}
-
-\end{rSection}
-
-}
-
-
-
-
-
-\iftoggle{cv}{
-
 \begin{rSection}{Pertinent Coursework}
 
-\Rice
+  \Brandeis
 
-\COMP
+    \PHIL
 
-\BeginDeptEvents
-\Event{Advanced Topics in Object-Oriented Design (B)}{Spring 2016} \\
-\Event{Advanced Computer Game Creation (B+)}{Spring 2016} \\
-\Event{Tools and Models for Data Science (A)}{Fall 2015} \\
-\Event{Functional Programming (A)}{Fall 2015} \\
-\Event{Operating Systems and Concurrent Programing (B)}{Spring 2015} \\
-\Event{Introduction to Computer Security (A+)}{Spring 2015} \\
-\Event{Reasoning about Algorithms (A)}{Fall 2014} \\
-\Event{Compiler Construction (A-)}{Fall 2014} \\
-\Event{Object-Oriented Design (A)}{Fall 2014} \\
-\Event{Principles of Parallel Programming (B)}{Spring 2014} \\
-\Event{Introduction to Computer Systems (A-)}{Spring 2014} \\
-\Event{Introduction to Program Design (A)}{Fall 2013} \\
-\Event{Algorithmic Thinking (A-)}{Spring 2013} \\
-\Event{Fundamentals of Computer Engineering (B-)}{Spring 2013} \\
-\Event{Computational Thinking (A)}{Fall 2012} \\
-\Event{Introduction to Computational Engineering (A+)}{Fall 2012}
-\EndDeptEvents
+      \BeginDeptEvents
+      \Event{Marx, Nietzsche, and Twentieth-Century Radicalism}{Fall 2017} \\
+      \Event{Hegel:~Self-Consciousness and Freedom in the Phenomenology of Spirit}{Fall 2017} \\
+      \Event{Philosophy of Mathematics}{Fall 2017} \\
+      \Event{Graduate Proseminar}{Fall 2017}
+      \EndDeptEvents
 
-\PHIL
+  \Rice
 
-\BeginDeptEvents
-\Event{Continental Philosophy (A-)}{Spring 2016} \\
-\Event{Mathematical Logic (audit)}{Fall 2014} \\
-\Event{History of Philosophy II (audit)}{Spring 2014} \\
-\Event{History of Philosophy I (B+)}{Fall 2013} \\
-\Event{Social and Political Philosophy (A-)}{Spring 2013} \\
-\Event{Theory of Knowledge (transfer)}{2011 to 2012} \\
-\Event{Ethics (transfer)}{2011 to 2012}
-\EndDeptEvents
+    \PHIL
+
+      \BeginDeptEvents
+      \Event{Continental Philosophy (A-)}{Spring 2016} \\
+      \Event{Mathematical Logic (audit)}{Fall 2014} \\
+      \Event{History of Philosophy II (audit)}{Spring 2014} \\
+      \Event{History of Philosophy I (B+)}{Fall 2013} \\
+      \Event{Social and Political Philosophy (A-)}{Spring 2013}
+      \EndDeptEvents
+
+    \COMP
+
+      \BeginDeptEvents
+      \Event{Advanced Topics in Object-Oriented Design (B)}{Spring 2016} \\
+      \Event{Advanced Computer Game Creation (B+)}{Spring 2016} \\
+      \Event{Tools and Models for Data Science (A)}{Fall 2015} \\
+      \Event{Functional Programming (A)}{Fall 2015} \\
+      \Event{Operating Systems and Concurrent Programing (B)}{Spring 2015} \\
+      \Event{Introduction to Computer Security (A+)}{Spring 2015} \\
+      \Event{Reasoning about Algorithms (A)}{Fall 2014} \\
+      \Event{Compiler Construction (A-)}{Fall 2014} \\
+      \Event{Object-Oriented Design (A)}{Fall 2014} \\
+      \Event{Principles of Parallel Programming (B)}{Spring 2014} \\
+      \Event{Introduction to Computer Systems (A-)}{Spring 2014} \\
+      \Event{Introduction to Program Design (A)}{Fall 2013} \\
+      \Event{Algorithmic Thinking (A-)}{Spring 2013} \\
+      \Event{Fundamentals of Computer Engineering (B-)}{Spring 2013} \\
+      \Event{Computational Thinking (A)}{Fall 2012} \\
+      \Event{Introduction to Computational Engineering (A+)}{Fall 2012}
+      \EndDeptEvents
 
 \end{rSection}}{}
 
+\begin{rSection}{Professional History}
 
+  \iftoggle{cv}{
+    \begin{rSubSection}
+  }{
+    \EventWithSubtitle
+  }
+  {Dr.~Timothy Schroeder\normalfont, Rice University, Philosophy}
+  {Summer 2016 \ToPresent}
+  {Consultant / Lead Developer (database + desktop website)}
+  {online + Houston, Texas}
+  \iftoggle{cv}{
+    \item developing an open-source website and accompanying database \\
+    of assertions and arguments made by professional philosophers
+    \end{rSubSection}
+  }{}
+  
+  \EventWithSubtitle
+  {Shepherd Artisan Coffee}
+  {October 2016}
+  {Barista (in training)}
+  {Miami, Florida}
 
+  \EventWithSubtitle
+  {Jones McClure Publishing}
+  {Summer 2013}
+  {Software Development Intern (mobile website)}
+  {Houston, Texas}
 
-
-\iftoggle{cv}{\pagebreak
-
-\begin{rSection}{Standardized Test Scores}
-
-\begin{rSubSection}{GRE}{November 2015}{}{}
-\item Quantitative: \tab{$164/170$} \tab{(\nth{88} percentile)}
-\item Verbal: \tab{} \tab{$161/170$} \tab{(\nth{87} percentile)}
-\item Writing: \tab{} \tab{$4.5/6.0$} \tab{(\nth{80} percentile)}
-\end{rSubSection}
-
-\begin{rSubSection}{SAT}{October 2011}{}{}
-\item Mathematics: \tab{$750/800$} \tab{(\nth{97} percentile)}
-\item Reading: \tab{} \tab{$790/800$} \tab{(\nth{99} percentile)}
-\item Writing: \tab{} \tab{$760/800$} \tab{(\nth{99} percentile)}
-\end{rSubSection}
+  \EventWithSubtitle
+  {Tualatin Hills Park \& Recreation District}
+  {Summer 2010 to Summer 2012}
+  {Lifeguard / Swim Instructor / Swim Coach}
+  {Portland, Oregon}
 
 \end{rSection}
 
-}
+\begin{rSection}{Academic Research Experience}
 
+  \iftoggle{cv}{
+    \Rice
+    \COMP
+    % \BeginDeptEvents
+  }{}
 
+  \iftoggle{cv}{
+    % \Event{\bf Dr.~Swarat Chaudhuri\normalfont:~program
+    %     verification + fairness}{Summer 2015 to Fall 2015}
+    % \EventWithSubtitle
+    % {Dr.~Swarat Chaudhuri}
+    % {Summer 2015 to Fall 2015}
+    % {program verification + fairness}
+    % {}
+    \begin{UnivDeptItem}{Dr.~Swarat Chaudhuri}{Summer 2015 to Fall 2015}{}{}
+    \item investigated a computational definition of ethical fairness \\
+    (hiring practices sensitive to personal attributes like race, etc)
+    \item investigated formal methods techniques to ensure fairness \\
+    in probabilistic or machine learning classification algorithms
+    \item investigated post hoc verification of fairness of a classification result
+    \end{UnivDeptItem}
+  }{
+    \EventWithSubtitle
+    {Dr.~Swarat Chaudhuri\normalfont, Rice University, Computer Science}
+    {Summer 2015 to Fall 2015}
+    {Research Assistant (program verification + fairness)}
+    {Houston, Texas}
+  }
 
+  \iftoggle{cv}{
+    % \Event{\bf Dr.~Vivek Sarkar\normalfont:~parallel
+    %     computation suite development}{Spring 2015}
+    % \EventWithSubtitle
+    % {Dr.~Vivek Sarkar}
+    % {Spring 2015}
+    % {parallel computation suite development}
+    % {}
+    \begin{UnivDeptItem}{Dr.~Vivek Sarkar}{Spring 2015}{}{}
+    \item investigated trade-offs among parallel \texttt{map} implementations
+    \item optimized the parallel computing suite Habanero Java
+    \end{UnivDeptItem}
+  }{
+    \EventWithSubtitle
+    {Dr.~Vivek Sarkar\normalfont, Rice University, Computer Science}
+    {Spring 2015}
+    {Research Assistant (parallel computation suite development)}
+    {Houston, Texas}
+  }
 
+  \iftoggle{cv}{
+      % \Event{\bf Dr.~Luay Nakhleh\normalfont:~bioinformatics
+      %     + graph theory}{Summer 2014}
+    % \EventWithSubtitle
+    % {Dr.~Luay Nakhleh}
+    % {Summer 2014}
+    % {bioinformatics + graph theory}
+    % {}
+    \begin{UnivDeptItem}{Dr.~Luay Nakhleh}{Summer 2014}{}{}
+    \item researched introgressed genes in the \emph{mus musculus} genome
+    \item applied clustering algorithms to protein-protein interaction \\
+    network data to confirm previously identified genome patterns
+    \item identified previously unknown introgressed gene candidates
+    \end{UnivDeptItem}
+  }{
+    \EventWithSubtitle
+    {Dr.~Luay Nakhleh\normalfont, Rice University, Computer Science}
+    {Summer 2014}
+    {Research Assistant (bioinformatics + graph theory)}
+    {Houston, Texas}
+  }
+
+  \iftoggle{cv}{
+      % \Event{\bf Dr.~Devika Subramanian\normalfont:~machine
+      %     learning + medicine}{Spring 2013}
+    % \EventWithSubtitle
+    % {Dr.~Devika Subramanian}
+    % {Spring 2013}
+    % {machine learning + medicine}
+    % {}
+    \begin{UnivDeptItem}{Dr.~Devika Subramanian}{Spring 2013}{}{}
+    \item applied machine learning algorithms to medical data
+    \end{UnivDeptItem}
+  }{
+    \EventWithSubtitle
+    {Dr.~Devika Subramanian\normalfont, Rice University, Computer Science}
+    {Spring 2013}
+    {Research Assistant (machine learning + medicine)}
+    {Houston, Texas}
+  }
+
+  % \iftoggle{cv}{
+  %   \EndDeptEvents
+  % }{}
+
+\end{rSection}
+
+\begin{rSection}{Teaching Experience}
+
+  \EventWithSubtitle
+  {Varsity Tutors}
+  {Fall 2016 to Summer 2017}
+  {Tutor (high school + undergraduate)}
+  {online + Miami, Florida}
+
+  \iftoggle{cv}{
+
+    \Rice
+
+    \CAAM
+
+    % \BeginDeptEvents
+    % \Event{Introduction to Computational Engineering: lecturer}{Spring 2013 to Spring 2016}
+    % \EndDeptEvents
+
+    \begin{UnivDeptItem}{Introduction to Computational Engineering}
+    {Spring 2013 to Spring 2016}{with Dr.~Steven Cox, Dr.~Franklin Kenter, Dr.~Illya Hicks}{}
+    \item taught one hour-long breakout section of the course once \\
+    per week; each section contained between five and twenty students
+    \item taught the main section of the course when the professor \\
+    was unavailable; contained approximately one hundred students
+    \item created original course content including two homework assignments
+    \item held weekly office hours; graded assignments and exams
+    \end{UnivDeptItem}
+
+    \COMP
+
+    % \BeginDeptEvents
+    % \Event{Principles of Parallel Programming: teaching assistant}{Spring 2015, Spring 2016} \\
+    % \Event{Reasoning About Algorithms: teaching assistant}{Fall 2015} \\
+    % \Event{Computational Thinking: teaching assistant}{Fall 2013, Fall 2014}
+    % \EndDeptEvents
+
+    \begin{UnivDeptItem}{Principles of Parallel Programming}
+    {Spring 2015, Spring 2016}{with Dr.~Vivek Sarkar, Dr.~Eric Allen}{}
+    \item held weekly office hours; graded assignments and exams
+    \end{UnivDeptItem}
+
+    \begin{UnivDeptItem}{Reasoning About Algorithms}
+    {Fall 2015}{with Dr.~Swarat Chaudhuri}{}
+    \item taught one hour-long tutorial session approximately bi-weekly; \\
+    each session contained between five and twenty-five students
+    \item held weekly office hours; graded assignments and exams
+    \end{UnivDeptItem}
+
+    \begin{UnivDeptItem}{Computational Thinking}
+    {Fall 2013, Fall 2014}{with Dr.~Scott Rixner}{}
+    \item supervised a flipped-classroom environment; interacted with \\
+    approximately fifteen students approximately ten times a week
+    \item held weekly office hours; graded assignments and exams
+    \end{UnivDeptItem}
+
+  }{
+    \EventWithSubtitle
+    {Rice University}
+    {Spring 2013 to Spring 2016}
+    {Teaching Assistant / Lecturer}
+    {Houston, Texas}
+  }
+
+\end{rSection}
+
+\begin{rSection}{Extracurricular Activities}
+
+  \iftoggle{cv}{
+
+    \begin{rSubSection}{Rice University Queer Resource Center \normalfont(QRC)}{Houston, Texas}
+    {Co-Founder and President}{Fall 2014 to Spring 2016}
+    \item facilitated discussion among approximately twenty disparate committees
+    \item wrote a successful funding proposal to the Rice Undergraduate Student \\
+    Association and was approved by the student body to receive \$5,000
+    \item headed the Sexual Assault Committee, worked to update Ally Training, \\
+    worked to hire a part-time staff person to support the QRC, investigated \\
+    founding a queer support group, and created the QRC's website
+    \end{rSubSection}
+
+    % TODO: make a conferences section (after going to another conference)
+    \begin{rSubSection}{Out for Undergrad Technology Conference}{San Francisco, California}
+    {Student Participant (selected by admissions committee)}{25-27 September 2015}
+    \item attended OUTC: a non-profit conference dedicated to helping \\ 
+    high-achieving LGBTQ undergraduates in technologically-relevant \\
+    STEM fields reach their full potential in their careers
+    \end{rSubSection}
+
+    \EventWithSubtitle
+    {Sid Richardson College Academic Fellows Program}
+    {Fall 2014 to Spring 2016}
+    {Fellow}
+    {Houston, Texas}
+
+    \EventWithSubtitle
+    {Rice University Peer Academic Advisor Program}
+    {Spring 2013 to Spring 2016}
+    {Advisor}
+    {Houston, Texas}
+
+    \EventWithSubtitle
+    {Rice University Student Ambassador Program}
+    {Spring 2013 to Spring 2016}
+    {Ambassador}
+    {Houston, Texas}
+
+  }{
+    \EventWithSubtitle
+    {Rice University Queer Resource Center}
+    {Fall 2014 to Spring 2016}
+    {Co-Founder / First President}
+    {Houston, Texas}
+  }
+
+\end{rSection}
 
 \iftoggle{cv}{
 
-\begin{rSection}{Miscellaneous Information}
+  \begin{rSection}{Awards and Honors}
 
-Citizenship: USA
+  \Event{Sid Richardson Athenian Award}{Spring 2016} \\
+  \Event{Rice Alumni Pride Award}{Fall 2015} \\
+  \Event{President's Honor Roll}{Fall 2014, Fall 2015} \\
+  \Event{John and Harriet Millington Scholarship}{Fall 2014, Fall 2015} \\
+  \Event{Lon Wilson Service Award}{Spring 2015} \\
+  \Event{Genevieve Parkhill Lykes Scholarship}{Fall 2014} \\
+  \Event{Bracht-Verlander Scholarship}{Fall 2012} \\
+  \Event{National Merit Quarterfinalist}{Spring 2012} \\
+  \Event{AP Scholar with Honor}{Spring 2012} \\
+  \Event{National Honor Society}{2011 to 2012}
 
-\end{rSection}
+  \end{rSection}
+
+  \begin{rSection}{Standardized Test Scores}
+
+  \begin{rSubSection}{GRE}{November 2015}{}{}
+  \item Quantitative: \tab{$164/170$} \tab{(\nth{88} percentile)}
+  \item Verbal: \tab{} \tab{$161/170$} \tab{(\nth{87} percentile)}
+  \item Writing: \tab{} \tab{$4.5/6.0$} \tab{(\nth{80} percentile)}
+  \end{rSubSection}
+
+  \begin{rSubSection}{SAT}{October 2011}{}{}
+  \item Mathematics: \tab{$750/800$} \tab{(\nth{97} percentile)}
+  \item Reading: \tab{} \tab{$790/800$} \tab{(\nth{99} percentile)}
+  \item Writing: \tab{} \tab{$760/800$} \tab{(\nth{99} percentile)}
+  \end{rSubSection}
+
+  \end{rSection}
+
+  \begin{rSection}{Miscellaneous Information}
+
+  Citizenship: USA
+
+  \end{rSection}
 
 }
-
-
-
-
 
 \end{document}

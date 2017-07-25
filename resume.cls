@@ -79,7 +79,8 @@
     \hfil\emph{\large \CV}\newline\newline\nameskip
     \hfil{\namesize\bf \@name}\newline
   }{
-    \hfil{\namesize\bf \@name}\nameskip\newline
+    % \hfil{\namesize\bf \@name}\nameskip\newline
+    \hfil{\namesize\@name}\nameskip\newline
   }
 }
 
@@ -97,7 +98,6 @@
     lmargin    = 0.75 in,
     rmargin    = 0.75 in,
     bmargin    = 0.75 in,
-    headheight = 8.00 in,
     headsep    = 0.25 in
 }
 
@@ -105,7 +105,9 @@
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
+
 \fancyhead[R]{\emph{\@name, \CV, Page \thepage}}
+% \fancyhead[R]{\underline{\emph{\@name, \CV, Page \thepage}}}
 % \fancyhead[R]{\underline{\@name, \emph{\CV}, Page \thepage}}
 
 % Print the header
@@ -130,7 +132,8 @@
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
   \sectionskip
-  {\bf #1} % Section title
+  % {\bf #1} % Section title
+  {\emph{#1}} % Section title
   \sectionlineskip
   \hrule % Horizontal line
   \sectionskip
@@ -148,9 +151,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % bold on the left, emph on the right
-\newcommand{\BoldEmph}[2]{{\bf#1}\hfill{\em#2}}
+% \newcommand{\BoldEmph}[2]{{\bf#1}\hfill{\em#2}}
 % normal on the left, emph on the right
-\newcommand{\NormalEmph}[2]{{#1}\hfill{\em#2}}
+% \newcommand{\NormalEmph}[2]{{#1}\hfill{\em#2}}
+% NEW: removed emph from right sides
+\newcommand{\BoldEmph}[2]{{\bf#1}\hfill{#2}}
+\newcommand{\NormalEmph}[2]{{#1}\hfill{#2}}
 
 % bold on top left, normal on bottom right, emph on right
 \newcommand{\FourTitle}[4]{%
@@ -163,10 +169,14 @@
 \newenvironment{rSubSection}[4]{ % 4 input arguments
   \FourTitle{#1}{#2}{#3}{#4}\smallskip
   \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-  \itemsep -0.5em \vspace{-0.75em} % Compress items in list together for aesthetics
+  \itemsep -0.5em
+  \vspace{-.75em} % Compress items in list together for aesthetics
+  % USED TO BE: both ON, -.75
+  % TODO: which is better???
+  % ANSWER: the way it was (lol)
 }{
   \end{list}
-  \vspace{0.5em} % Some space after the list of bullet points
+  % \vspace{0.5em} % Some space after the list of bullet points
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -178,13 +188,17 @@
 
 \newcommand{\Event}[2]{\NormalEmph{#1}{#2}}
 \newcommand{\Thing}[1]{\NormalEmph{#1}{  }}
+\newcommand{\bfEvent}[2]{\BoldEmph{#1}{#2}}
+\newcommand{\bfThing}[1]{\BoldEmph{#1}{  }}
 
 \newcommand{\UniversityTitle}[2]{%
-\BoldEmph{#1}{#2}}
+%\BoldEmph{#1}{#2}}
+\NormalEmph{#1}{#2}}
 
 \newcommand{\DepartmentTitle}[1]{%
 \begin{changemargin}{1.5em}{0em}%
-\BoldEmph{#1}{}%
+%\BoldEmph{#1}{}%
+\NormalEmph{#1}{}%
 \end{changemargin}}
 
 \newcommand{\BeginUnivEvents}{%
