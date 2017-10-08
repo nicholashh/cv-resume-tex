@@ -1,7 +1,7 @@
 
 % project version:    3.0
 % project started:    2012-09-10
-% this file created:  2017-07-30
+% this file created:  2017-09-13
 % this file archived: ?
 
 \documentclass{resume}
@@ -39,34 +39,36 @@ www.nicholashh.com \\
   {Brandeis University}
   {Fall 2017 \bf to Spring 2019}
   {\bf Master of Arts \normalfont in Philosophy}
-  {Boston, Massachusetts}
+  {Boston, Massachusetts}%
   \iftoggle{cv}{
     \item GPA: TBD$/4.00$
     \item Thesis: TBD
     \end{rSubSection}
   }{}
 
-  \iftoggle{cv}{
+  % \iftoggle{cv}{
     \begin{rSubSection}
-  }{
-    \EventWithSubtitle
-  }
+  % }{
+  %   \EventWithSubtitle
+  % }
   {Rice University\normalfont, Sid Richardson College}
   {Fall 2012 to Spring 2016}
   {\bf Bachelor of Science \normalfont in Computer Science}
-  {Houston, Texas}
+  {Houston, Texas}%
   \iftoggle{cv}{
     \item Overall GPA:~$3.61/4.00$
     \item Major GPA:~$3.68/4.00$
-    \end{rSubSection}
-  }{}
+  }{
+    \item GPA:~$3.61/4.00$ (Major GPA:~$3.68/4.00$)
+  }
+  \end{rSubSection}
 
   \iftoggle{cv}{
     \begin{rSubSection}
     {\normalfont Southridge High School}
     {Fall 2010 to Spring 2012}
     {International Baccalaureate Diploma}
-    {Portland, Oregon}
+    {Portland, Oregon}%
     \item GPA:~$3.97/4.00$
     \end{rSubSection}
   }{}
@@ -81,9 +83,10 @@ www.nicholashh.com \\
     \PHIL
 
       \BeginDeptEvents
-      \Event{Marx, Nietzsche, and Twentieth-Century Radicalism}{Fall 2017} \\
       \Event{Hegel:~Self-Consciousness and Freedom in the Phenomenology of Spirit}{Fall 2017} \\
-      \Event{Philosophy of Mathematics}{Fall 2017} \\
+      \Event{Marx, Nietzsche, and Twentieth-Century [German] Radicalism}{Fall 2017} \\
+      \Event{[French] Existentialism}{Fall 2017} \\
+      \Event{Ethics and Emotions}{Fall 2017} \\
       \Event{Graduate Proseminar}{Fall 2017}
       \EndDeptEvents
 
@@ -122,7 +125,7 @@ www.nicholashh.com \\
 
 \end{rSection}}{}
 
-\begin{rSection}{Professional History}
+\begin{rSection}{Professional History:~Computer Science}
 
   \iftoggle{cv}{
     \begin{rSubSection}
@@ -132,138 +135,52 @@ www.nicholashh.com \\
   {Dr.~Timothy Schroeder\normalfont, Rice University, Philosophy}
   {Summer 2016 \ToPresent}
   {Product Manager / Developer (database + desktop website)}
-  {online + Houston, Texas}
+  {online + Houston, Texas}%
   \iftoggle{cv}{
     \item developing an open-source website and accompanying database \\
     of assertions and arguments made by professional philosophers
     \end{rSubSection}
   }{}
-  
-  \EventWithSubtitle
-  {Shepherd Artisan Coffee}
-  {October 2016}
-  {Barista (in training)}
-  {Miami, Florida}
-
-  \EventWithSubtitle
-  {Jones McClure Publishing}
-  {Summer 2013}
-  {Software Development Intern (mobile website)}
-  {Houston, Texas}
-
-  \EventWithSubtitle
-  {Tualatin Hills Park \& Recreation District}
-  {Summer 2010 to Summer 2012}
-  {Lifeguard / Swim Instructor / Swim Coach}
-  {Portland, Oregon}
-
-\end{rSection}
-
-\begin{rSection}{Academic Research Experience}
 
   \iftoggle{cv}{
-    \Rice
-    \COMP
-    % \BeginDeptEvents
+    \begin{rSubSection}
+  }{
+    \EventWithSubtitle
+  }
+  {The OpenDota Project}
+  {Fall 2014 \ToPresent}
+  {Co-Founder / DevOps / PR (www.opendota.com)}
+  {online}%
+  \iftoggle{cv}{
+    \item involved in the creative process behind OpenDota
+    \item responsible for writing and editing blog posts
+    \item trained in site maintenance and administration
+    \end{rSubSection}
   }{}
 
   \iftoggle{cv}{
-    % \Event{\bf Dr.~Swarat Chaudhuri\normalfont:~program
-    %     verification + fairness}{Summer 2015 to Fall 2015}
-    % \EventWithSubtitle
-    % {Dr.~Swarat Chaudhuri}
-    % {Summer 2015 to Fall 2015}
-    % {program verification + fairness}
-    % {}
-    \begin{UnivDeptItem}{Dr.~Swarat Chaudhuri}{Summer 2015 to Fall 2015}{}{}
-    \item investigated a computational definition of ethical fairness \\
-    (hiring practices sensitive to personal attributes like race, etc)
-    \item investigated formal methods techniques to ensure fairness \\
-    in probabilistic or machine learning classification algorithms
-    \item investigated post hoc verification of fairness of a classification result
-    \end{UnivDeptItem}
+    \begin{rSubSection}
   }{
     \EventWithSubtitle
-    {Dr.~Swarat Chaudhuri\normalfont, Rice University, Computer Science}
-    {Summer 2015 to Fall 2015}
-    {Research Assistant (program verification + fairness)}
-    {Houston, Texas}
   }
-
+  {Jones McClure Publishing}
+  {Summer 2013}
+  {Software Development Intern (mobile website)}
+  {Houston, Texas}%
   \iftoggle{cv}{
-    % \Event{\bf Dr.~Vivek Sarkar\normalfont:~parallel
-    %     computation suite development}{Spring 2015}
-    % \EventWithSubtitle
-    % {Dr.~Vivek Sarkar}
-    % {Spring 2015}
-    % {parallel computation suite development}
-    % {}
-    \begin{UnivDeptItem}{Dr.~Vivek Sarkar}{Spring 2015}{}{}
-    \item investigated trade-offs among parallel \texttt{map} implementations
-    \item optimized the parallel computing suite Habanero Java
-    \end{UnivDeptItem}
-  }{
-    \EventWithSubtitle
-    {Dr.~Vivek Sarkar\normalfont, Rice University, Computer Science}
-    {Spring 2015}
-    {Research Assistant (parallel computation suite development)}
-    {Houston, Texas}
-  }
-
-  \iftoggle{cv}{
-      % \Event{\bf Dr.~Luay Nakhleh\normalfont:~bioinformatics
-      %     + graph theory}{Summer 2014}
-    % \EventWithSubtitle
-    % {Dr.~Luay Nakhleh}
-    % {Summer 2014}
-    % {bioinformatics + graph theory}
-    % {}
-    \begin{UnivDeptItem}{Dr.~Luay Nakhleh}{Summer 2014}{}{}
-    \item researched introgressed genes in the \emph{mus musculus} genome
-    \item applied clustering algorithms to protein-protein interaction \\
-    network data to confirm previously identified genome patterns
-    \item identified previously unknown introgressed gene candidates
-    \end{UnivDeptItem}
-  }{
-    \EventWithSubtitle
-    {Dr.~Luay Nakhleh\normalfont, Rice University, Computer Science}
-    {Summer 2014}
-    {Research Assistant (bioinformatics + graph theory)}
-    {Houston, Texas}
-  }
-
-  \iftoggle{cv}{
-      % \Event{\bf Dr.~Devika Subramanian\normalfont:~machine
-      %     learning + medicine}{Spring 2013}
-    % \EventWithSubtitle
-    % {Dr.~Devika Subramanian}
-    % {Spring 2013}
-    % {machine learning + medicine}
-    % {}
-    \begin{UnivDeptItem}{Dr.~Devika Subramanian}{Spring 2013}{}{}
-    \item applied machine learning algorithms to medical data
-    \end{UnivDeptItem}
-  }{
-    \EventWithSubtitle
-    {Dr.~Devika Subramanian\normalfont, Rice University, Computer Science}
-    {Spring 2013}
-    {Research Assistant (machine learning + medicine)}
-    {Houston, Texas}
-  }
-
-  % \iftoggle{cv}{
-  %   \EndDeptEvents
-  % }{}
+    \item created a mobile version of the existing desktop website
+    \end{rSubSection}
+  }{}
 
 \end{rSection}
 
-\begin{rSection}{Teaching Experience}
+\begin{rSection}{Professional History:~Teaching}
 
   \EventWithSubtitle
   {Varsity Tutors}
   {Fall 2016 to Summer 2017}
   {Tutor (high school + undergraduate)}
-  {online + Miami, Florida}
+  {online + Miami, Florida}%
 
   \iftoggle{cv}{
 
@@ -317,7 +234,140 @@ www.nicholashh.com \\
     {Rice University}
     {Spring 2013 to Spring 2016}
     {Teaching Assistant / Lecturer}
-    {Houston, Texas}
+    {Houston, Texas}%
+  }
+
+\end{rSection}
+
+% \begin{rSection}{Professional History:~Other}
+  
+%   \EventWithSubtitle
+%   {Shepherd Artisan Coffee}
+%   {October 2016}
+%   {Barista (in training)}
+%   {Miami, Florida}%
+
+%   \EventWithSubtitle
+%   {Tualatin Hills Park \& Recreation District}
+%   {Summer 2010 to Summer 2012}
+%   {Lifeguard / Swim Instructor / Swim Coach}
+%   {Portland, Oregon}%
+
+% \end{rSection}
+
+\begin{rSection}{Academic Research Experience}
+
+  \iftoggle{cv}{
+    \Rice
+    \COMP
+  }{
+    \begin{rSubSection}
+    {\normalfont Rice University, Computer Science}
+    {}
+    {}
+    {}
+  }
+
+  \iftoggle{cv}{
+    % \Event{\bf Dr.~Swarat Chaudhuri\normalfont:~program
+    %     verification + fairness}{Summer 2015 to Fall 2015}
+    % \EventWithSubtitle
+    % {Dr.~Swarat Chaudhuri}
+    % {Summer 2015 to Fall 2015}
+    % {program verification + fairness}
+    % {}
+    \begin{UnivDeptItem}{Dr.~Swarat Chaudhuri}{Summer 2015 to Fall 2015}{}{}
+    \item investigated a computational definition of ethical fairness \\
+    (hiring practices sensitive to personal attributes like race, etc)
+    \item investigated formal methods techniques to ensure fairness \\
+    in probabilistic or machine learning classification algorithms
+    \item investigated post hoc verification of fairness of a classification result
+    \end{UnivDeptItem}
+  }{
+    % \EventWithSubtitle
+    % {Dr.~Swarat Chaudhuri\normalfont, Rice University, Computer Science}
+    % {Summer 2015 to Fall 2015}
+    % {Research Assistant (program verification + fairness)}
+    % {Houston, Texas}
+    \item {\bf Dr.~Swarat Chaudhuri}
+    (program verification + fairness)
+    \hfill Summer 2015 to Fall 2015%
+  }
+
+  \iftoggle{cv}{
+    % \Event{\bf Dr.~Vivek Sarkar\normalfont:~parallel
+    %     computation suite development}{Spring 2015}
+    % \EventWithSubtitle
+    % {Dr.~Vivek Sarkar}
+    % {Spring 2015}
+    % {parallel computation suite development}
+    % {}
+    \begin{UnivDeptItem}{Dr.~Vivek Sarkar}{Spring 2015}{}{}
+    \item investigated trade-offs among parallel \texttt{map} implementations
+    \item optimized the parallel computing suite Habanero Java
+    \end{UnivDeptItem}
+  }{
+    % \EventWithSubtitle
+    % {Dr.~Vivek Sarkar\normalfont, Rice University, Computer Science}
+    % {Spring 2015}
+    % {Research Assistant (parallel computation suite development)}
+    % {Houston, Texas}
+    \item {\bf Dr.~Vivek Sarkar}
+    (parallel computation suite development)
+    \hfill Spring 2015%
+  }
+
+  \iftoggle{cv}{
+      % \Event{\bf Dr.~Luay Nakhleh\normalfont:~bioinformatics
+      %     + graph theory}{Summer 2014}
+    % \EventWithSubtitle
+    % {Dr.~Luay Nakhleh}
+    % {Summer 2014}
+    % {bioinformatics + graph theory}
+    % {}
+    \begin{UnivDeptItem}{Dr.~Luay Nakhleh}{Summer 2014}{}{}
+    \item researched introgressed genes in the \emph{mus musculus} genome
+    \item applied clustering algorithms to protein-protein interaction \\
+    network data to confirm previously identified genome patterns
+    \item identified previously unknown introgressed gene candidates
+    \end{UnivDeptItem}
+  }{
+    % \EventWithSubtitle
+    % {Dr.~Luay Nakhleh\normalfont, Rice University, Computer Science}
+    % {Summer 2014}
+    % {Research Assistant (bioinformatics + graph theory)}
+    % {Houston, Texas}
+    \item {\bf Dr.~Luay Nakhleh}
+    (bioinformatics + graph theory)
+    \hfill Summer 2014%
+  }
+
+  \iftoggle{cv}{
+      % \Event{\bf Dr.~Devika Subramanian\normalfont:~machine
+      %     learning + medicine}{Spring 2013}
+    % \EventWithSubtitle
+    % {Dr.~Devika Subramanian}
+    % {Spring 2013}
+    % {machine learning + medicine}
+    % {}
+    \begin{UnivDeptItem}{Dr.~Devika Subramanian}{Spring 2013}{}{}
+    \item applied machine learning algorithms to medical data
+    \end{UnivDeptItem}
+  }{
+    % \EventWithSubtitle
+    % {Dr.~Devika Subramanian\normalfont, Rice University, Computer Science}
+    % {Spring 2013}
+    % {Research Assistant (machine learning + medicine)}
+    % {Houston, Texas}
+    \item {\bf Dr.~Devika Subramanian}
+    (machine learning + medicine)
+    \hfill Spring 2013%
+  }
+
+  \iftoggle{cv}{
+    % \EndDeptEvents
+  }{
+    \end{rSubSection}
   }
 
 \end{rSection}
@@ -362,13 +412,23 @@ www.nicholashh.com \\
     {Ambassador}
     {Houston, Texas}
 
-  }{
+}{
+
     \EventWithSubtitle
     {Rice University Queer Resource Center}
     {Fall 2014 to Spring 2016}
     {Co-Founder / First President}
     {Houston, Texas}
-  }
+
+  \end{rSection}
+
+  \begin{rSection}{Additional Information}
+
+    For additional details about the information listed above, as well as information \\
+    about my pertinent coursework, awards and honors, standardized test scores, etc, \\
+    my full CV (Curriculum Vitae) is available online at \{www.nicholashh.com/cv\}.
+
+}
 
 \end{rSection}
 
