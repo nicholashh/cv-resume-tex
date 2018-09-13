@@ -27,8 +27,8 @@
 \toggletrue{cv} % if so, compile the doc to a cv (more information)
 \else \togglefalse{cv} \fi % if not, compile to a resume (less information)
 
-\iftoggle{cv}{\setlength{\footskip}{4\baselineskip}} % CVs need extra space for page numbers
-{\pagestyle{empty}} % Resumes don't have page numbers (only one page)
+% \iftoggle{cv}{\setlength{\footskip}{4\baselineskip}} % CVs need extra space for page numbers
+% {\pagestyle{empty}} % Resumes don't have page numbers (only one page)
 
 \usepackage[super]{nth} % Required for ifthenelse statements
 
@@ -45,68 +45,76 @@
 \def \addressSep {$\diamond$} % Set default address separator to a diamond
 
 % One, two or three address lines can be specified 
-\let \@addressone \relax
-\let \@addresstwo \relax
-\let \@addressthree \relax
+% \let \@addressone \relax
+% \let \@addresstwo \relax
+% \let \@addressthree \relax
 
 % \address command can be used to set the first, second, and third address (last 2 optional)
-\def \address #1{
-  \@ifundefined{@addresstwo}{
-    \def \@addresstwo {#1}
-  }{
-  \@ifundefined{@addressthree}{
-  \def \@addressthree {#1}
-  }{
-     \def \@addressone {#1}
-  }}
-}
+% \def \address #1{
+%   \@ifundefined{@addresstwo}{
+%     \def \@addresstwo {#1}
+%   }{
+%   \@ifundefined{@addressthree}{
+%   \def \@addressthree {#1}
+%   }{
+%      \def \@addressone {#1}
+%   }}
+% }
 
 % \printaddress is used to style an address line (given as input)
-\def \printaddress #1{
-  \begingroup
-    \def \\ {\addressSep\ }
-    \centerline{#1}
-  \endgroup
-  \par
-  \addressskip
-}
+% \def \printaddress #1{
+%   \begingroup
+%     \def \\ {\addressSep\ }
+%     % \centerline{#1}
+%     #1
+%   \endgroup
+%   % \par
+%   % \addressskip
+% }
 
 \def\CV{Curriculum Vitae}
 
-% \printname is used to print the name as a page header
-\def \printname {
-  \iftoggle{cv}{
-    \hfil\emph{\large \CV}\newline\newline\nameskip
-    \hfil{\namesize\bf \@name}\newline
-  }{
-    % \hfil{\namesize\bf \@name}\nameskip\newline
-    \hfil{\namesize\@name}\nameskip\newline
-  }
-}
-
 % The below commands define the whitespace after certain things in the document
-\def\namesize{\LARGE} % Size of the name at the top of the document
+% \def\namesize{\LARGE} % Size of the name at the top of the document
 \def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
 \def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
 \def\nameskip{\bigskip} % The space after your name at the top
 \def\sectionskip{\medskip} % The space after the heading section
 
 % change the margins of the paper
+% \newlength\x
+% \addtolength{\x}{1.00in}
+% \addtolength{\x}{1em}
+% \showthe\x
 \usepackage{geometry}
 \geometry{
-    tmargin    = 1.00 in,
-    lmargin    = 0.75 in,
-    rmargin    = 0.75 in,
-    bmargin    = 0.75 in,
-    headsep    = 0.25 in
+% tmargin     = 1.25 in,
+tmargin     = 1.00 in,
+% tmargin     = \x,
+lmargin    = 0.75 in,
+rmargin    = 0.75 in,
+bmargin    = 0.75 in,
+headsep    = 0.25 in
 }
+% \geometry{
+% tmargin     = 1.25 in,
+% % tmargin     = 1.00 in,
+% lmargin     = 1.00 in,
+% rmargin     = 1.00 in,
+% bmargin     = 1.00 in,
+% % headheight  = 0.50 in,
+% % headsep     = 0.25 in,
+% footnotesep = 0.25 in
+% }
 
 \usepackage{fancyhdr} % define a header across the top of the page
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 
-\fancyhead[R]{\emph{\@name, \CV, Page \thepage}}
+\usepackage{lastpage}
+\fancyhead[R]{\emph{\@name, \CV, Page \thepage~of~\pageref{LastPage}}}
+% \fancyhead[R]{\emph{\@name, \CV, Page \thepage}}
 % \fancyhead[R]{\underline{\emph{\@name, \CV, Page \thepage}}}
 % \fancyhead[R]{\underline{\@name, \emph{\CV}, Page \thepage}}
 
@@ -116,13 +124,50 @@
   \ori@document  % Begin document
   \thispagestyle{empty} % Suppress the header on this (the first) page
   \vspace*{-.75in} % Move the content up to where the header usually is
-  \printname % Print the name specified with \name
-  \@ifundefined{@addressone}{}{ % Print the first address if specified
-    \printaddress{\@addressone}}
-  \@ifundefined{@addresstwo}{}{ % Print the second address if specified
-    \printaddress{\@addresstwo}}
-     \@ifundefined{@addressthree}{}{ % Print the third address if specified
-    \printaddress{\@addressthree}}
+  \begin{center}
+    \iftoggle{cv}{
+
+      \begin{large}
+      \emph{ \CV}
+      \vspace*{-0.5ex}
+      \end{large}
+
+      \vspace*{0.25in}
+      
+      % \hfil\emph{\large \CV}\newline\newline\vspace*{5em}
+      % \hfil{\namesize\bf \@name}\newline
+    }{
+      % \hfil{\namesize\bf \@name}\nameskip\newline
+      % \hfil{\namesize\@name}\nameskip\newline
+    }
+
+    \begin{LARGE}
+    {\bf \@name}
+    \vspace*{-1ex}
+    \end{LARGE}
+
+    \vspace*{0.25in}
+
+    % \printname % Print the name specified with \name
+    % \vspace*{0.2in}
+    % \@ifundefined{@addressone}{}{ % Print the first address if specified
+    %   \printaddress{\@addressone}}
+    % \@ifundefined{@addresstwo}{}{ % Print the second address if specified
+    %   \printaddress{\@addresstwo}}
+    % \@ifundefined{@addressthree}{}{ % Print the third address if specified
+    %   \printaddress{\@addressthree}}
+
+    \iftoggle{cv}{
+      \@title
+    }{
+      \begingroup
+        \def \\ {\addressSep\ }
+        \@title
+      \endgroup
+    }
+
+  \end{center}
+  \vspace*{0.1in}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -130,21 +175,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Defines the rSection environment for the large sections within the CV
-\newenvironment{rSection}[1]{ % 1 input argument - section name
-  \sectionskip
+\newenvironment{rSection}[1]{% 1 input argument - section name
+  \sectionskip%
   % {\bf #1} % Section title
-  {\emph{#1}} % Section title
-  \sectionlineskip
-  \hrule % Horizontal line
-  \sectionskip
-  \begin{list}{}{ % List for each individual item in the section
-    \setlength{\leftmargin}{1.5em} % Margin within the section
-  }
-  \par\nobreak
-  \item[]
-}{
-  \end{list}
-}
+  % {\emph{#1}}% Section title
+  {\emph{\textbf{#1}}}% Section title
+  \sectionlineskip%
+  \hrule% Horizontal line
+  \sectionskip%
+  \begin{list}{}{% List for each individual item in the section
+    \setlength{\leftmargin}{1.5em}% Margin within the section
+  }%
+  \par\nobreak%
+  \item[]%
+}{%
+  \end{list}%
+}%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	SUB-SECTION FORMATTING
@@ -160,24 +206,24 @@
 
 % bold on top left, normal on bottom right, emph on right
 \newcommand{\FourTitle}[4]{%
-  \ifthenelse{\equal{#1}{}}{}{\BoldEmph{#1}{#2}% maybe print first two
+  \ifthenelse{\equal{#1}{}}{}{\BoldEmph{#1}{#2}\vspace{.1em}% maybe print first two
   \ifthenelse{\equal{#3}{}}{}{\\}}% put in the line break if printing all four
   \ifthenelse{\equal{#3}{}}{}{\NormalEmph{#3}{#4}}}% maybe print second two
 
 \newcommand{\EventWithSubtitle}[4]{\FourTitle{#1}{#2}{#3}{#4}}
 
-\newenvironment{rSubSection}[4]{ % 4 input arguments
-  \FourTitle{#1}{#2}{#3}{#4}\smallskip
-  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-  \itemsep -0.5em
-  \vspace{-.75em} % Compress items in list together for aesthetics
+\newenvironment{rSubSection}[4]{% 4 input arguments
+  \FourTitle{#1}{#2}{#3}{#4}\vspace{.2em}%\smallskip%
+  \begin{list}{$\cdot$}{\leftmargin=0em}% \cdot used for bullets, no indentation
+  \itemsep-0.5em%
+  \vspace{-.75em}% Compress items in list together for aesthetics
   % USED TO BE: both ON, -.75
   % TODO: which is better???
   % ANSWER: the way it was (lol)
-}{
-  \end{list}
+}{%
+  \end{list}%
   % \vspace{0.5em} % Some space after the list of bullet points
-}
+}%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ( SUB * k )-SECTION FORMATTING
@@ -187,34 +233,34 @@
 \let\endchangemargin=\endlist
 
 \newcommand{\Event}[2]{\NormalEmph{#1}{#2}}
-\newcommand{\Thing}[1]{\NormalEmph{#1}{  }}
+\newcommand{\Thing}[1]{\NormalEmph{#1}{}}
 \newcommand{\bfEvent}[2]{\BoldEmph{#1}{#2}}
-\newcommand{\bfThing}[1]{\BoldEmph{#1}{  }}
+\newcommand{\bfThing}[1]{\BoldEmph{#1}{}}
 
 \newcommand{\UniversityTitle}[2]{%
 %\BoldEmph{#1}{#2}}
-\NormalEmph{#1}{#2}}
+\NormalEmph{\underline{#1}}{#2}}%
 
 \newcommand{\DepartmentTitle}[1]{%
 \begin{changemargin}{1.5em}{0em}%
 %\BoldEmph{#1}{}%
-\NormalEmph{#1}{}%
-\end{changemargin}}
+\NormalEmph{\underline{#1}}{}%
+\end{changemargin}}%
 
 \newcommand{\BeginUnivEvents}{%
-\begin{changemargin}{1.5em}{0em}}
+\begin{changemargin}{1.5em}{0em}}%
 \newcommand{\EndUnivEvents}{%
-\end{changemargin}}
+\end{changemargin}}%
 
 \newcommand{\BeginDeptEvents}{%
-\begin{changemargin}{3.0em}{0em}}
+\begin{changemargin}{3.0em}{0em}}%
 \newcommand{\EndDeptEvents}{%
-\end{changemargin}}
+\end{changemargin}}%
 
-\newenvironment{UnivDeptItem}[4]{
-  \begin{changemargin}{3.0em}{0em}
-  \begin{rSubSection}{#1}{#2}{#3}{#4}
-}{
-  \end{rSubSection}
-  \end{changemargin}
-}
+\newenvironment{UnivDeptItem}[4]{%
+  \begin{changemargin}{3.0em}{0em}%
+  \begin{rSubSection}{#1}{#2}{#3}{#4}%
+}{%
+  \end{rSubSection}%
+  \end{changemargin}%
+}%
