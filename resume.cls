@@ -113,7 +113,8 @@ headsep    = 0.25 in
 \renewcommand{\headrulewidth}{0pt}
 
 \usepackage{lastpage}
-\fancyhead[R]{\emph{\@name, \CV, Page \thepage~of~\pageref{LastPage}}}
+\fancyhead[R]{\emph{\@name, \CV, Page \thepage/\pageref{LastPage}}}
+% \fancyhead[R]{\emph{\@name~|~\CV~|~Page \thepage/\pageref{LastPage}}}
 % \fancyhead[R]{\emph{\@name, \CV, Page \thepage}}
 % \fancyhead[R]{\underline{\emph{\@name, \CV, Page \thepage}}}
 % \fancyhead[R]{\underline{\@name, \emph{\CV}, Page \thepage}}
