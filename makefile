@@ -6,13 +6,13 @@ all: resume cv card
 resume:
 	xelatex -file-line-error \
 	--jobname=$(name).resume \
-	"\input{source.tex}"
+	"\input{cv.tex}"
 r: resume
 
 cv:
 	xelatex -file-line-error \
 	--jobname=$(name).cv \
-	"\def\iscv{1} \input{source.tex}"
+	"\def\iscv{1} \input{cv.tex}"
 
 card:
 	xelatex -file-line-error \
