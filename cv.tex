@@ -108,7 +108,8 @@
     {\normalfont Southridge High School}
     {Portland, Oregon}
     % {International Baccalaureate Diploma}
-    {IB Diploma}
+    % {IB Diploma}
+    {IB Diploma~($37/45$)}
     {Fall 2010 to Spring 2012}%
     % {Fall 2008 to Spring 2012}%
     % \item GPA:~$3.97/4.00$
@@ -404,7 +405,11 @@
 
 % \iftoggle{cv}{\pagebreak}{}
 % \begin{rSection}{Volunteer Work / Extracurricular Activities}
-\begin{rSection}{Volunteer Work}
+\iftoggle{cv}{%
+\begin{rSection}{Volunteer Work / Extracurriculars}%
+}{%
+\begin{rSection}{Volunteer Work}%
+}%
 
   \iftoggle{cv}{
     \begin{rSubSection}
@@ -492,7 +497,7 @@
     {Southridge High School Swim Team}
     {Portland, Oregon}
     {Co-Capitan}
-    {Winter 2011}%
+    {2011-2012}%
 
   }{}
 
