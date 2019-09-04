@@ -1,15 +1,19 @@
 
 \documentclass{resume}
 
+\newcommand{\PHIL}[0]{\DepartmentTitle{Philosophy Department}}
 \newcommand{\COMP}[0]{\DepartmentTitle{Computer Science Department}}
 \newcommand{\CAAM}[0]{\DepartmentTitle{Applied Math Department}}
-\newcommand{\PHIL}[0]{\DepartmentTitle{Philosophy Department}}
 \newcommand{\other}[0]{\DepartmentTitle{other departments}}
+\newcommand{\IB}[0]{\DepartmentTitle{IB Coursework}{}}
+\newcommand{\AP}[0]{\DepartmentTitle{AP Coursework}{}}
 
+\newcommand{\Southridge}[0]{\UniversityTitle{Southridge High School}{}}
 \newcommand{\Rice}[0]{\UniversityTitle{Rice University}{}}
 \newcommand{\Brandeis}[0]{\UniversityTitle{Brandeis University}{}}
+\newcommand{\UCR}[0]{\UniversityTitle{University of California at Riverside}{}}
 
-\newcommand{\ToPresent}[0]{to \textbf{present}}
+\newcommand{\ToPresent}[0]{\textbf{to present}}
 
 
 
@@ -18,9 +22,10 @@
 \name{Nicholas Hanson-Holtry}
 
 \title{%
-nicholas.hanson.holtry@gmail.com \\
-www.nicholashh.com \\
-503.360.3148}
+\texttt{\{nicholas.hanson.holtry@gmail.com\}}\\
+\texttt{\{http://www.nicholashh.com\}}%\\
+% \texttt{\{503.360.3148\}}}
+}
 
 \begin{document}
 
@@ -35,55 +40,79 @@ www.nicholashh.com \\
 \begin{rSection}{Education}
 
   % \begin{rSubSection}
+  \EventWithSubtitle
   % {??? \normalfont University}
-  % {??? to \bf ???}
+  % {\normalfont University of California at Riverside}
+  {\normalfont University of California at Riverside}
+  {Los Angeles, California}
   % {\bf Doctor \normalfont of Philosophy in \bf Philosophy}
-  % % {Philosophy MA}
-  % {???, ???}%
+  % {\bf Ph.D \normalfont in \bf Philosophy}
+  {\bf PhD in Philosophy}
+  % {Philosophy MA}
+  % {Fall 2017 \ToPresent}%
+  {Fall 2019 \ToPresent}%
   % \iftoggle{cv}{
-  %   % \item ?
+  %   \item ?
   % }{
-  %   % \item ?
+  %   \item ?
   % }
   % \end{rSubSection}
 
-  \begin{rSubSection}
-  {Brandeis \normalfont University}
-  {Boston, Massachusetts}
-  {\bf Master \normalfont of Arts in \bf Philosophy}
-  {Fall 2017 to \bf{Spring 2019}}%
   \iftoggle{cv}{
-    \item Thesis:~``Reasoning First Rationality''
-    \item Advisors:~Dr.~Berislav Maru{\v s}i{\' c}, Dr.~Eli Hirsch
-    \item Philosophy GPA:~\tab{$4.00/4.00$}
-    \item Overall GPA:~\tab{$3.97/4.00$}
-  }{
-    \item GPA:~$3.97/4.00$
-  }
-  \end{rSubSection}
+    \begin{rSubSection}
+    % \EventWithSubtitle
+    % {Brandeis \normalfont University}
+    {\normalfont Brandeis University}
+    {Boston, Massachusetts}
+    % {\bf Master \normalfont of Arts in \bf Philosophy}
+    % {\bf M.A. \normalfont in \bf Philosophy}
+    {\bf MA in Philosophy}
+    {Fall 2017 to Spring 2019}%
+    \iftoggle{cv}{
+      \item Thesis:~``Reasoning First Rationality''
+      \item Advisors:~Dr.~Berislav Maru{\v s}i{\' c}, Dr.~Eli Hirsch
+      \item Philosophy GPA:~\tab{$4.00/4.00$}
+      \item Overall GPA:~\tab{$3.97/4.00$}
+    }{
+      \item GPA:~$3.97/4.00$
+    }
+    \end{rSubSection}
+  }{}
 
-  \begin{rSubSection}
-  {Rice \normalfont University~(SRC)}
+  \iftoggle{cv}{
+    \begin{rSubSection}
+  }{
+    \EventWithSubtitle
+  }
+  % {Rice \normalfont University~(SRC)}
+  {\normalfont Rice University~(SRC)}
   {Houston, Texas}
-  {\bf Bachelor \normalfont of Science in \bf Computer Science}
+  % {\bf Bachelor \normalfont of Science in \bf Computer Science}
+  % {\bf B.S. \normalfont in \bf Computer Science}
+  {\bf BS in Computer Science}
   {Fall 2012 to Spring 2016}%
   \iftoggle{cv}{
     \item Comp Sci GPA:~\tab{$3.68/4.00$}
     \item Overall GPA:~\tab{$3.61/4.00$}
-  }{
-    \item GPA:~$3.61/4.00$
+  }{%
+    % \item GPA:~$3.61/4.00$
   }
-  \end{rSubSection}
+  \iftoggle{cv}{
+    \end{rSubSection}
+  }{}%
 
-  % \iftoggle{cv}{
+  \iftoggle{cv}{
 
-  %   \begin{rSubSection}
-  %   {\normalfont Southridge High School}
-  %   {Fall 2008 to Spring 2012}
-  %   {International Baccalaureate Diploma}
-  %   {Portland, Oregon}%
-  %   \item GPA:~$3.97/4.00$
-  %   \end{rSubSection}
+    % \begin{rSubSection}
+    \EventWithSubtitle
+    {\normalfont Southridge High School}
+    {Portland, Oregon}
+    % {International Baccalaureate Diploma}
+    {IB Diploma}
+    {Fall 2010 to Spring 2012}%
+    % {Fall 2008 to Spring 2012}%
+    % \item GPA:~$3.97/4.00$
+    % \end{rSubSection}
 
   %   \EventWithSubtitle
   %   {\normalfont Summa South Middle School}
@@ -97,7 +126,7 @@ www.nicholashh.com \\
   %   {}
   %   {}
 
-  % }{}
+  }{}
 
 
 
@@ -105,205 +134,136 @@ www.nicholashh.com \\
 
 \end{rSection}
 
+
+
+
+
+% \iftoggle{cv}{\pagebreak}{}
+
 \iftoggle{cv}{
+  \begin{rSection}{Teaching Experience}
 
-  \begin{rSection}{Pertinent Coursework}
+    \iftoggle{cv}{
 
-    \Brandeis
+      \Brandeis
 
-      \PHIL
+        \PHIL
 
-        \BeginDeptEvents
-        \Event{Morality of Groups~\tab\tab{\emph{~~~~Graduate Seminar}}\tab\texttt{MS}\tab{?}}{\bf{Spring 2019}} \\
-        \Event{Philosophy of Mind~\tab\tab{\emph{~~~~Graduate Seminar}}\tab\texttt{JS}\tab{?}}{\bf{Spring 2019}} \\
-        \Event{Causation and Explanation~\tab\tab\tab\tab\texttt{JM}\tab{?}}{\bf{Spring 2019}} \\
-        \Event{Philosophy of Language~\tab\tab\tab\tab\tab\texttt{EH}\tab{?}}{\bf{Spring 2019}} \\
-        \Event{Aristotle~\tab\tab\tab\tab\tab\tab\tab\texttt{PY}\tab{?}}{\bf{Spring 2019}} \\
-        \Event{Biomedical Ethics~\tab\tab\tab\tab\tab\tab\texttt{EH}\tab{audit}}{\bf{Spring 2019}} \\
-        \Event{Infinity~\tab\tab\tab\tab\tab\tab\tab\texttt{PY}\tab{audit}}{\bf{Spring 2019}} \\
-        \Event{Rationality~\tab\tab\tab{\emph{~~~~Independent Study}}\tab\texttt{BM}\tab{\texttt{A}}}{Fall 2018} \\
-        \Event{Kant --- Pure Reason~\tab\tab\tab\tab\tab\texttt{KM}\tab{\texttt{A+}}}{Fall 2018} \\
-        \Event{Philosophy of Action~\tab\tab\tab\tab\tab\texttt{BM}\tab{?}}{Fall 2018} \\
-        \Event{Metaethics --- Parfit~\tab\tab\tab\tab\tab\texttt{EH}\tab{?}}{Fall 2018} \\
-        \Event{Hume --- Human Nature~\tab\tab\tab\tab\tab\texttt{JM}\tab{audit}}{Fall 2018} \\
-        \Event{Personal Identity~\tab\tab\tab\tab\tab\tab\texttt{EH}\tab{audit}}{Fall 2018} \\
-        \Event{Self-Knowledge~\tab\tab\tab\tab\tab\tab\texttt{BM}\tab{audit}}{Fall 2018} \\
-        \Event{Neuroethics~\tab\tab\tab\tab\tab\tab\tab\texttt{BC}\tab{audit}}{Fall 2018} \\
-        \Event{External World Skepticism~{\emph{~~~~Graduate Seminar}}\tab\texttt{BM}\tab{\texttt{A}}}{Spring 2018} \\
-        \Event{Space and Time~\tab\tab\tab\tab\tab\tab\texttt{EH}\tab{\texttt{A}}}{Spring 2018} \\
-        \Event{Mathematical Logic~\tab\tab\tab\tab\tab\tab\texttt{JM}\tab{\texttt{A}}}{Spring 2018} \\
-        \Event{Wittgenstein --- Investigations~\tab\tab\tab\tab\texttt{EH}\tab{\texttt{A}}}{Spring 2018} \\
-        \Event{Descartes, Spinoza, and Leibniz~\tab\tab\tab\tab\texttt{JM}\tab{audit}}{Spring 2018} \\
-        \Event{Philosophy of Mind~\tab\tab\tab\tab\tab\tab\texttt{JS}\tab{audit}}{Spring 2018} \\
-        \Event{Idea of God~\tab\tab\tab\tab\tab\tab\tab\texttt{PY}\tab{audit}}{Spring 2018} \\
-        \Event{Existentialism --- The French~\tab\tab\tab\tab\texttt{BM}\tab{\texttt{A}}}{Fall 2017} \\
-        \Event{Hegel --- Phenomenology of Spirit~\tab\tab\tab\texttt{YS}\tab{\texttt{A}}}{Fall 2017} \\
-        \Event{Ethics and Emotions~\tab\tab\tab\tab\tab\texttt{KM}\tab{\texttt{A}}}{Fall 2017} \\
-        \Event{Proseminar~\tab\tab\tab{\emph{~~~~Graduate Seminar}}\tab\texttt{AT}\tab{\texttt{A}}}{Fall 2017}
-        \EndDeptEvents
+          \begin{UnivDeptItem}
+          {Biomedical Ethics}
+          {Spring 2019}
+          {with Dr.~Eli Hirsch}
+          {}%
+          \item Held office hours, graded assignments+exams, etc.
+          \end{UnivDeptItem}
 
-      \other
+  % \iftoggle{cv}{\pagebreak}{}
 
-        \BeginDeptEvents
-        % \Event{Marx, Nietzsche, And Radicalism~\tab\tab\tab\tab{A-}}{Fall 2017}
-        \Event{The Buddha~\tab\tab\tab\tab\tab\tab\tab\texttt{YF}\tab{audit}}{\bf{Spring 2019}} \\
-        \Event{History of Photography~\tab\tab\tab\tab\tab\texttt{PK}\tab{audit}}{\bf{Spring 2019}} \\
-        \Event{Marx, Nietzsche, and Radicalism~\tab\tab\tab\tab\texttt{BY}\tab{\texttt{A-}}}{Fall 2017}
-        \EndDeptEvents
+          \begin{UnivDeptItem}
+          {Neuroethics}
+          {Fall 2018}
+          {with Dr.~Brendan Cline}
+          {}%
+          \item Taught class when the professor was unavailable.
+          \item Held office hours, graded assignments+exams, etc.
+          \end{UnivDeptItem}
 
-    \Rice
+          \begin{UnivDeptItem}
+          {Aesthetics}
+          {Spring 2018}
+          {with Dr.~Andreas Teuber}
+          {}%
+          \item Held office hours, graded assignments+exams, etc.
+          \end{UnivDeptItem}
 
-      \PHIL
+    }{}
 
-        \BeginDeptEvents
-        \Event{Continental Philosophy~\tab\tab\tab\tab\tab\texttt{SC}\tab{\texttt{A-}}}{Spring 2016} \\
-        \Event{History of Philosophy~\tab\tab\tab\tab\tab\texttt{CS}\tab{\texttt{B+}}}{Fall 2013} \\
-        \Event{Social and Political Philosophy~\tab\tab\tab\tab\texttt{GS}\tab{\texttt{A-}}}{Spring 2013}
-        \EndDeptEvents
+    \iftoggle{cv}{
+      \vspace{1ex}
+      \begin{rSubSection}
+      {\underline{Varsity Tutors}}
+    }{
+      \EventWithSubtitle
+      {Varsity Tutors}
+    }
+    {online + Miami, Florida}
+    {Contractor / Certified Tutor}
+    {Fall 2016 to Summer 2017}%
+    \iftoggle{cv}{
+      \item Tutored high school and undergraduate students in a variety\\
+      of subjects, ranging from writing to coding to SAT test prep.
+      \end{rSubSection}
+    }{}
 
-      \COMP
+    \iftoggle{cv}{
 
-        \BeginDeptEvents
-        \Event{Advanced Topics in Object-Oriented Design~\tab\tab\texttt{SW}\tab{\texttt{B}}}{Spring 2016} \\
-        \Event{Advanced Computer Game Creation~\tab\tab\tab\texttt{JW}\tab{\texttt{B+}}}{Spring 2016} \\
-        \Event{Tools and Models for Data Science~\tab\tab\tab\texttt{CJ}\tab{\texttt{A}}}{Fall 2015} \\
-        \Event{Functional Programming~\tab\tab\tab\tab\tab\texttt{EA}\tab{\texttt{A}}}{Fall 2015} \\
-        \Event{Operating Systems and Concurrent Programing~\tab\texttt{DJ}\tab{\texttt{B}}}{Spring 2015} \\
-        \Event{Introduction to Computer Security~\tab\tab\tab\texttt{DW}\tab{\texttt{A+}}}{Spring 2015} \\
-        \Event{Reasoning About Algorithms~\tab\tab\tab\tab\texttt{SC}\tab{\texttt{A}}}{Fall 2014} \\
-        \Event{Compiler Construction~\tab\tab\tab\tab\tab\texttt{KC}\tab{\texttt{A-}}}{Fall 2014} \\
-        \Event{Introduction to Object-Oriented Design~\tab\tab\tab\texttt{SW}\tab{\texttt{A}}}{Fall 2014} \\
-        \Event{Principles of Parallel Programming~\tab\tab\tab\texttt{VS}\tab{\texttt{B}}}{Spring 2014} \\
-        \Event{Introduction to Computer Systems~\tab\tab\tab\texttt{AC}\tab{\texttt{A-}}}{Spring 2014} \\
-        \Event{Introduction to Program Design~\tab\tab\tab\tab\texttt{CJ}\tab{\texttt{A}}}{Fall 2013} \\
-        \Event{Algorithmic Thinking~\tab\tab\tab\tab\tab\texttt{LN}\tab{\texttt{A-}}}{Spring 2013} \\
-        \Event{Computational Thinking~\tab\tab\tab\tab\tab\texttt{DS}\tab{\texttt{A}}}{Fall 2012}
-        \EndDeptEvents
+      \Rice
 
-      \other
+        \CAAM
 
-        \BeginDeptEvents
-        \Event{Linear Algebra~\tab\tab\tab\tab\tab\tab\texttt{ME}\tab{\texttt{A}}}{Fall 2013} \\
-        \Event{Multivariable Calculus~\tab\tab\tab\tab\tab\texttt{NK}\tab{\texttt{A-}}}{Spring 2013} \\
-        \Event{Fundamentals of Computer Engineering~\tab\tab\tab\texttt{JC}\tab{\texttt{B-}}}{Spring 2013} \\
-        \Event{Introduction to Computational Engineering~\tab\tab\texttt{SC}\tab{\texttt{A+}}}{Fall 2012}
-        \EndDeptEvents
+          \begin{UnivDeptItem}
+          {Introduction to Computational Engineering}
+          {Spring 2013 to Spring 2016}
+          {with Dr.~Steven Cox, Dr.~Franklin Kenter, and Dr.~Illya Hicks}
+          {}%
+          \item Taught class when the professor was unavailable.
+          \item Taught 1 recitation of $\sim$15 students $\sim$1 time/week.
+          \item Created and assigned 2 original homework assignments.
+          \item Held office hours, graded assignments+exams, etc.
+          \end{UnivDeptItem}
+
+        \COMP
+
+          \begin{UnivDeptItem}
+          {Principles of Parallel Programming}
+          {Spring 2015, Spring 2016}
+          {with Dr.~Vivek Sarkar and Dr.~Eric Allen}
+          {}%
+          \item Held office hours, graded assignments+exams, etc.
+          \end{UnivDeptItem}
+
+          \begin{UnivDeptItem}
+          {Reasoning About Algorithms}
+          {Fall 2015}
+          {with Dr.~Swarat Chaudhuri}
+          {}%
+          \item Taught 1 recitation of $\sim$10 students $\sim$2 times/week.
+          \item Held office hours, graded assignments+exams, etc.
+          \end{UnivDeptItem}
+
+          \begin{UnivDeptItem}
+          {Computational Thinking}
+          {Fall 2013, Fall 2014}
+          {with Dr.~Scott Rixner}
+          {}%
+          \item Taught 1 recitation of $\sim$15 students $\sim$3 times/week.
+          \item Held office hours, graded assignments+exams, etc.
+          \end{UnivDeptItem}
+
+    }{
+
+      \EventWithSubtitle
+      {Rice University}
+      {Houston, Texas}
+      {Teaching Assistant / Lecturer}
+      {Spring 2013 to Spring 2016}%
+
+    }
 
   \end{rSection}
 
-}{}
+}{
+
+}
 
 
 
 
 
-\iftoggle{cv}{\pagebreak}{}
-\begin{rSection}{Teaching Experience}
+\begin{rSection}{Recent Personal Projects}
 
-  \iftoggle{cv}{
-
-    \Brandeis
-
-      \PHIL
-
-        \begin{UnivDeptItem}
-        {Biomedical Ethics}
-        {\bf{Spring 2019}}
-        {with Dr.~Eli Hirsch}
-        {}%
-        \item Held office hours, graded assignments+exams, etc.
-        \end{UnivDeptItem}
-
-        \begin{UnivDeptItem}
-        {Neuroethics}
-        {Fall 2018}
-        {with Dr.~Brendan Cline}
-        {}%
-        \item Taught class when the professor was unavailable.
-        \item Held office hours, graded assignments+exams, etc.
-        \end{UnivDeptItem}
-
-        \begin{UnivDeptItem}
-        {Aesthetics}
-        {Spring 2018}
-        {with Dr.~Andreas Teuber}
-        {}%
-        \item Held office hours, graded assignments+exams, etc.
-        \end{UnivDeptItem}
-
-  }{}
-
-  \iftoggle{cv}{
-
-    \Rice
-
-      \CAAM
-
-        \begin{UnivDeptItem}
-        {Introduction To Computational Engineering}
-        {Spring 2013 to Spring 2016}
-        {with Dr.~Steven Cox, Dr.~Franklin Kenter, and Dr.~Illya Hicks}
-        {}%
-        \item Taught class when the professor was unavailable.
-        \item Taught 1 recitation of $\sim$15 students $\sim$1 time/week.
-        \item Created and assigned 2 original homework assignments.
-        \item Held office hours, graded assignments+exams, etc.
-        \end{UnivDeptItem}
-
-      \COMP
-
-        \begin{UnivDeptItem}
-        {Principles of Parallel Programming}
-        {Spring 2015, Spring 2016}
-        {with Dr.~Vivek Sarkar and Dr.~Eric Allen}
-        {}%
-        \item Held office hours, graded assignments+exams, etc.
-        \end{UnivDeptItem}
-
-        \begin{UnivDeptItem}
-        {Reasoning About Algorithms}
-        {Fall 2015}
-        {with Dr.~Swarat Chaudhuri}
-        {}%
-        \item Taught 1 recitation of $\sim$10 students $\sim$2 times/week.
-        \item Held office hours, graded assignments+exams, etc.
-        \end{UnivDeptItem}
-
-        \begin{UnivDeptItem}
-        {Computational Thinking}
-        {Fall 2013, Fall 2014}
-        {with Dr.~Scott Rixner}
-        {}%
-        \item Taught 1 recitation of $\sim$15 students $\sim$3 times/week.
-        \item Held office hours, graded assignments+exams, etc.
-        \end{UnivDeptItem}
-
-  }{
-
-    \EventWithSubtitle
-    {Rice University}
-    {Houston, Texas}
-    {Teaching Assistant / Lecturer}
-    {Spring 2013 to Spring 2016}%
-
-  }
-
-  \iftoggle{cv}{
-    \vspace{1ex}
-    \begin{rSubSection}
-    {\normalfont\underline{Varsity Tutors}}
-  }{
-    \EventWithSubtitle
-    {Varsity Tutors}
-  }
-  {online + Miami, Florida}
-  {Private Contractor / Certified Tutor}
-  {Fall 2016 to Summer 2017}%
-  \iftoggle{cv}{
-    \item Tutored high school and undergraduate students in a variety \\
-    of subjects, ranging from writing to coding to SAT test prep.
-    \end{rSubSection}
-  }{}
+  \Event{\texttt{\{https://nicholashh.github.io/phil-ranker\}}}{Fall 2018}\\
+  \Event{\texttt{\{https://github.com/nicholashh/arch/blob/master/note\}}}{Summer 2019}
 
 \end{rSection}
 
@@ -311,8 +271,9 @@ www.nicholashh.com \\
 
 
 
-\iftoggle{cv}{\pagebreak}{}
-\begin{rSection}{Academic Research Experience}
+% \iftoggle{cv}{\pagebreak}{}
+% \begin{rSection}{Academic Research Experience}
+\begin{rSection}{Academic Research}
 
   \iftoggle{cv}{
     \Rice
@@ -327,7 +288,7 @@ www.nicholashh.com \\
 
   \iftoggle{cv}{
     \begin{UnivDeptItem}{Dr.~Timothy Schroeder}{Summer 2016 to Summer 2017}{}{}
-    \item Prototyped an open-source website (and accompanying database) \\
+    \item Prototyped an open-source website (and accompanying database)\\
     of assertions and arguments made by professional philosophers.
     \end{UnivDeptItem}
   }{
@@ -335,6 +296,8 @@ www.nicholashh.com \\
     (philosophical database prototype)
     \hfill Summer 2016 to Summer 2017%
   }
+
+% \iftoggle{cv}{\pagebreak}{}
 
   \iftoggle{cv}{
     \COMP
@@ -366,7 +329,7 @@ www.nicholashh.com \\
   \iftoggle{cv}{
     \begin{UnivDeptItem}{Dr.~Luay Nakhleh}{Summer 2014}{}{}
     \item Investigated introgressed genes in the \emph{mus musculus} genome.
-    \item Applied clustering algorithms to protein-protein interaction \\
+    \item Applied clustering algorithms to protein-protein interaction\\
     network data to confirm previously identified genome patterns.
     \item Identified previously unknown introgressed gene candidates.
     \end{UnivDeptItem}
@@ -396,23 +359,8 @@ www.nicholashh.com \\
 
 
 
-\begin{rSection}{Professional Work History}
-
-  \iftoggle{cv}{
-    \begin{rSubSection}
-  }{
-    \EventWithSubtitle
-  }
-  {The OpenDota Project \normalfont (\texttt{www.opendota.com})}
-  {online}
-  {Co-Founder / DevOps / Public Relations}
-  {Fall 2014 \ToPresent}%
-  \iftoggle{cv}{
-    \item Writes and edits blog posts, as needed.
-    \item Trained in site maintenance and administration.
-    \item Involved in initial planning of site.
-    \end{rSubSection}
-  }{}
+% \begin{rSection}{Professional Work History}
+\begin{rSection}{Professional Work}
 
   \iftoggle{cv}{
     \begin{rSubSection}
@@ -454,8 +402,26 @@ www.nicholashh.com \\
 
 
 
-\iftoggle{cv}{\pagebreak}{}
-\begin{rSection}{Volunteer Work / Extracurricular Activities}
+% \iftoggle{cv}{\pagebreak}{}
+% \begin{rSection}{Volunteer Work / Extracurricular Activities}
+\begin{rSection}{Volunteer Work}
+
+  \iftoggle{cv}{
+    \begin{rSubSection}
+  }{
+    \EventWithSubtitle
+  }
+  {The OpenDota Project \normalfont \texttt{\{https://www.opendota.com\}}}
+  {online}
+  {Co-Founder / DevOps / Public Relations}
+  % {Co-Founder / DevOps / Public Relations / ``Bus Guy''}
+  {Fall 2014 \ToPresent}%
+  \iftoggle{cv}{
+    \item Writes and edits blog posts, as needed.
+    \item Trained in site maintenance and administration.
+    \item Involved in initial planning of site.
+    \end{rSubSection}
+  }{}
 
   \iftoggle{cv}{
     \begin{rSubSection}
@@ -467,11 +433,11 @@ www.nicholashh.com \\
   {Co-Founder / First President}
   {Fall 2014 to Spring 2016}%
   \iftoggle{cv}{
-    \item Wrote a successful funding proposal to the Rice Undergraduate Student \\
+    \item Wrote a successful funding proposal to the Rice Undergraduate Student\\
     Association and was approved by the student body to receive \$5,000.
     \item Facilitated discussion among $\sim$20 disparate committees $\sim$2 times/month.
-    \item Headed the Sexual Assault Committee, co-headed Ally Training Committee, \\
-    worked to hire a part-time staff person to support the Center, investigated \\
+    \item Headed the Sexual Assault Committee, co-headed Ally Training Committee,\\
+    worked to hire a part-time staff person to support the Center, investigated\\
     founding a queer support group, and created the Center's website.
     \end{rSubSection}
   }{}
@@ -485,7 +451,7 @@ www.nicholashh.com \\
     {Student Participant (selected by admissions committee)}
     {25-27 September 2015}%
     \item Attended the conference (which is dedicated to helping \\ 
-    high-achieving LGBTQ+ undergraduates in technological \\
+    high-achieving LGBTQ+ undergraduates in technological\\
     STEM fields reach their full potential in their careers).
     \end{rSubSection}
 
@@ -494,7 +460,7 @@ www.nicholashh.com \\
     {Houston, Texas}
     {Academic Fellow (Computer Science)}
     {Fall 2014 to Spring 2016}%
-    \item Held ``open office hours'' in which any student in any class \\
+    \item Held ``open office hours'' in which any student in any class\\
     could get help on any topic (related to computer science).
     \item Taught various ``workshops'' (related to computer science).
     \item Oversaw computer science fellowship within the college.
@@ -516,6 +482,18 @@ www.nicholashh.com \\
     \item Gave tours of the university to ``distinguished'' guests.
     \end{rSubSection}
 
+    \EventWithSubtitle
+    {Southridge High School Speech and Debate Team}
+    {Portland, Oregon}
+    {Capitan of Debate}
+    {2011-2012}%
+
+    \EventWithSubtitle
+    {Southridge High School Swim Team}
+    {Portland, Oregon}
+    {Co-Capitan}
+    {Winter 2011}%
+
   }{}
 
 \end{rSection}
@@ -526,28 +504,147 @@ www.nicholashh.com \\
 
 \iftoggle{cv}{
 
-  \begin{rSection}{Awards And Honors}
+  \begin{rSection}{Awards and Honors}
 
-  \Event{Max Kade Travel Grant}{Summer 2018} \\
-  \Event{Brandeis GSAS Scholarship Grant}{Fall 2017} \\
-  \Event{Sid Richardson Athenian Award}{Spring 2016} \\
-  \Event{Rice Alumni Pride Award}{Fall 2015} \\
-  \Event{President's Honor Roll}{Fall 2014, Fall 2015} \\
-  \Event{John and Harriet Millington Scholarship}{Fall 2014, Fall 2015} \\
-  \Event{Lon Wilson Service Award}{Spring 2015} \\
-  \Event{Genevieve Parkhill Lykes Scholarship}{Fall 2014} \\
-  \Event{Bracht-Verlander Scholarship}{Fall 2012} \\
-  \Event{National Merit Quarterfinalist}{Spring 2012} \\
-  \Event{AP Scholar with Honor}{Spring 2012} \\
-  \Event{National Honor Society}{2011 to 2012}
+  \Event{Max Kade Travel Grant}{Summer 2018}\\
+  \Event{Brandeis GSAS Scholarship Grant}{Fall 2017}\\
+  \Event{Sid Richardson Athenian Award}{Spring 2016}\\
+  \Event{Rice Alumni Pride Award}{Fall 2015}\\
+  \Event{Rice President's Honor Roll}{Fall 2014, Fall 2015}\\
+  \Event{John and Harriet Millington Scholarship}{Fall 2014, Fall 2015}\\
+  \Event{Lon Wilson Service Award}{Spring 2015}\\
+  \Event{Genevieve Parkhill Lykes Scholarship}{Fall 2014}\\
+  \Event{Bracht-Verlander Scholarship}{Fall 2012}\\
+  \Event{National Merit Quarterfinalist}{Spring 2012}\\
+  % \Event{AP Scholar with Honor}{Spring 2012}\\
+  \Event{National Honor Society}{2011-2012}
 
   \end{rSection}
 
+\iftoggle{cv}{
+
+  \begin{rSection}{List of Coursework}
+
+    % \UCR
+
+    %   \PHIL
+
+    %     \BeginDeptEvents
+    %     \Event{TBD}{Fall 2019}
+    %     \EndDeptEvents
+
+    \Brandeis
+
+      \PHIL
+
+        \BeginDeptEvents
+        \Event{Mind --- Burge, Millikan~\tab{\emph{~~~~~~~~~Graduate Seminar}}\tab\texttt{~JS}\tab{\texttt{A}}}{Spring 2019}\\
+        \Event{Language~\tab\tab\tab\tab\tab\tab\tab\texttt{~EH}\tab{\texttt{A}}}{Spring 2019}\\
+        \Event{Explanation and Causation~\tab\tab\tab\tab\texttt{~JM}\tab{\texttt{A+}}}{Spring 2019}\\
+        \Event{Aristotle~\tab\tab\tab\tab\tab\tab\tab\texttt{~PY}\tab{\texttt{A}}}{Spring 2019}\\
+        \Event{Biomedical Ethics~\tab\tab\tab\tab\tab\tab\texttt{~EH}\tab{audit}}{Spring 2019}\\
+        \Event{Rationality~\tab\tab\tab{\emph{~~~~~~~~~Independent Study}}\tab\texttt{~BM}\tab{\texttt{A}}}{Fall 2018}\\
+        \Event{Action~\tab\tab\tab\tab\tab\tab\tab\texttt{~BM}\tab{\texttt{A}}}{Fall 2018}\\
+        \Event{Kant --- Pure Reason~\tab\tab\tab\tab\tab\texttt{~KM}\tab{\texttt{A+}}}{Fall 2018}\\
+        \Event{Metaethics --- Parfit~\tab\tab\tab\tab\tab\texttt{~EH}\tab{\texttt{A}}}{Fall 2018}\\
+        \Event{Personal Identity~\tab\tab\tab\tab\tab\tab\texttt{~EH}\tab{audit}}{Fall 2018}\\
+        \Event{Self-Knowledge~\tab\tab\tab\tab\tab\tab\texttt{~BM}\tab{audit}}{Fall 2018}\\
+        \Event{Neuroethics~\tab\tab\tab\tab\tab\tab\tab\texttt{~BC}\tab{audit}}{Fall 2018}\\
+        \Event{Hume --- Human Nature~\tab\tab\tab\tab\tab\texttt{~JM}\tab{audit}}{Fall 2018}\\
+        \Event{External World Skepticism~{\emph{~~~~~~~~~Graduate Seminar}}\tab\texttt{~BM}\tab{\texttt{A}}}{Spring 2018}\\
+        \Event{Space and Time~\tab\tab\tab\tab\tab\tab\texttt{~EH}\tab{\texttt{A}}}{Spring 2018}\\
+        \Event{Mathematical Logic~\tab\tab\tab\tab\tab\tab\texttt{~JM}\tab{\texttt{A}}}{Spring 2018}\\
+        \Event{Wittgenstein --- Investigations~\tab\tab\tab\tab\texttt{~EH}\tab{\texttt{A}}}{Spring 2018}\\
+        \Event{Mind~\tab\tab\tab\tab\tab\tab\tab\tab\texttt{~JS}\tab{audit}}{Spring 2018}\\
+        \Event{The Idea of God~\tab\tab\tab\tab\tab\tab\texttt{~PY}\tab{audit}}{Spring 2018}\\
+        \Event{Descartes, Spinoza, Leibniz~\tab\tab\tab\tab\texttt{~JM}\tab{audit}}{Spring 2018}\\
+        \Event{Proseminar~\tab\tab\tab{\emph{~~~~~~~~~Graduate Seminar}}\tab\texttt{~AT}\tab{\texttt{A}}}{Fall 2017}\\
+        \Event{Ethics and Emotions~\tab\tab\tab\tab\tab\texttt{~KM}\tab{\texttt{A}}}{Fall 2017}\\
+        \Event{Existentialism --- The French~\tab\tab\tab\tab\texttt{~BM}\tab{\texttt{A}}}{Fall 2017}\\
+        \Event{Hegel --- Phenomenology of Spirit~\tab\tab\tab\texttt{~ES}\tab{\texttt{A}}}{Fall 2017}
+        \EndDeptEvents
+
+      \other
+
+        \BeginDeptEvents
+        \Event{The Buddha~\tab\tab\tab\tab\tab\tab\texttt{RELI}\tab\texttt{~YF}\tab{audit}}{Spring 2019}\\
+        \Event{History of Photography~\tab\tab\tab\tab\texttt{ARTS}\tab\texttt{~PK}\tab{audit}}{Spring 2019}\\
+        \Event{Marx, Nietzsche, and \nth{20}c Radicalism~\tab\tab\texttt{POLI}\tab\texttt{~BY}\tab{\texttt{A-}}}{Fall 2017}
+        \EndDeptEvents
+
+    \Rice
+
+      \PHIL
+
+        \BeginDeptEvents
+        \Event{Continental Philosophy~\tab\tab\tab\tab\tab\texttt{~SC}\tab{\texttt{A-}}}{Spring 2016}\\
+        \Event{History of Philosophy~\tab\tab\tab\tab\tab\texttt{~CS}\tab{\texttt{B+}}}{Fall 2013}\\
+        \Event{Social and Political Philosophy~\tab\tab\tab\tab\texttt{~GS}\tab{\texttt{A-}}}{Spring 2013}
+        \EndDeptEvents
+
+      \COMP
+
+        \BeginDeptEvents
+        \Event{Advanced Topics in Object-Oriented Design~\tab\tab\texttt{~SW}\tab{\texttt{B}}}{Spring 2016}\\
+        \Event{Advanced Computer Game Creation~\tab\tab\tab\texttt{~JW}\tab{\texttt{B+}}}{Spring 2016}\\
+        \Event{Tools and Models for Data Science~\tab\tab\tab\texttt{~CJ}\tab{\texttt{A}}}{Fall 2015}\\
+        \Event{Functional Programming~\tab\tab\tab\tab\tab\texttt{~EA}\tab{\texttt{A}}}{Fall 2015}\\
+        \Event{Operating Systems and Concurrent Programing~\tab\texttt{~DJ}\tab{\texttt{B}}}{Spring 2015}\\
+        \Event{Introduction to Computer Security~\tab\tab\tab\texttt{~DW}\tab{\texttt{A+}}}{Spring 2015}\\
+        \Event{Introduction to Object-Oriented Design~\tab\tab\tab\texttt{~SW}\tab{\texttt{A}}}{Fall 2014}\\
+        \Event{Reasoning About Algorithms~\tab\tab\tab\tab\texttt{~SC}\tab{\texttt{A}}}{Fall 2014}\\
+        \Event{Compiler Construction~\tab\tab\tab\tab\tab\texttt{~KC}\tab{\texttt{A-}}}{Fall 2014}\\
+        \Event{Principles of Parallel Programming~\tab\tab\tab\texttt{~VS}\tab{\texttt{B}}}{Spring 2014}\\
+        \Event{Introduction to Computer Systems~\tab\tab\tab\texttt{~AC}\tab{\texttt{A-}}}{Spring 2014}\\
+        \Event{Introduction to Program Design~\tab\tab\tab\tab\texttt{~CJ}\tab{\texttt{A}}}{Fall 2013}\\
+        \Event{Algorithmic Thinking~\tab\tab\tab\tab\tab\texttt{~LN}\tab{\texttt{A-}}}{Spring 2013}\\
+        \Event{Computational Thinking~\tab\tab\tab\tab\tab\texttt{~DS}\tab{\texttt{A}}}{Fall 2012}
+        \EndDeptEvents
+
+% \iftoggle{cv}{\pagebreak}{}
+
+      \other
+
+        \BeginDeptEvents
+        \Event{Linear Algebra~\tab\tab\tab\tab\tab\texttt{CAAM}\tab\texttt{~ME}\tab{\texttt{A}}}{Fall 2013}\\
+        \Event{Multivariable Calculus~\tab\tab\tab\tab\texttt{MATH}\tab\texttt{~NK}\tab{\texttt{A-}}}{Spring 2013}\\
+        \Event{Fundamentals of Computer Engineering~\tab\tab\texttt{ELEC}\tab\texttt{~JC}\tab{\texttt{B-}}}{Spring 2013}\\
+        \Event{Ordinary Differential Equations~\tab\tab\tab\texttt{MATH}\tab\texttt{~SB}\tab{\texttt{B-}}}{Fall 2012}\\
+        \Event{Introduction to Computational Engineering~\tab\texttt{CAAM}\tab\texttt{~SC}\tab{\texttt{A+}}}{Fall 2012}
+        \EndDeptEvents
+
+    \Southridge
+
+      \IB
+
+        \BeginDeptEvents
+        \Event{\texttt{(HL)} English~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{5(/7)}}}{2011-2012}\\
+        \Event{\texttt{(SL)} Spanish~\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011}\\
+        \Event{\texttt{(SL)} Psychology~\tab\tab\tab\tab\tab\tab\tab{\texttt{5}}}{2011}\\
+        \Event{\texttt{(SL)} Chemistry~\tab\tab\tab\tab\tab\tab\tab{audit}}{2010}\\
+        \Event{\texttt{(HL)} Physics~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011-2012}\\
+        \Event{\texttt{(HL)} Math~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011-2012}\\
+        \Event{\texttt{(SL)} Environmental Systems and Societies~\tab\tab\tab{\texttt{6}}}{2012}\\
+        \Event{Extended Essay \texttt{(English)}~\tab\tab\tab\tab\tab{\texttt{A}}}{2012}\\
+        \Event{Theory of Knowledge~\tab\tab\tab\tab\tab\tab{\texttt{B}}}{2012}
+        \EndDeptEvents
+
+      \AP
+
+        \BeginDeptEvents
+        \Event{US History~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{4(/5)}}}{2010}\\
+        \Event{Statistics~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{5}}}{2010}
+        \EndDeptEvents
+
+  \end{rSection}
+
+}{}
 
 
 
 
-  \pagebreak
+
+%   % \pagebreak
 
   \begin{rSection}{Standardized Test Scores}
 
@@ -557,10 +654,17 @@ www.nicholashh.com \\
   \item Quantitative:~\tab\tab{$164/170$}\tab\tab{(\nth{88} percentile)}
   \end{rSubSection}
 
-  \begin{rSubSection}{SAT\hspace{7.85em}$2,300/2,400$}{October 2011}{}{}
+  \begin{rSubSection}{SAT\hspace{7.85em}$2,300/2,400$\hspace{3.9em}\normalfont(\nth{99} percentile)}{October 2011}{}{}
   \item Writing:~\tab\tab\tab{$760/800$}\tab\tab{(\nth{99} percentile)}
   \item Reading:~\tab\tab\tab{$790/800$}\tab\tab{(\nth{99} percentile)}
   \item Mathematics:~\tab\tab{$750/800$}\tab\tab{(\nth{97} percentile)}
+  \end{rSubSection}
+
+  \begin{rSubSection}{ACT\hspace{8.75em}$33/36$\hspace{5.3em}\normalfont(\nth{98} percentile)}{February 2010}{}{}
+  \item English:~\tab\tab\tab{\hspace{.5em}$34/36$}\tab\tab\tab{(\nth{98} percentile)}
+  \item Reading:~\tab\tab\tab{\hspace{.5em}$29/36$}\tab\tab\tab{(\nth{86} percentile)}
+  \item Math:~\tab\tab\tab\tab{\hspace{.5em}$30/36$}\tab\tab\tab{(\nth{94} percentile)}
+  \item Science:~\tab\tab\tab{\hspace{.5em}$35/36$}\tab\tab\tab{(\nth{99} percentile)}
   \end{rSubSection}
 
   \end{rSection}
@@ -579,7 +683,7 @@ www.nicholashh.com \\
 
   \begin{rSubSection}{\normalfont programming languages}{}{}{}
   \item fluent:~Java, Python, C, JS(/HTML/CSS), SQL, Matlab
-  \item moderate:~Scala, VB.Net
+  \item moderate:~Bash, Scala, VB.Net
   \end{rSubSection}
 
   \end{rSection}
@@ -590,9 +694,11 @@ www.nicholashh.com \\
 
   \begin{rSection}{Miscellaneous Information}
 
-  preferred gender pronouns:~``they/them/their''
+  preferred pronouns:~``they/them/their''
 
   citizenship/nationality:~USA
+
+  Myers-Briggs:~INFJ
 
   \end{rSection}
 
@@ -601,12 +707,14 @@ www.nicholashh.com \\
 
 
 }{
-  
+
   \begin{rSection}{Additional Information}
 
-    For additional details about the information listed above, as well as information \\
-    about my pertinent coursework, awards and honors, standardized test scores, etc, \\
-    my full CV (Curriculum Vitae) is available online at \{www.nicholashh.com/cv\}.
+    % For additional details about the information listed above, as well as information\\
+    % about my pertinent coursework, awards and honors, standardized test scores, etc,\\
+    % my full CV (\emph{curriculum vitae}) is available online at \{www.nicholashh.com/cv\}.
+
+    My full CV (\emph{curriculum vitae}) is available online at \texttt{\{http://www.nicholashh.com/cv\}}.
 
   \end{rSection}
 

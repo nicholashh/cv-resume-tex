@@ -159,10 +159,11 @@ headsep    = 0.25 in
     %   \printaddress{\@addressthree}}
 
     \iftoggle{cv}{
-      \@title
+      \@title                        % (A) normal title
     }{
       \begingroup
-        \def \\ {\addressSep\ }
+        % \def \\ {\addressSep\ }
+        \def \\ {~~\addressSep~~}     % (B) title with DIAMONDS
         \@title
       \endgroup
     }
@@ -178,6 +179,7 @@ headsep    = 0.25 in
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{% 1 input argument - section name
   \sectionskip%
+  \vspace{0.5em}%
   % {\bf #1} % Section title
   % {\emph{#1}}% Section title
   {\emph{\textbf{#1}}}% Section title
@@ -191,6 +193,7 @@ headsep    = 0.25 in
   \item[]%
 }{%
   \end{list}%
+  \vspace{0.5em}%
 }%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -207,6 +210,7 @@ headsep    = 0.25 in
 
 % bold on top left, normal on bottom right, emph on right
 \newcommand{\FourTitle}[4]{%
+  \vspace{0.5em}%
   \ifthenelse{\equal{#1}{}}{}{\BoldEmph{#1}{#2}\vspace{.1em}% maybe print first two
   \ifthenelse{\equal{#3}{}}{}{\\}}% put in the line break if printing all four
   \ifthenelse{\equal{#3}{}}{}{\NormalEmph{#3}{#4}}}% maybe print second two
@@ -240,9 +244,11 @@ headsep    = 0.25 in
 
 \newcommand{\UniversityTitle}[2]{%
 %\BoldEmph{#1}{#2}}
+\vspace{0.5em}%
 \NormalEmph{\underline{#1}}{#2}}%
 
 \newcommand{\DepartmentTitle}[1]{%
+\vspace{0.5em}%
 \begin{changemargin}{1.5em}{0em}%
 %\BoldEmph{#1}{}%
 \NormalEmph{\underline{#1}}{}%
@@ -254,14 +260,15 @@ headsep    = 0.25 in
 \end{changemargin}}%
 
 \newcommand{\BeginDeptEvents}{%
+\vspace{0.5em}%
 \begin{changemargin}{3.0em}{0em}}%
 \newcommand{\EndDeptEvents}{%
 \end{changemargin}}%
 
 \newenvironment{UnivDeptItem}[4]{%
-  \begin{changemargin}{3.0em}{0em}%
-  \begin{rSubSection}{#1}{#2}{#3}{#4}%
+\begin{changemargin}{3.0em}{0em}%
+\begin{rSubSection}{#1}{#2}{#3}{#4}%
 }{%
-  \end{rSubSection}%
-  \end{changemargin}%
+\end{rSubSection}%
+\end{changemargin}%
 }%
