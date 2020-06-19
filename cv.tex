@@ -21,10 +21,20 @@
 
 \name{Nicholas Hanson-Holtry}
 
-\title{%
-\texttt{\{nicholas.hanson.holtry@gmail.com\}}\\
-\texttt{\{http://www.nicholashh.com\}}%\\
-% \texttt{\{503.360.3148\}}}
+\iftoggle{cv}{
+  \title{%
+  \texttt{\{nicholas.hanson.holtry@gmail.com\}}\\
+  \texttt{\{http://www.nicholashh.com\}}\\~\\
+  % \texttt{\{503.360.3148\}}}
+  pronouns:~``they/them/their''
+  }
+}{
+  \title{%
+  \texttt{\{nicholas.hanson.holtry@gmail.com\}}\\
+  \texttt{\{www.nicholashh.com\}}\\
+  % \texttt{\{503.360.3148\}}}
+  ``they/them/their''
+  }
 }
 
 \begin{document}
@@ -70,7 +80,8 @@
     {Fall 2017 to Spring 2019}%
     \iftoggle{cv}{
       \item Thesis:~``Reasoning First Rationality''
-      \item Advisors:~Dr.~Berislav Maru{\v s}i{\' c}, Dr.~Eli Hirsch
+      % \item Advisors:~Dr.~Berislav Maru{\v s}i{\' c}, Dr.~Eli Hirsch
+      \item Advisors:~Berislav Maru{\v s}i{\' c}, Eli Hirsch
       \item Philosophy GPA:~\tab{$4.00/4.00$}
       \item Overall GPA:~\tab{$3.97/4.00$}
     }{
@@ -261,18 +272,22 @@
 
 
 
-\begin{rSection}{Recent Personal Projects}
+\iftoggle{cv}{}{
 
-  \Event{\texttt{\{https://nicholashh.github.io/phil-ranker\}}}{Fall 2018}\\
-  \Event{\texttt{\{https://github.com/nicholashh/arch/blob/master/note\}}}{Summer 2019}
+  \begin{rSection}{Recent Personal Projects}
 
-\end{rSection}
+    \Event{\texttt{\{https://nicholashh.github.io/phil-ranker\}}}{Fall 2018}\\
+    \Event{\texttt{\{https://github.com/nicholashh/arch/blob/master/note\}}}{Summer 2019}
+
+  \end{rSection}
+
+}
 
 
 
 
 
-% \iftoggle{cv}{\pagebreak}{}
+\iftoggle{cv}{\pagebreak}{}
 % \begin{rSection}{Academic Research Experience}
 \begin{rSection}{Academic Research}
 
@@ -509,7 +524,9 @@
 
 \iftoggle{cv}{
 
-  \begin{rSection}{Awards and Honors}
+  % \iftoggle{cv}{\pagebreak}{}
+
+  \begin{rSection}{Awards / Honors}
 
   \Event{Max Kade Travel Grant}{Summer 2018}\\
   \Event{Brandeis GSAS Scholarship Grant}{Fall 2017}\\
@@ -528,15 +545,30 @@
 
 \iftoggle{cv}{
 
-  \begin{rSection}{List of Coursework}
+  \begin{rSection}{Coursework / Transcript}
 
-    % \UCR
+    \UCR
 
-    %   \PHIL
+      \PHIL
 
-    %     \BeginDeptEvents
-    %     \Event{TBD}{Fall 2019}
-    %     \EndDeptEvents
+        \BeginDeptEvents
+        \Event{Proseminar --- Scanlon, Korsgaard~\tab\tab\tab\texttt{~AR}\tab{\texttt{A}}}{Spring 2020}\\
+        \Event{Meta-Logic~\tab\tab\tab\tab\tab\tab\tab\texttt{~ER}\tab{\texttt{A+}}}{Spring 2020}\\
+        \Event{Hyman~\tab\tab\tab\tab\tab\tab\tab\texttt{~KF}\tab{\texttt{A}}}{Spring 2020}\\
+        \Event{Aristotle --- Nicomachean Ethics~\tab\tab\tab\tab\texttt{~JM}\tab{tbd}}{Spring 2020}\\
+        \Event{Nietzsche --- Naturalism~\tab\tab\tab\tab\tab\texttt{~MC}\tab{audit}}{Spring 2020}\\
+        \Event{Motivation~\tab\tab\tab\tab\tab\tab\tab\texttt{~AJ}\tab{audit}}{Spring 2020}\\
+        \Event{Proseminar --- Gettierology~\tab\tab\tab\tab\texttt{~PG}\tab{\texttt{A}}}{Winter 2020}\\
+        \Event{Brandom's Hegel~\tab\tab\tab\tab\tab\tab\texttt{~PK}\tab{\texttt{A}}}{Winter 2020}\\
+        \Event{Frege~\tab\tab\tab\tab\tab\tab\tab\tab\texttt{~ER}\tab{\texttt{A-}}}{Winter 2020}\\
+        \Event{Moral Constitutivism --- Objections~\tab\tab\tab\texttt{~LF}\tab{\texttt{A}}}{Winter 2020}\\
+        \Event{Moral Psychology --- Gratitude~\tab\tab\tab\tab\texttt{~CM}\tab{audit}}{Winter 2020}\\
+        \Event{Proseminar --- Descartes, Leibniz~\tab\tab\tab\tab\texttt{~AH}\tab{\texttt{A}}}{Fall 2019}\\
+        \Event{Dynamic Structuralism~\tab\tab\tab\tab\tab\texttt{~PK}\tab{\texttt{A-}}}{Fall 2019}\\
+        \Event{The Aspect Of Eternity --- Nagel~\tab\tab\tab\tab\texttt{~HW}\tab{\texttt{A}}}{Fall 2019}\\
+        \Event{Moral Constitutivism --- Kant~\tab\tab\tab\tab\texttt{~MN}\tab{\texttt{A}}}{Fall 2019}\\
+        \Event{Moral Psychology --- Negative Affect~\tab\tab\tab\texttt{~MC}\tab{audit}}{Fall 2019}
+        \EndDeptEvents
 
     \Brandeis
 
@@ -545,7 +577,7 @@
         \BeginDeptEvents
         \Event{Mind --- Burge, Millikan~\tab{\emph{~~~~~~~~~Graduate Seminar}}\tab\texttt{~JS}\tab{\texttt{A}}}{Spring 2019}\\
         \Event{Language~\tab\tab\tab\tab\tab\tab\tab\texttt{~EH}\tab{\texttt{A}}}{Spring 2019}\\
-        \Event{Explanation and Causation~\tab\tab\tab\tab\texttt{~JM}\tab{\texttt{A+}}}{Spring 2019}\\
+        \Event{Explanation \& Causation~\tab\tab\tab\tab\tab\texttt{~JM}\tab{\texttt{A+}}}{Spring 2019}\\
         \Event{Aristotle~\tab\tab\tab\tab\tab\tab\tab\texttt{~PY}\tab{\texttt{A}}}{Spring 2019}\\
         \Event{Biomedical Ethics~\tab\tab\tab\tab\tab\tab\texttt{~EH}\tab{audit}}{Spring 2019}\\
         \Event{Rationality~\tab\tab\tab{\emph{~~~~~~~~~Independent Study}}\tab\texttt{~BM}\tab{\texttt{A}}}{Fall 2018}\\
@@ -557,24 +589,24 @@
         \Event{Neuroethics~\tab\tab\tab\tab\tab\tab\tab\texttt{~BC}\tab{audit}}{Fall 2018}\\
         \Event{Hume --- Human Nature~\tab\tab\tab\tab\tab\texttt{~JM}\tab{audit}}{Fall 2018}\\
         \Event{External World Skepticism~{\emph{~~~~~~~~~Graduate Seminar}}\tab\texttt{~BM}\tab{\texttt{A}}}{Spring 2018}\\
-        \Event{Space and Time~\tab\tab\tab\tab\tab\tab\texttt{~EH}\tab{\texttt{A}}}{Spring 2018}\\
+        \Event{Space \& Time~\tab\tab\tab\tab\tab\tab\texttt{~EH}\tab{\texttt{A}}}{Spring 2018}\\
         \Event{Mathematical Logic~\tab\tab\tab\tab\tab\tab\texttt{~JM}\tab{\texttt{A}}}{Spring 2018}\\
         \Event{Wittgenstein --- Investigations~\tab\tab\tab\tab\texttt{~EH}\tab{\texttt{A}}}{Spring 2018}\\
         \Event{Mind~\tab\tab\tab\tab\tab\tab\tab\tab\texttt{~JS}\tab{audit}}{Spring 2018}\\
-        \Event{The Idea of God~\tab\tab\tab\tab\tab\tab\texttt{~PY}\tab{audit}}{Spring 2018}\\
-        \Event{Descartes, Spinoza, Leibniz~\tab\tab\tab\tab\texttt{~JM}\tab{audit}}{Spring 2018}\\
+        \Event{The Idea Of God~\tab\tab\tab\tab\tab\tab\texttt{~PY}\tab{audit}}{Spring 2018}\\
+        \Event{Descartes, Spinoza, \& Leibniz~\tab\tab\tab\tab\texttt{~JM}\tab{audit}}{Spring 2018}\\
         \Event{Proseminar~\tab\tab\tab{\emph{~~~~~~~~~Graduate Seminar}}\tab\texttt{~AT}\tab{\texttt{A}}}{Fall 2017}\\
-        \Event{Ethics and Emotions~\tab\tab\tab\tab\tab\texttt{~KM}\tab{\texttt{A}}}{Fall 2017}\\
-        \Event{Existentialism --- The French~\tab\tab\tab\tab\texttt{~BM}\tab{\texttt{A}}}{Fall 2017}\\
-        \Event{Hegel --- Phenomenology of Spirit~\tab\tab\tab\texttt{~ES}\tab{\texttt{A}}}{Fall 2017}
+        \Event{Ethics \& Emotions~\tab\tab\tab\tab\tab\tab\texttt{~KM}\tab{\texttt{A}}}{Fall 2017}\\
+        \Event{Hegel --- Phenomenology Of Spirit~\tab\tab\tab\texttt{~ES}\tab{\texttt{A}}}{Fall 2017}\\
+        \Event{Existentialism --- Sartre, Beauvoir~\tab\tab\tab\texttt{~BM}\tab{\texttt{A}}}{Fall 2017}
         \EndDeptEvents
 
       \other
 
         \BeginDeptEvents
-        \Event{The Buddha~\tab\tab\tab\tab\tab\tab\texttt{RELI}\tab\texttt{~YF}\tab{audit}}{Spring 2019}\\
-        \Event{History of Photography~\tab\tab\tab\tab\texttt{ARTS}\tab\texttt{~PK}\tab{audit}}{Spring 2019}\\
-        \Event{Marx, Nietzsche, and \nth{20}c Radicalism~\tab\tab\texttt{POLI}\tab\texttt{~BY}\tab{\texttt{A-}}}{Fall 2017}
+        \Event{Buddhism~\tab\tab\tab\tab\tab\tab\texttt{RELI}\tab\texttt{~YF}\tab{audit}}{Spring 2019}\\
+        \Event{History Of Photography~\tab\tab\tab\tab\texttt{ARTS}\tab\texttt{~PK}\tab{audit}}{Spring 2019}\\
+        \Event{Marx, Nietzsche, \& \nth{20}c Radicalism~\tab\tab\texttt{POLI}\tab\texttt{~BY}\tab{\texttt{A-}}}{Fall 2017}
         \EndDeptEvents
 
     \Rice
@@ -583,25 +615,25 @@
 
         \BeginDeptEvents
         \Event{Continental Philosophy~\tab\tab\tab\tab\tab\texttt{~SC}\tab{\texttt{A-}}}{Spring 2016}\\
-        \Event{History of Philosophy~\tab\tab\tab\tab\tab\texttt{~CS}\tab{\texttt{B+}}}{Fall 2013}\\
-        \Event{Social and Political Philosophy~\tab\tab\tab\tab\texttt{~GS}\tab{\texttt{A-}}}{Spring 2013}
+        \Event{History Of Philosophy~\tab\tab\tab\tab\tab\texttt{~CS}\tab{\texttt{B+}}}{Fall 2013}\\
+        \Event{Social \& Political Philosophy~\tab\tab\tab\tab\texttt{~GS}\tab{\texttt{A-}}}{Spring 2013}
         \EndDeptEvents
 
       \COMP
 
         \BeginDeptEvents
-        \Event{Advanced Topics in Object-Oriented Design~\tab\tab\texttt{~SW}\tab{\texttt{B}}}{Spring 2016}\\
+        \Event{Advanced Topics In Object-Oriented Design~\tab\tab\texttt{~SW}\tab{\texttt{B}}}{Spring 2016}\\
         \Event{Advanced Computer Game Creation~\tab\tab\tab\texttt{~JW}\tab{\texttt{B+}}}{Spring 2016}\\
-        \Event{Tools and Models for Data Science~\tab\tab\tab\texttt{~CJ}\tab{\texttt{A}}}{Fall 2015}\\
+        \Event{Tools \& Models For Data Science~\tab\tab\tab\tab\texttt{~CJ}\tab{\texttt{A}}}{Fall 2015}\\
         \Event{Functional Programming~\tab\tab\tab\tab\tab\texttt{~EA}\tab{\texttt{A}}}{Fall 2015}\\
-        \Event{Operating Systems and Concurrent Programing~\tab\texttt{~DJ}\tab{\texttt{B}}}{Spring 2015}\\
-        \Event{Introduction to Computer Security~\tab\tab\tab\texttt{~DW}\tab{\texttt{A+}}}{Spring 2015}\\
-        \Event{Introduction to Object-Oriented Design~\tab\tab\tab\texttt{~SW}\tab{\texttt{A}}}{Fall 2014}\\
+        \Event{Operating Systems \& Concurrent Programing~\tab\tab\texttt{~DJ}\tab{\texttt{B}}}{Spring 2015}\\
+        \Event{Introduction To Computer Security~\tab\tab\tab\texttt{~DW}\tab{\texttt{A+}}}{Spring 2015}\\
+        \Event{Introduction To Object-Oriented Design~\tab\tab\tab\texttt{~SW}\tab{\texttt{A}}}{Fall 2014}\\
         \Event{Reasoning About Algorithms~\tab\tab\tab\tab\texttt{~SC}\tab{\texttt{A}}}{Fall 2014}\\
         \Event{Compiler Construction~\tab\tab\tab\tab\tab\texttt{~KC}\tab{\texttt{A-}}}{Fall 2014}\\
-        \Event{Principles of Parallel Programming~\tab\tab\tab\texttt{~VS}\tab{\texttt{B}}}{Spring 2014}\\
-        \Event{Introduction to Computer Systems~\tab\tab\tab\texttt{~AC}\tab{\texttt{A-}}}{Spring 2014}\\
-        \Event{Introduction to Program Design~\tab\tab\tab\tab\texttt{~CJ}\tab{\texttt{A}}}{Fall 2013}\\
+        \Event{Principles Of Parallel Programming~\tab\tab\tab\texttt{~VS}\tab{\texttt{B}}}{Spring 2014}\\
+        \Event{Introduction To Computer Systems~\tab\tab\tab\texttt{~AC}\tab{\texttt{A-}}}{Spring 2014}\\
+        \Event{Introduction To Program Design~\tab\tab\tab\tab\texttt{~CJ}\tab{\texttt{A}}}{Fall 2013}\\
         \Event{Algorithmic Thinking~\tab\tab\tab\tab\tab\texttt{~LN}\tab{\texttt{A-}}}{Spring 2013}\\
         \Event{Computational Thinking~\tab\tab\tab\tab\tab\texttt{~DS}\tab{\texttt{A}}}{Fall 2012}
         \EndDeptEvents
@@ -613,9 +645,9 @@
         \BeginDeptEvents
         \Event{Linear Algebra~\tab\tab\tab\tab\tab\texttt{CAAM}\tab\texttt{~ME}\tab{\texttt{A}}}{Fall 2013}\\
         \Event{Multivariable Calculus~\tab\tab\tab\tab\texttt{MATH}\tab\texttt{~NK}\tab{\texttt{A-}}}{Spring 2013}\\
-        \Event{Fundamentals of Computer Engineering~\tab\tab\texttt{ELEC}\tab\texttt{~JC}\tab{\texttt{B-}}}{Spring 2013}\\
+        \Event{Fundamentals Of Computer Engineering~\tab\tab\texttt{ELEC}\tab\texttt{~JC}\tab{\texttt{B-}}}{Spring 2013}\\
         \Event{Ordinary Differential Equations~\tab\tab\tab\texttt{MATH}\tab\texttt{~SB}\tab{\texttt{B-}}}{Fall 2012}\\
-        \Event{Introduction to Computational Engineering~\tab\texttt{CAAM}\tab\texttt{~SC}\tab{\texttt{A+}}}{Fall 2012}
+        \Event{Introduction To Computational Engineering~\tab\texttt{CAAM}\tab\texttt{~SC}\tab{\texttt{A+}}}{Fall 2012}
         \EndDeptEvents
 
     \Southridge
@@ -629,7 +661,7 @@
         \Event{\texttt{(SL)} Chemistry~\tab\tab\tab\tab\tab\tab\tab{audit}}{2010}\\
         \Event{\texttt{(HL)} Physics~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011-2012}\\
         \Event{\texttt{(HL)} Math~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011-2012}\\
-        \Event{\texttt{(SL)} Environmental Systems and Societies~\tab\tab\tab{\texttt{6}}}{2012}\\
+        \Event{\texttt{(SL)} Environmental Systems \& Societies~\tab\tab\tab{\texttt{6}}}{2012}\\
         \Event{Extended Essay \texttt{(English)}~\tab\tab\tab\tab\tab{\texttt{A}}}{2012}\\
         \Event{Theory of Knowledge~\tab\tab\tab\tab\tab\tab{\texttt{B}}}{2012}
         \EndDeptEvents
@@ -650,6 +682,8 @@
 
 
 %   % \pagebreak
+
+\iftoggle{cv}{\pagebreak}{}
 
   \begin{rSection}{Standardized Test Scores}
 
@@ -699,7 +733,7 @@
 
   \begin{rSection}{Miscellaneous Information}
 
-  preferred pronouns:~``they/them/their''
+  pronouns:~``they/them/their''
 
   citizenship/nationality:~USA
 
