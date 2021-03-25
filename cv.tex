@@ -12,6 +12,7 @@
 \newcommand{\Rice}[0]{\UniversityTitle{Rice University}{}}
 \newcommand{\Brandeis}[0]{\UniversityTitle{Brandeis University}{}}
 \newcommand{\UCR}[0]{\UniversityTitle{University of California at Riverside}{}}
+\newcommand{\Oxford}[0]{\UniversityTitle{University of Oxford}{}}
 
 \newcommand{\ToPresent}[0]{\textbf{to present}}
 
@@ -28,10 +29,10 @@
 
 \iftoggle{cv}{
   \title{%
-  \texttt{\{nicholas.hanson.holtry@gmail.com\}}\\
-  \texttt{\{http://www.nicholashh.com\}}\\~\\
+  pronouns:~``they/them/their''\\~\\ % double return
+  \texttt{\{http://www.nicholashh.com\}}\\
+  \texttt{\{nicholas.hanson.holtry@gmail.com\}}
   % \texttt{\{503.360.3148\}}}
-  pronouns:~``they/them/their''
   }
 }{
   \title{%
@@ -84,9 +85,11 @@
     {\bf MA in Philosophy}
     {Fall 2017 to Spring 2019}%
     \iftoggle{cv}{
-      \item Thesis:~``Reasoning First Rationality''
-      % \item Advisors:~Dr.~Berislav Maru{\v s}i{\' c}, Dr.~Eli Hirsch
-      \item Advisors:~\beri, Eli Hirsch
+      % \item Thesis:~``Reasoning First Rationality''
+      \item Thesis:~``Reasoning-First~Rationality''
+      % \item Advisors:~Berislav Maru{\v s}i{\' c}, Eli Hirsch
+      % \item Advisors:~\beri, Eli Hirsch
+      \item Advisors:~Eli Hirsch \& \beri
       % \item Philosophy GPA:~\tab{$4.00/4.00$}
       % \item Overall GPA:~\tab{$3.97/4.00$}
     }{
@@ -101,7 +104,8 @@
     \EventWithSubtitle
   % }
   % {Rice \normalfont University~(SRC)}
-  {\normalfont Rice University~(SRC)}
+  % {\normalfont Rice University~(SRC)}
+  {\normalfont Rice University}
   {Houston, Texas}
   % {\bf Bachelor \normalfont of Science in \bf Computer Science}
   % {\bf B.S. \normalfont in \bf Computer Science}
@@ -156,7 +160,7 @@
 
 
 
-% \iftoggle{cv}{\pagebreak}{}
+% \iftoggle{cv}{\newpage}{}
 
 \iftoggle{cv}{
   \begin{rSection}{Teaching Experience}
@@ -168,12 +172,24 @@
         \PHIL
 
           \begin{UnivDeptItem}
+          {The Meaning Of Life}
+          {Winter 2021}
+          {with Kim Frost}
+          {}%
+          \item Taught 2 discussion-sections of $\sim$20 students 1 time/week.
+          \item Held office hours, graded papers, etc.
+          \end{UnivDeptItem}
+
+          \begin{UnivDeptItem}
           {Applied Ethics}
           {Fall 2020}
-          {with Dr.~Patrick Londen}
+          {with Patrick Londen}
           {}%
-          \item Taught 3x20 students for 50 mins once per week, graded papers, etc.
+          \item Taught 3 discussion-sections of $\sim$20 students 1 time/week.
+          \item Held office hours, graded papers, etc.
           \end{UnivDeptItem}
+
+      \newpage
 
       \Brandeis
 
@@ -182,28 +198,28 @@
           \begin{UnivDeptItem}
           {Biomedical Ethics}
           {Spring 2019}
-          {with Dr.~Eli Hirsch}
+          {with Eli Hirsch}
           {}%
-          \item Held office hours, graded assignments+exams, etc.
+          \item Held office hours, graded papers \& exams, etc.
           \end{UnivDeptItem}
 
-  \iftoggle{cv}{\pagebreak}{}
+  % \iftoggle{cv}{\newpage}{}
 
           \begin{UnivDeptItem}
           {Neuroethics}
           {Fall 2018}
-          {with Dr.~Brendan Cline}
+          {with Brendan Cline}
           {}%
           \item Taught class when the professor was unavailable.
-          \item Held office hours, graded assignments+exams, etc.
+          \item Held office hours, graded papers \& exams, etc.
           \end{UnivDeptItem}
 
           \begin{UnivDeptItem}
           {Aesthetics}
           {Spring 2018}
-          {with Dr.~Andreas Teuber}
+          {with Andreas Teuber}
           {}%
-          \item Held office hours, graded assignments+exams, etc.
+          \item Held office hours, graded papers \& exams, etc.
           \end{UnivDeptItem}
 
     }{}
@@ -220,8 +236,8 @@
     {Contractor / Certified Tutor}
     {Fall 2016 to Summer 2017}%
     \iftoggle{cv}{
-      \item Tutored high school and undergraduate students in a variety\\
-      of subjects, ranging from writing to coding to SAT test prep.
+      \item Tutored high school and undergraduate students in a variety of\\
+      subjects, ranging from writing to coding to SAT test prep.
       \end{rSubSection}
     }{}
 
@@ -234,12 +250,12 @@
           \begin{UnivDeptItem}
           {Introduction to Computational Engineering}
           {Spring 2013 to Spring 2016}
-          {with Dr.~Steven Cox, Dr.~Franklin Kenter, and Dr.~Illya Hicks}
+          {with Steven Cox, Franklin Kenter, \& Illya Hicks}
           {}%
           \item Taught class when the professor was unavailable.
           \item Taught 1 recitation of $\sim$15 students $\sim$1 time/week.
           \item Created and assigned 2 original homework assignments.
-          \item Held office hours, graded assignments+exams, etc.
+          \item Held office hours, graded assignments \& exams, etc.
           \end{UnivDeptItem}
 
         \COMP
@@ -247,27 +263,27 @@
           \begin{UnivDeptItem}
           {Principles of Parallel Programming}
           {Spring 2015, Spring 2016}
-          {with Dr.~Vivek Sarkar and Dr.~Eric Allen}
+          {with Vivek Sarkar \& Eric Allen}
           {}%
-          \item Held office hours, graded assignments+exams, etc.
+          \item Held office hours, graded assignments \& exams, etc.
           \end{UnivDeptItem}
 
           \begin{UnivDeptItem}
           {Reasoning About Algorithms}
           {Fall 2015}
-          {with Dr.~Swarat Chaudhuri}
+          {with Swarat Chaudhuri}
           {}%
           \item Taught 1 recitation of $\sim$10 students $\sim$2 times/week.
-          \item Held office hours, graded assignments+exams, etc.
+          \item Held office hours, graded assignments \& exams, etc.
           \end{UnivDeptItem}
 
           \begin{UnivDeptItem}
           {Computational Thinking}
           {Fall 2013, Fall 2014}
-          {with Dr.~Scott Rixner}
+          {with Scott Rixner}
           {}%
           \item Taught 1 recitation of $\sim$15 students $\sim$3 times/week.
-          \item Held office hours, graded assignments+exams, etc.
+          \item Held office hours, graded assignments \& exams, etc.
           \end{UnivDeptItem}
 
     }{
@@ -305,90 +321,6 @@
 
 
 
-\iftoggle{cv}{\pagebreak}{}
-% \begin{rSection}{Academic Research Experience}
-\begin{rSection}{Academic Research}
-
-  \iftoggle{cv}{
-    \Rice
-    \PHIL
-  }{
-    \begin{rSubSection}
-    {\normalfont Rice University}
-    {}
-    {}
-    {}
-  }
-
-  \iftoggle{cv}{
-    \begin{UnivDeptItem}{Dr.~Timothy Schroeder}{Summer 2016 to Summer 2017}{}{}
-    \item Prototyped an open-source website (and accompanying database)\\
-    of assertions and arguments made by professional philosophers.
-    \end{UnivDeptItem}
-  }{
-    \item {\bf Dr.~Timothy Schroeder}
-    (philosophical database prototype)
-    \hfill Summer 2016 to Summer 2017%
-  }
-
-% \iftoggle{cv}{\pagebreak}{}
-
-  \iftoggle{cv}{
-    \COMP
-  }
-
-  \iftoggle{cv}{
-    \begin{UnivDeptItem}{Dr.~Swarat Chaudhuri}{Summer 2015 to Fall 2015}{}{}
-    \item Investigated a computational definition of ethical fairness.
-    \item Investigated formal methods assurances of fairness.
-    \item Investigated post hoc verification of fairness.
-    \end{UnivDeptItem}
-  }{
-    \item {\bf Dr.~Swarat Chaudhuri}
-    (program verification + fairness)
-    \hfill Summer 2015 to Fall 2015%
-  }
-
-  \iftoggle{cv}{
-    \begin{UnivDeptItem}{Dr.~Vivek Sarkar}{Spring 2015}{}{}
-    \item Investigated optimal parallel \texttt{map} implementations.
-    \item Contributed to the parallel computing suite Habanero Java.
-    \end{UnivDeptItem}
-  }{
-    \item {\bf Dr.~Vivek Sarkar}
-    (parallel computation suite development)
-    \hfill Spring 2015%
-  }
-
-  \iftoggle{cv}{
-    \begin{UnivDeptItem}{Dr.~Luay Nakhleh}{Summer 2014}{}{}
-    \item Investigated introgressed genes in the \emph{mus musculus} genome.
-    \item Applied clustering algorithms to protein-protein interaction\\
-    network data to confirm previously identified genome patterns.
-    \item Identified previously unknown introgressed gene candidates.
-    \end{UnivDeptItem}
-  }{
-    \item {\bf Dr.~Luay Nakhleh}
-    (bioinformatics + graph theory)
-    \hfill Summer 2014%
-  }
-
-  \iftoggle{cv}{
-    \begin{UnivDeptItem}{Dr.~Devika Subramanian}{Spring 2013}{}{}
-    \item Applied machine learning algorithms to medical data.
-    \end{UnivDeptItem}
-  }{
-    \item {\bf Dr.~Devika Subramanian}
-    (machine learning + medicine)
-    \hfill Spring 2013%
-  }
-
-  \iftoggle{cv}{}{
-    \end{rSubSection}
-  }
-
-\end{rSection}
-
 \iftoggle{cv}{
 
   \begin{rSection}{Coursework / Transcript}
@@ -398,41 +330,54 @@
       \PHIL
 
         \BeginDeptEvents
-        % \Event{Moral Address~\tab\tab\tab\tab{Coleen Macnamara}\tab{\texttt{?}}}{Winter 2021}\\
-        \Event{Forgiveness \& Its Limits~\tab\tab\tab{Myisha Cherry}\tab{\texttt{A+}}}{Fall 2020}\\
-        \Event{Kant --- Pure Reason~\tab\tab\tab{Alexandra Newton}\tab{\texttt{A-}}}{Fall 2020}\\
+        % \Event{Nietzsche~\tab\tab\tab\tab\tab{Maude Clark}\tab\tab{audit}}{Spring 2021}\\
+        \Event{Kant --- The Doctrine Of Method~\tab{Pierre Keller}\tab\tab{audit}}{Winter 2021}\\
+        \Event{German Translation~\tab\tab\tab{Pierre Keller}\tab\tab{\texttt{A}}}{Winter 2021}\\
+        \Event{Moral Address~\tab\tab\tab\tab{Coleen Macnamara}\tab{\texttt{A}}}{Winter 2021}\\
+        \Event{Forgiveness~\tab\tab\tab\tab\tab{Myisha Cherry}\tab{\texttt{A+}}}{Fall 2020}\\
+        \Event{Kant --- The \nth{1} Critique~\tab\tab\tab{Alexandra Newton}\tab{\texttt{A-}}}{Fall 2020}\\ % SEE ALSO KATE MORAN'S CLASS
         \Event{Groups Of People~\tab\tab\tab\tab{Adam Harmer}\tab{audit}}{Fall 2020}\\
-        \Event{Proseminar --- Scanlon, Korsgaard~\tab{Andrews Reath}\tab{\texttt{A}}}{Spring 2020}\\
-        \Event{Meta-Logic~\tab\tab\tab\tab\tab{Erich Reck}\tab\tab{\texttt{A+}}}{Spring 2020}\\
-        \Event{Hyman~\tab\tab\tab\tab\tab{Kim Frost}\tab\tab{\texttt{A}}}{Spring 2020}\\
-        \Event{Aristotle --- Nicomachean Ethics~\tab\tab{\jozef}\tab\tab{\texttt{?}}}{Spring 2020}\\
+        \Event{Scanlon \& Korsgaard (\emph{Proseminar})~\tab{Andrews Reath}\tab{\texttt{A}}}{Spring 2020}\\
+        \Event{John Hyman --- Action \& Will~\tab\tab{Kim Frost}\tab\tab{\texttt{A}}}{Spring 2020}\\
+        \Event{Aristotle --- Nicomachean Ethics~\tab\tab{\jozef}\tab\tab{\texttt{A-}}}{Spring 2020}\\
         \Event{Nietzsche --- Naturalism~\tab\tab\tab{Maude Clark}\tab\tab{audit}}{Spring 2020}\\
         \Event{Motivation~\tab\tab\tab\tab\tab{Agnieszka Jaworska}\tab{audit}}{Spring 2020}\\
-        \Event{Proseminar --- Gettierology~\tab\tab{Peter Graham}\tab{\texttt{A}}}{Winter 2020}\\
-        \Event{Brandom's Hegel~\tab\tab\tab\tab{Pierre Keller}\tab\tab{\texttt{A}}}{Winter 2020}\\
+        \Event{Meta-Logic~\tab\tab\tab\tab\tab{Erich Reck}\tab\tab{\texttt{A+}}}{Spring 2020}\\
         \Event{Frege~\tab\tab\tab\tab\tab\tab{Erich Reck}\tab\tab{\texttt{A-}}}{Winter 2020}\\
-        \Event{Moral Psychology --- Gratitude~\tab\tab{Coleen Macnamara}\tab{audit}}{Winter 2020}\\
+        \Event{Gettierology (\emph{Proseminar})~\tab\tab\tab{Peter Graham}\tab{\texttt{A}}}{Winter 2020}\\
+        \Event{Robert Brandom --- Hegel~\tab\tab\tab{Pierre Keller}\tab\tab{\texttt{A}}}{Winter 2020}\\
+        \Event{Gratitude~\tab\tab\tab\tab\tab{Coleen Macnamara}\tab{audit}}{Winter 2020}\\
         \Event{Moral Constitutivism --- Objections~\tab{Luca Ferrero}\tab\tab{\texttt{A}}}{Winter 2020}\\
         \Event{Moral Constitutivism --- Kant~\tab\tab{Michael Nelson}\tab{\texttt{A}}}{Fall 2019}\\
-        \Event{Proseminar --- Descartes, Leibniz~\tab\tab{Adam Harmer}\tab{\texttt{A}}}{Fall 2019}\\
+        \Event{Negative Affect~\tab\tab\tab\tab{Myisha Cherry}\tab{audit}}{Fall 2019}\\
         \Event{Dynamic Structuralism~\tab\tab\tab{Pierre Keller}\tab\tab{\texttt{A-}}}{Fall 2019}\\
         \Event{The Aspect Of Eternity --- Nagel~\tab\tab{Howard Wettstein}\tab{\texttt{A}}}{Fall 2019}\\
-        \Event{Moral Psychology --- Negative Affect~\tab{Myisha Cherry}\tab{audit}}{Fall 2019}
+        \Event{Descartes \& Leibniz (\emph{Proseminar})~\tab{Adam Harmer}\tab{\texttt{A}}}{Fall 2019}
         \EndDeptEvents
+
+    \Oxford
+
+      \PHIL
+
+        \BeginDeptEvents
+        \Event{The Metaphysics Of Consciousness~\tab{Alex Moran}\tab\tab{audit}}{Winter 2021}
+        \EndDeptEvents
+
+    \newpage
 
     \Brandeis
 
       \PHIL
 
         \BeginDeptEvents
-        \Event{Mind --- Burge, Millikan (\emph{Seminar})\tab{Jerry Samet}\tab\tab{\texttt{A}}}{Spring 2019}\\
-        \Event{Language~\tab\tab\tab\tab\tab{Eli Hirsch}\tab\tab{\texttt{A}}}{Spring 2019}\\
         \Event{Explanation \& Causation~\tab\tab\tab{\jen}\tab{\texttt{A+}}}{Spring 2019}\\
+        \Event{Mind --- Burge \& Millikan (\emph{Seminar})\tab{Jerry Samet}\tab\tab{\texttt{A}}}{Spring 2019}\\
+        \Event{Language~\tab\tab\tab\tab\tab{Eli Hirsch}\tab\tab{\texttt{A}}}{Spring 2019}\\
         \Event{Aristotle~\tab\tab\tab\tab\tab{Palle Yourgrau}\tab{\texttt{A}}}{Spring 2019}\\
         \Event{Biomedical Ethics~\tab\tab\tab\tab{Eli Hirsch}\tab\tab{audit}}{Spring 2019}\\
         \Event{Rationality (\emph{Independent Study})\tab\tab\beri\tab{\texttt{A}}}{Fall 2018}\\
         \Event{Action~\tab\tab\tab\tab\tab\beri\tab{\texttt{A}}}{Fall 2018}\\
-        \Event{Kant --- Pure Reason~\tab\tab\tab{Kathleen Moran}\tab{\texttt{A+}}}{Fall 2018}\\
+        \Event{Kant --- The \nth{1} Critique~\tab\tab\tab{Kathleen Moran}\tab{\texttt{A+}}}{Fall 2018}\\
         \Event{Metaethics --- Parfit~\tab\tab\tab{Eli Hirsch}\tab\tab{\texttt{A}}}{Fall 2018}\\
         \Event{Personal Identity~\tab\tab\tab\tab{Eli Hirsch}\tab\tab{audit}}{Fall 2018}\\
         \Event{Self-Knowledge~\tab\tab\tab\tab\beri\tab{audit}}{Fall 2018}\\
@@ -441,21 +386,21 @@
         \Event{External World Skepticism (\emph{Seminar})\tab\beri\tab{\texttt{A}}}{Spring 2018}\\
         \Event{Space \& Time~\tab\tab\tab\tab{Eli Hirsch}\tab\tab{\texttt{A}}}{Spring 2018}\\
         \Event{Mathematical Logic~\tab\tab\tab\tab{\jen}\tab{\texttt{A}}}{Spring 2018}\\
-        \Event{Wittgenstein --- Investigations~\tab\tab{Eli Hirsch}\tab\tab{\texttt{A}}}{Spring 2018}\\
+        \Event{Wittgenstein --- The Investigations~\tab{Eli Hirsch}\tab\tab{\texttt{A}}}{Spring 2018}\\
         \Event{Mind~\tab\tab\tab\tab\tab\tab{Jerry Samet}\tab\tab{audit}}{Spring 2018}\\
         \Event{The Idea Of God~\tab\tab\tab\tab{Palle Yourgrau}\tab{audit}}{Spring 2018}\\
         \Event{Descartes, Spinoza, \& Leibniz~\tab\tab{\jen}\tab{audit}}{Spring 2018}\\
         \Event{Proseminar (\emph{Seminar})\tab\tab\tab{Andreas Teuber}\tab{\texttt{A}}}{Fall 2017}\\
         \Event{Ethics \& Emotions~\tab\tab\tab\tab{Kathleen Moran}\tab{\texttt{A}}}{Fall 2017}\\
         \Event{Hegel --- Phenomenology Of Spirit~\tab{Eugene Sheppard}\tab{\texttt{A}}}{Fall 2017}\\
-        \Event{Existentialism --- Sartre, Beauvoir~\tab\beri\tab{\texttt{A}}}{Fall 2017}
+        \Event{Existentialism --- Sartre \& Beauvoir~\tab\beri\tab{\texttt{A}}}{Fall 2017}
         \EndDeptEvents
 
       \other
 
         \BeginDeptEvents
         \Event{Buddhism~\tab\tab\tab\tab\tab\tab\texttt{RELI}\tab\texttt{~YF}\tab{audit}}{Spring 2019}\\
-        \Event{History Of Photography~\tab\tab\tab\tab\texttt{ARTS}\tab\texttt{PK}\tab{audit}}{Spring 2019}\\
+        \Event{History Of Photography~\tab\tab\tab\tab\texttt{ARTS}\tab\texttt{~PK}\tab{audit}}{Spring 2019}\\
         \Event{Marx, Nietzsche, \& \nth{20}c Radicalism~\tab\tab\texttt{POLI}\tab\texttt{~BY}\tab{\texttt{A-}}}{Fall 2017}
         \EndDeptEvents
 
@@ -468,6 +413,8 @@
         \Event{History Of Philosophy~\tab\tab\tab{Charles Siewert}\tab{\texttt{B+}}}{Fall 2013}\\
         \Event{Social \& Political Philosophy~\tab\tab{George Sher}\tab\tab{\texttt{A-}}}{Spring 2013}
         \EndDeptEvents
+
+      \newpage
 
       \COMP
 
@@ -488,7 +435,7 @@
         \Event{Computational Thinking~\tab\tab\tab\tab\tab\texttt{~DS}\tab{\texttt{A}}}{Fall 2012}
         \EndDeptEvents
 
-% \iftoggle{cv}{\pagebreak}{}
+% \iftoggle{cv}{\newpage}{}
 
       \other
 
@@ -500,33 +447,96 @@
         \Event{Introduction To Computational Engineering~\tab\texttt{CAAM}\tab\texttt{~SC}\tab{\texttt{A+}}}{Fall 2012}
         \EndDeptEvents
 
-    \Southridge
-
-      \IB
-
-        \BeginDeptEvents
-        \Event{\texttt{TOTAL}~\tab\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{37/45}}}{}\\
-        \Event{\texttt{(HL)} English~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{5(/7)}}}{2011-2012}\\
-        \Event{\texttt{(SL)} Spanish~\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011}\\
-        \Event{\texttt{(SL)} Psychology~\tab\tab\tab\tab\tab\tab\tab{\texttt{5}}}{2011}\\
-        \Event{\texttt{(SL)} Chemistry~\tab\tab\tab\tab\tab\tab\tab{audit}}{2010}\\
-        \Event{\texttt{(HL)} Physics~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011-2012}\\
-        \Event{\texttt{(HL)} Math~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011-2012}\\
-        \Event{\texttt{(SL)} Environmental Systems \& Societies~\tab\tab\tab{\texttt{6}}}{2012}\\
-        \Event{Extended Essay \texttt{(English)}~\tab\tab\tab\tab\tab{\texttt{A}}}{2012}\\
-        \Event{Theory of Knowledge~\tab\tab\tab\tab\tab\tab{\texttt{B}}}{2012}
-        \EndDeptEvents
-
-      \AP
-
-        \BeginDeptEvents
-        \Event{US History~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{4(/5)}}}{2010}\\
-        \Event{Statistics~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{5}}}{2010}
-        \EndDeptEvents
-
   \end{rSection}
 
 }{}
+
+
+
+
+
+% \begin{rSection}{Academic Research Experience}
+\begin{rSection}{Academic Research}
+
+  \iftoggle{cv}{
+    \Rice
+    \PHIL
+  }{
+    \begin{rSubSection}
+    {\normalfont Rice University}
+    {}
+    {}
+    {}
+  }
+
+  \iftoggle{cv}{
+    \begin{UnivDeptItem}{Timothy Schroeder}{Summer 2016 to Summer 2017}{}{}
+    \item Prototyped an open-source website and accompanying database of\\
+    arguments and assertions made by professional philosophers.
+    \end{UnivDeptItem}
+  }{
+    \item {\bf Timothy Schroeder}
+    (philosophical database prototype)
+    \hfill Summer 2016 to Summer 2017%
+  }
+
+% \iftoggle{cv}{\newpage}{}
+
+  \iftoggle{cv}{
+    \COMP
+  }
+
+  \iftoggle{cv}{
+    \begin{UnivDeptItem}{Swarat Chaudhuri}{Summer 2015 to Fall 2015}{}{}
+    \item Investigated a computational definition of ethical fairness.
+    \item Investigated formal methods assurances of fairness.
+    \item Investigated \emph{post hoc} verification of fairness.
+    \end{UnivDeptItem}
+  }{
+    \item {\bf Swarat Chaudhuri}
+    (program verification + fairness)
+    \hfill Summer 2015 to Fall 2015%
+  }
+
+  \iftoggle{cv}{
+    \begin{UnivDeptItem}{Vivek Sarkar}{Spring 2015}{}{}
+    \item Investigated optimal parallel \texttt{map} implementations.
+    \item Contributed to the parallel computing suite Habanero Java.
+    \end{UnivDeptItem}
+  }{
+    \item {\bf Vivek Sarkar}
+    (parallel computation suite development)
+    \hfill Spring 2015%
+  }
+
+  \iftoggle{cv}{
+    \begin{UnivDeptItem}{Luay Nakhleh}{Summer 2014}{}{}
+    \item Investigated introgressed genes in the \emph{mus musculus} genome.
+    \item Applied clustering algorithms to protein-protein interaction\\
+    network data to confirm previously identified genome patterns.
+    \item Identified previously unknown introgressed gene candidates.
+    \end{UnivDeptItem}
+  }{
+    \item {\bf Luay Nakhleh}
+    (bioinformatics + graph theory)
+    \hfill Summer 2014%
+  }
+
+  \iftoggle{cv}{
+    \begin{UnivDeptItem}{Devika Subramanian}{Spring 2013}{}{}
+    \item Applied machine learning algorithms to medical data.
+    \end{UnivDeptItem}
+  }{
+    \item {\bf Devika Subramanian}
+    (machine learning + medicine)
+    \hfill Spring 2013%
+  }
+
+  \iftoggle{cv}{}{
+    \end{rSubSection}
+  }
+
+\end{rSection}
 
 
 
@@ -561,7 +571,8 @@
 
   \iftoggle{cv}{
     \begin{rSubSection}
-    {Tualatin Hills Park \& Recreation District}
+    {Tualatin Hills Park \& Recreation District:\\%
+    Conestoga Recreation \& Aquatic Center}
     {Portland, Oregon}
     {Swim Coach / Swim Instructor / Lifeguard}
     {Summer 2010 to Summer 2012}%
@@ -575,30 +586,14 @@
 
 
 
-% \iftoggle{cv}{\pagebreak}{}
+% \iftoggle{cv}{\newpage}{}
 % \begin{rSection}{Volunteer Work / Extracurricular Activities}
 \iftoggle{cv}{%
-\begin{rSection}{Volunteer Work / Extracurriculars}%
+% \begin{rSection}{Volunteer Work / Extracurriculars}%
+\begin{rSection}{Service}%
 }{%
 \begin{rSection}{Volunteer Work}%
 }%
-
-  \iftoggle{cv}{
-    \begin{rSubSection}
-  }{
-    \EventWithSubtitle
-  }
-  {The OpenDota Project \normalfont \texttt{\{https://www.opendota.com\}}}
-  {online}
-  {Co-Founder / DevOps / Public Relations}
-  % {Co-Founder / DevOps / Public Relations / ``Bus Guy''}
-  {Fall 2014 \ToPresent}%
-  \iftoggle{cv}{
-    \item Writes and edits blog posts, as needed.
-    \item Trained in site maintenance and administration.
-    \item Involved in initial planning of site.
-    \end{rSubSection}
-  }{}
 
   \iftoggle{cv}{
     \begin{rSubSection}
@@ -621,17 +616,6 @@
 
   \iftoggle{cv}{
 
-    % TODO:~make a conferences section (after going to another conference)
-    \begin{rSubSection}
-    {Out for Undergrad Technology Conference}
-    {San Francisco, California}
-    {Student Participant (selected by admissions committee)}
-    {25-27 September 2015}%
-    \item Attended the conference (which is dedicated to helping \\ 
-    high-achieving LGBTQ+ undergraduates in technological\\
-    STEM fields reach their full potential in their careers).
-    \end{rSubSection}
-
     \begin{rSubSection}
     {Sid Richardson College Academic Fellows Program}
     {Houston, Texas}
@@ -642,6 +626,8 @@
     \item Taught various ``workshops'' (related to computer science).
     \item Oversaw computer science fellowship within the college.
     \end{rSubSection}
+
+    \newpage
 
     \begin{rSubSection}
     {Rice University Peer Academic Advisor Program}
@@ -659,18 +645,6 @@
     \item Gave tours of the university to ``distinguished'' guests.
     \end{rSubSection}
 
-    \EventWithSubtitle
-    {Southridge High School Speech and Debate Team}
-    {Portland, Oregon}
-    {Capitan of Debate}
-    {2011-2012}%
-
-    \EventWithSubtitle
-    {Southridge High School Swim Team}
-    {Portland, Oregon}
-    {Co-Capitan}
-    {2011-2012}%
-
   }{}
 
 \end{rSection}
@@ -679,9 +653,49 @@
 
 
 
-\iftoggle{cv}{
+\iftoggle{cv}{% \iftoggle{cv}{\newpage}{}
 
-  % \iftoggle{cv}{\pagebreak}{}
+  \begin{rSection}{Extracurriculars}%
+
+  \begin{rSubSection}
+  {The OpenDota Project \normalfont \texttt{\{https://www.opendota.com\}}}
+  {online}
+  {Co-Founder / DevOps / Public Relations}
+  % {Co-Founder / DevOps / Public Relations / ``Bus Guy''}
+  {Fall 2014 \ToPresent}%
+  \iftoggle{cv}{
+    \item Writes and edits blog posts, as needed.
+    \item Trained in administration \& maintenance.
+    \item Contributed to the initial planning of the site.
+    \end{rSubSection}
+  }{}
+
+  % TODO:~make a conferences section (after going to another conference)
+  \begin{rSubSection}
+  {Out for Undergrad Technology Conference}
+  {San Francisco, California}
+  {Student Participant (selected by admissions committee)}
+  {25-27 September 2015}%
+  \item Attended the conference (which is dedicated to helping \\ 
+  high-achieving LGBTQ+ undergraduates in technological\\
+  STEM fields reach their full potential in their careers).
+  \end{rSubSection}
+
+  \EventWithSubtitle
+  {Southridge High School Speech and Debate Team}
+  {Portland, Oregon}
+  {Capitan of Debate}
+  {2011-2012}%
+
+  \EventWithSubtitle
+  {Southridge High School Swim Team}
+  {Portland, Oregon}
+  {Co-Capitan}
+  {2011-2012}%
+
+  \end{rSection}
+
+  % \iftoggle{cv}{\newpage}{}
 
   \begin{rSection}{Awards / Honors}
 
@@ -704,9 +718,7 @@
 
 
 
-%   % \pagebreak
-
-\iftoggle{cv}{\pagebreak}{}
+\iftoggle{cv}{\newpage}{}
 
   \begin{rSection}{Standardized Test Scores}
 
@@ -729,23 +741,49 @@
   \item Science:~\tab\tab\tab{\hspace{.5em}$35/36$}\tab\tab\tab{(\nth{99} percentile)}
   \end{rSubSection}
 
+    \Southridge
+
+      \IB
+
+        \BeginDeptEvents
+        \Event{\texttt{TOTAL}~\tab\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{37/45}}}{}\\
+        \Event{\texttt{(HL)} English~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{5(/7)}}}{2011-2012}\\
+        \Event{\texttt{(SL)} Spanish~\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011}\\
+        \Event{\texttt{(SL)} Psychology~\tab\tab\tab\tab\tab\tab\tab{\texttt{5}}}{2011}\\
+        \Event{\texttt{(SL)} Chemistry~\tab\tab\tab\tab\tab\tab\tab{audit}}{2010}\\
+        \Event{\texttt{(HL)} Physics~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011-2012}\\
+        \Event{\texttt{(HL)} Math~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011-2012}\\
+        \Event{\texttt{(SL)} Environmental Systems \& Societies~\tab\tab\tab{\texttt{6}}}{2012}\\
+        \Event{Extended Essay \texttt{(English)}~\tab\tab\tab\tab\tab{\texttt{A}}}{2012}\\
+        \Event{Theory of Knowledge~\tab\tab\tab\tab\tab\tab{\texttt{B}}}{2012}
+        \EndDeptEvents
+
+      \AP
+
+        \BeginDeptEvents
+        \Event{US History~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{4(/5)}}}{2010}\\
+        \Event{Statistics~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{5}}}{2010}
+        \EndDeptEvents
+
   \end{rSection}
 
 
 
 
 
+  \newpage
+
   \begin{rSection}{Language Proficiency}
 
   \begin{rSubSection}{\normalfont natural languages}{}{}{}
-  \item native/fluent:~English
+  \item fluent/native:~English
   \item moderate:~Spanish, American Sign Language
-  \item minimal:~Latin
+  \item minimal:~Latin, German
   \end{rSubSection}
 
   \begin{rSubSection}{\normalfont programming languages}{}{}{}
   \item fluent:~Java, Python, C, JS(/HTML/CSS), SQL, Matlab
-  \item moderate:~Bash, Scala, VB.Net
+  \item moderate:~Bash, Scala, VB.NET
   \end{rSubSection}
 
   \end{rSection}
@@ -758,9 +796,29 @@
 
   pronouns:~``they/them/their''
 
-  citizenship/nationality:~USA
+  citizenship:~USA
+
+  ethnicity:\\
+    \hspace*{1.25em}{44\% = German}\\
+    \hspace*{1.25em}{30\% = Norwegian / Swedish}\\
+    \hspace*{1.25em}{22\% = British / Irish}\\
+    \hspace*{1.25em}{2\% = Finnish}\\
+    \hspace*{1.25em}{1\% = Iranian}\\
+    \hspace*{1.25em}{1\% = Native American}
+
+  sex:~male
+
+  sexuality:~gay
+
+  gender:~agender
 
   Myers-Briggs:~INFJ
+
+  favorite color:~purple
+
+  favorite zoo animal:~giraffe
+
+  % TODO: add Contact Info section
 
   \end{rSection}
 
