@@ -272,3 +272,11 @@ headsep    = 0.25 in
 \end{rSubSection}%
 \end{changemargin}%
 }%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 20210809
+\usepackage{xcolor}
+\definecolor{mypurple}{rgb}{.5, 0, .5}
+\newcommand{\purple}[1]{\textcolor{mypurple}{#1}}
+
