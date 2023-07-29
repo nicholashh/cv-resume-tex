@@ -41,10 +41,9 @@
   }
 }{
   \title{%
-  \texttt{\{nicholas.hanson.holtry@gmail.com\}}\\
+  ``they/them/their''\\
   \texttt{\{www.nicholashh.com\}}\\
-  % \texttt{\{503.360.3148\}}}
-  ``they/them/their''
+  \texttt{\{nicholas.hanson.holtry@gmail.com\}}
   }
 }
 
@@ -157,34 +156,34 @@
   %   \end{rSubSection}
   % }{}%
 
-  \iftoggle{cv}{
+  % \iftoggle{cv}{
 
-    % \begin{rSubSection}
-    \EventWithSubtitle
-    {\normalfont Southridge High School}
-    {Portland, Oregon}
-    % {International Baccalaureate Diploma}
-    % {IB Diploma}
-    % {IB Diploma~($37/45$)}
-    {International Baccalaureate Diploma}
-    {Fall 2010 to Spring 2012}%
-    % {Fall 2008 to Spring 2012}%
-    % \item GPA:~$3.97/4.00$
-    % \end{rSubSection}
-
+  %   % \begin{rSubSection}
   %   \EventWithSubtitle
-  %   {\normalfont Summa South Middle School}
-  %   {Fall 2005 to Spring 2008}
-  %   {}
-  %   {}
+  %   {\normalfont Southridge High School}
+  %   {Portland, Oregon}
+  %   % {International Baccalaureate Diploma}
+  %   % {IB Diploma}
+  %   % {IB Diploma~($37/45$)}
+  %   {International Baccalaureate Diploma}
+  %   {Fall 2010 to Spring 2012}%
+  %   % {Fall 2008 to Spring 2012}%
+  %   % \item GPA:~$3.97/4.00$
+  %   % \end{rSubSection}
 
-  %   \EventWithSubtitle
-  %   {\normalfont Raleigh Hills Elementary School}
-  %   {Fall 1999 to Spring 2005}
-  %   {}
-  %   {}
+  % %   \EventWithSubtitle
+  % %   {\normalfont Summa South Middle School}
+  % %   {Fall 2005 to Spring 2008}
+  % %   {}
+  % %   {}
 
-  }{}
+  % %   \EventWithSubtitle
+  % %   {\normalfont Raleigh Hills Elementary School}
+  % %   {Fall 1999 to Spring 2005}
+  % %   {}
+  % %   {}
+
+  % }{}
 
 \end{rSection}
 
@@ -220,6 +219,24 @@
         \PHIL
 
           \begin{UnivDeptItem}
+          {Critical Thinking}
+          {Winter 2023}
+          {with Coleen Macnamara}
+          {}%
+          \item Taught 2 discussion-sections of 20--25 students once per week.
+          \item Held office hours, graded exams, etc.
+          \end{UnivDeptItem}
+
+          \begin{UnivDeptItem}
+          {Evil}
+          {Fall 2022}
+          {with Eric Schwitzgebel}
+          {}%
+          \item Taught 3 discussion-sections of 20--25 students once per week.
+          \item Held office hours, graded exams \& papers, etc.
+          \end{UnivDeptItem}
+
+          \begin{UnivDeptItem}
           {Introduction To Philosophy}
           {Spring 2022}
           {with John Fischer}
@@ -228,8 +245,11 @@
           \item Held office hours, graded exams, etc.
           \end{UnivDeptItem}
 
+    \newpage
+
           \begin{UnivDeptItem}
-          {Applied Ethics}
+          % {Applied Ethics}
+          {Contemporary Moral Issues}
           {Fall 2020 \& Winter 2022}
           {with Patrick Londen}
           {}%
@@ -245,10 +265,6 @@
           \item Taught 2--3 discussion-sections of 20--25 students once per week.
           \item Held office hours, graded papers, etc.
           \end{UnivDeptItem}
-
-
-
-      \newpage
 
       \Brandeis
 
@@ -350,8 +366,8 @@
 
   \begin{rSection}{Recent Personal Projects}
 
-    \Event{\texttt{\{https://nicholashh.github.io/phil-ranker\}}}{Fall 2018}\\
-    \Event{\texttt{\{https://github.com/nicholashh/arch/blob/master/note\}}}{Summer 2019}
+    \Event{\texttt{\{https://nicholashh.github.io/phil-ranker\}}}{Fall 2018}%\\
+    % \Event{\texttt{\{https://github.com/nicholashh/arch/blob/master/note\}}}{Summer 2019}
 
   \end{rSection}
 
@@ -361,7 +377,7 @@
 
 
 
-\iftoggle{cv}{\newpage}{}
+% \iftoggle{cv}{\newpage}{}
 % \begin{rSection}{Volunteer Work / Extracurricular Activities}
 \iftoggle{cv}{%
 % \begin{rSection}{Volunteer Work / Extracurriculars}%
@@ -436,7 +452,9 @@
 
 
 
-
+\iftoggle{cv}{
+  \newpage
+}{}
 
 % \begin{rSection}{Academic Research Experience}
 % \begin{rSection}{Academic Research}
@@ -464,7 +482,7 @@
     \hfill Summer 2016 to Summer 2017%
   }
 
-  \iftoggle{cv}{\newpage}{}
+  % \iftoggle{cv}{\newpage}{}
 
   \iftoggle{cv}{
     \COMP
@@ -530,22 +548,24 @@
 \begin{rSection}{Professional Work}
 
   \iftoggle{cv}{
-    \vspace{1ex}
-    \begin{rSubSection}
-    {Varsity Tutors}
-  }{
-    \EventWithSubtitle
-    {Varsity Tutors}
+    \iftoggle{cv}{
+      \vspace{1ex}
+      \begin{rSubSection}
+      {Varsity Tutors}
+    }{
+      \EventWithSubtitle
+      {Varsity Tutors}
+    }
+    {online + Miami, Florida}
+    % {Contractor / Certified Tutor}
+    {Tutor}
+    {Fall 2016 to Summer 2017}%
+    \iftoggle{cv}{
+      \item Tutored high school and undergraduate students in a variety of\\
+      subjects, including programming, essay writing, and SAT test prep.
+      \end{rSubSection}
+    }{}
   }
-  {online + Miami, Florida}
-  % {Contractor / Certified Tutor}
-  {Tutor}
-  {Fall 2016 to Summer 2017}%
-  \iftoggle{cv}{
-    \item Tutored high school and undergraduate students in a variety of\\
-    subjects, including programming, essay writing, and SAT test prep.
-    \end{rSubSection}
-  }{}
 
   \iftoggle{cv}{
     \begin{rSubSection}
@@ -557,7 +577,7 @@
     \end{rSubSection}
   }
 
-  % \iftoggle{cv}{\newpage}{}
+  \iftoggle{cv}{\newpage}{}
 
   \iftoggle{cv}{
     \begin{rSubSection}
@@ -660,6 +680,8 @@
 
 \iftoggle{cv}{
 
+  \newpage
+
   % \begin{rSection}{Coursework / Transcript}
   \begin{rSection}{Coursework}
 
@@ -668,6 +690,13 @@
       \PHIL
 
         \BeginDeptEvents
+
+        \Event{Love~\tab\tab\tab\tab\tab\tab{Myisha Cherry}\tab{audit}}{Winter 2023}\\
+        \Event{Wittgenstein, Hanson, Kuhn~\tab\tab{Erich Reck}\tab\tab{audit}}{Winter 2023}\\
+        \Event{(\emph{Writing Workshop})~\tab\tab\tab\tab{Luca Ferrero}\tab\tab{audit}}{Winter 2023}\\
+        \Event{Pragmatic Genealogy --- Queloz~\tab\tab{Erich Reck}\tab\tab{audit}}{Fall 2022}\\
+        \Event{Bugbee --- The Inward Morning~\tab\tab{Howard Wettstein}\tab{audit}}{Fall 2022}\\
+        \Event{Standing~\tab\tab\tab\tab\tab{Coleen Macnamara}\tab{audit}}{Fall 2022}\\
         \Event{Akrasia~\tab\tab\tab\tab\tab{\jozef}\tab\tab{audit}}{Spring 2022}\\
         \Event{Moral Status~\tab\tab\tab\tab\tab{Agnieszka Jaworska}\tab{audit}}{Spring 2022}\\
         \Event{Kant --- The \nth{3} Critique~\tab\tab\tab{Alexandra Newton}\tab{audit}}{Spring 2022}\\
@@ -767,7 +796,7 @@
         \Event{Social \& Political Philosophy~\tab\tab{George Sher}\tab\tab{\texttt{A-}}}{Spring 2013}
         \EndDeptEvents
 
-      % \newpage
+      \newpage
 
       \COMP
 
@@ -830,36 +859,36 @@
   \item Mathematics:~\tab\tab{$750/800$}\tab\tab{(\nth{97} percentile)}
   \end{rSubSection}
 
-  \begin{rSubSection}{ACT\hspace{9.9em}$33/36$\hspace{5.9em}\normalfont(\nth{98} percentile)}{February 2010}{}{}
-  \item English:~\tab\tab\tab{\hspace{.5em}$34/36$}\tab\tab\tab{(\nth{98} percentile)}
-  \item Reading:~\tab\tab\tab{\hspace{.5em}$29/36$}\tab\tab\tab{(\nth{86} percentile)}
-  \item Math:~\tab\tab\tab\tab{\hspace{.5em}$30/36$}\tab\tab\tab{(\nth{94} percentile)}
-  \item Science:~\tab\tab\tab{\hspace{.5em}$35/36$}\tab\tab\tab{(\nth{99} percentile)}
-  \end{rSubSection}
+  % \begin{rSubSection}{ACT\hspace{9.9em}$33/36$\hspace{5.9em}\normalfont(\nth{98} percentile)}{February 2010}{}{}
+  % \item English:~\tab\tab\tab{\hspace{.5em}$34/36$}\tab\tab\tab{(\nth{98} percentile)}
+  % \item Reading:~\tab\tab\tab{\hspace{.5em}$29/36$}\tab\tab\tab{(\nth{86} percentile)}
+  % \item Math:~\tab\tab\tab\tab{\hspace{.5em}$30/36$}\tab\tab\tab{(\nth{94} percentile)}
+  % \item Science:~\tab\tab\tab{\hspace{.5em}$35/36$}\tab\tab\tab{(\nth{99} percentile)}
+  % \end{rSubSection}
 
-    \Southridge
+    % \Southridge
 
-      \IB
+    %   \IB
 
-        \BeginDeptEvents
-        \Event{\texttt{TOTAL}~\tab\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{37(/45)}}}{}\\
-        \Event{\texttt{(HL)} English~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{5(/7)}}}{2011-2012}\\
-        \Event{\texttt{(SL)} Spanish~\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011}\\
-        \Event{\texttt{(SL)} Psychology~\tab\tab\tab\tab\tab\tab\tab{\texttt{5}}}{2011}\\
-        \Event{\texttt{(SL)} Chemistry~\tab\tab\tab\tab\tab\tab\tab{audit}}{2010}\\
-        \Event{\texttt{(HL)} Physics~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011-2012}\\
-        \Event{\texttt{(HL)} Math~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011-2012}\\
-        \Event{\texttt{(SL)} Environmental Systems \& Societies~\tab\tab\tab{\texttt{6}}}{2012}\\
-        \Event{Extended Essay \texttt{((HL) English)}~\tab\tab\tab\tab\tab{\texttt{A}}}{2012}\\
-        \Event{Theory of Knowledge~\tab\tab\tab\tab\tab\tab{\texttt{B}}}{2012}
-        \EndDeptEvents
+    %     \BeginDeptEvents
+    %     \Event{\texttt{TOTAL}~\tab\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{37(/45)}}}{}\\
+    %     \Event{\texttt{(HL)} English~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{5(/7)}}}{2011-2012}\\
+    %     \Event{\texttt{(SL)} Spanish~\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011}\\
+    %     \Event{\texttt{(SL)} Psychology~\tab\tab\tab\tab\tab\tab\tab{\texttt{5}}}{2011}\\
+    %     \Event{\texttt{(SL)} Chemistry~\tab\tab\tab\tab\tab\tab\tab{audit}}{2010}\\
+    %     \Event{\texttt{(HL)} Physics~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011-2012}\\
+    %     \Event{\texttt{(HL)} Math~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{6}}}{2011-2012}\\
+    %     \Event{\texttt{(SL)} Environmental Systems \& Societies~\tab\tab\tab{\texttt{6}}}{2012}\\
+    %     \Event{Extended Essay \texttt{((HL) English)}~\tab\tab\tab\tab\tab{\texttt{A}}}{2012}\\
+    %     \Event{Theory of Knowledge~\tab\tab\tab\tab\tab\tab{\texttt{B}}}{2012}
+    %     \EndDeptEvents
 
-      \AP
+    %   \AP
 
-        \BeginDeptEvents
-        \Event{US History~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{4(/5)}}}{2010}\\
-        \Event{Statistics~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{5}}}{2010}
-        \EndDeptEvents
+    %     \BeginDeptEvents
+    %     \Event{US History~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{4(/5)}}}{2010}\\
+    %     \Event{Statistics~\tab\tab\tab\tab\tab\tab\tab\tab{\texttt{5}}}{2010}
+    %     \EndDeptEvents
 
   \end{rSection}
 
@@ -895,12 +924,15 @@
   % pronouns:~``they / them / their''
   \pronouns
 
-  gender:~agender ( / nonbinary / trans / queer )
+  gender:~agender ( / nonbinary / queer / trans )
+
+  sex:~male ( / amab / xy )
+
+  genderality:~pan
 
   % NOT -- ( / homoromantic ) -- because SEXuality
-  sexuality:~gay ( / homoromantic )
-
-  sex:~male ( / XY )
+  % 20230720 OMG YES SO GOOD thus 'genderality'
+  sexuality:~gay
 
   ethnicity:\\
     \hspace*{1.25em}{44\% = German}\\
@@ -915,7 +947,9 @@
 
   % Myers--Briggs:~INTJ $\to$ INFJ (~$\to$ INFP )
   % Myers--Briggs:~(( INTJ $\to$ ) INFJ $\to$ ) INFP ( $\to$ ENFP ( $\to$ ESFP ))
-  Myers--Briggs:~(( INTJ $\to$ ) INFJ $\to$ ) INFP
+  % Myers--Briggs:~(( INTJ $\to$ ) INFJ $\to$ ) INFP
+  Myers--Briggs:~( INTJ $\to$ ) INFJ\\
+    \hspace*{5em}( $\to$ INFP ( $\to$ INTP ))
 
   favorite zoo animal:~giraffe
 
