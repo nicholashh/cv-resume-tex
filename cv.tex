@@ -85,7 +85,9 @@
 
 
 
-\begin{rSection}{Education}
+\iftoggle{cv}{
+\begin{rSection}{Education / Learning}
+}{\begin{rSection}{Education}}
 
   % \begin{rSubSection}
   \EventWithSubtitle
@@ -108,9 +110,10 @@
   % \item Dissertation:~TBD
   % \end{rSubSection}
 
-    \iftoggle{cv}{
-    \begin{rSubSection}
-  }{\EventWithSubtitle}
+    % \iftoggle{cv}{
+    % \begin{rSubSection}}{
+    \EventWithSubtitle
+    % }
     % {Brandeis \normalfont University}
     {\normalfont Brandeis University}
     {Boston, Massachusetts}
@@ -120,16 +123,16 @@
     {Fall 2017 to Spring 2019}%
     \iftoggle{cv}{
       % \item Thesis:~``Reasoning First Rationality''
-      \item Thesis:~``Reasoning [\&] Rationality''
+      % * % \item Thesis:~``Reasoning [\&] Rationality''
       % \item Advisors:~Berislav Maru{\v s}i{\' c}, Eli Hirsch
       % \item Advisors:~\beri, Eli Hirsch
       % \item Advisors:~Eli Hirsch \& \beri
-      \item Advisors:~Eli Hirsch, \beri, \& \jen
+      % * % \item Advisors:~Eli Hirsch, \beri, \& \jen
       % \item Philosophy GPA:~\tab{$4.00/4.00$}
       % \item Overall GPA:~\tab{$3.97/4.00$}
     }{}%
-    \iftoggle{cv}{
-    \end{rSubSection}}{}
+    % \iftoggle{cv}{
+    % \end{rSubSection}}{}
   % }{}
 
   % \iftoggle{cv}{
@@ -192,8 +195,6 @@
 
 % \iftoggle{cv}{
 
-%   \newpage
-
 %   \begin{rSection}{Publications}
 
 %     TODO LOL
@@ -206,16 +207,44 @@
 
 
 
-% \iftoggle{cv}{\newpage}{}
+% \iftoggle{cv}{
+%   \begin{rSection}{Teaching Experience as the Primary Instructor} % https://tex.stackexchange.com/questions/225267/how-to-set-not-italic-or-not-bold -- \textmd{} \textup{}
+%     \UCR
+%       \PHIL
+%         \begin{UnivDeptItem}
+%         {The Philosophy of Social Justice}
+%         {Summer 2023}
+%         {}
+%         {}%
+%         \item Designed the entire course from the ground up.
+%         \item Lectured and lead discussions of 25 students for 3 hours for 10 classes.
+%         % \item Syllabus available at \texttt{tinyurl.com/nick-phil-social-justice-syll}.
+%         \item Course Description: This course develops a philosophical understanding\\ of the concept of social justice. We begin by grounding ourselves in an\\ understanding of \emph{the history of the philosophical use of the term}\\ ``{\bf justice}'' (in Unit 1) and then compare and contrast that with\\ \emph{current usage} of the term ``{\bf social} justice'' (in Units 2 and 3).
+%         \end{UnivDeptItem}
+%       % end phil
+%     % end ucr
+%   \end{rSection}
+% }{} % end cv
 
 \iftoggle{cv}{
-  \begin{rSection}{Teaching Experience}
+  \begin{rSection}{Teaching Experience as a Teaching Assistant}
 
     \iftoggle{cv}{
 
       \UCR
 
         \PHIL
+
+          \begin{UnivDeptItem}
+          {Early Modern Philosophy}
+          {Spring 2023}
+          {with Adam Harmer}
+          {}%
+          % \newpage
+          \item Guest-lectured the main class twice.
+          \item Taught 3 discussion-sections of 20--25 students once per week.
+          \item Held office hours, graded essays \& exams, etc.
+          \end{UnivDeptItem}
 
           \begin{UnivDeptItem}
           {Critical Thinking}
@@ -232,19 +261,19 @@
           {with Eric Schwitzgebel}
           {}%
           \item Taught 3 discussion-sections of 20--25 students once per week.
-          \item Held office hours, graded exams \& papers, etc.
+          \item Held office hours, graded essays \& exams, etc.
           \end{UnivDeptItem}
 
+          \newpage
+
           \begin{UnivDeptItem}
-          {Introduction To Philosophy}
+          {Introduction to Philosophy}
           {Spring 2022}
           {with John Fischer}
           {}%
           \item Taught 3 discussion-sections of 20--25 students once per week.
           \item Held office hours, graded exams, etc.
           \end{UnivDeptItem}
-
-    \newpage
 
           \begin{UnivDeptItem}
           % {Applied Ethics}
@@ -253,16 +282,16 @@
           {with Patrick Londen}
           {}%
           \item Taught 3 discussion-sections of 20--25 students once per week.
-          \item Held office hours, graded papers, etc.
+          \item Held office hours, graded essays, etc.
           \end{UnivDeptItem}
 
           \begin{UnivDeptItem}
-          {The Meaning Of Life}
+          {The Meaning of Life}
           {Winter 2021, Spring 2021, \& Fall 2021}
           {with Kim Frost \& Avery Snelson}
           {}%
           \item Taught 2--3 discussion-sections of 20--25 students once per week.
-          \item Held office hours, graded papers, etc.
+          \item Held office hours, graded essays, etc.
           \end{UnivDeptItem}
 
       \Brandeis
@@ -274,18 +303,16 @@
           {Spring 2019}
           {with Eli Hirsch}
           {}%
-          \item Held office hours, graded papers \& exams, etc.
+          \item Held office hours, graded essays \& exams, etc.
           \end{UnivDeptItem}
-
-  % \iftoggle{cv}{\newpage}{}
 
           \begin{UnivDeptItem}
           {Neuroethics}
           {Fall 2018}
           {with Brendan Cline}
           {}%
-          \item Taught class when the professor was unavailable.
-          \item Held office hours, graded papers \& exams, etc.
+          \item Guest-lectured the main class once.
+          \item Held office hours, graded essays \& exams, etc.
           \end{UnivDeptItem}
 
           \begin{UnivDeptItem}
@@ -293,7 +320,7 @@
           {Spring 2018}
           {with Andreas Teuber}
           {}%
-          \item Held office hours, graded papers \& exams, etc.
+          \item Held office hours, graded essays \& exams, etc.
           \end{UnivDeptItem}
 
 
@@ -303,20 +330,22 @@
         \CAAM
 
           \begin{UnivDeptItem}
-          {Introduction To Computational Engineering}
+          {Introduction to Computational Engineering}
           {Spring 2013 to Spring 2016}
           {with Steven Cox, Franklin Kenter, \& Illya Hicks}
           {}%
-          \item Taught class when the professor was unavailable.
+          \item Guest-lectured the main class a handful of times.
           \item Taught 1 recitation of $\sim$15 students $\sim$1 time/week.
           \item Created and assigned 2 original homework assignments.
           \item Held office hours, graded assignments \& exams, etc.
           \end{UnivDeptItem}
 
+        \newpage
+
         \COMP
 
           \begin{UnivDeptItem}
-          {Principles Of Parallel Programming}
+          {Principles of Parallel Programming}
           {Spring 2015 \& Spring 2016}
           {with Vivek Sarkar \& Eric Allen}
           {}%
@@ -376,7 +405,6 @@
 
 
 
-% \iftoggle{cv}{\newpage}{}
 % \begin{rSection}{Volunteer Work / Extracurricular Activities}
 \iftoggle{cv}{%
 % \begin{rSection}{Volunteer Work / Extracurriculars}%
@@ -437,6 +465,8 @@
     \item Academically advised students within the college.
     \end{rSubSection}
 
+    \newpage
+
     \begin{rSubSection}
     {Rice University Student Ambassador Program}
     {Houston, Texas}
@@ -451,9 +481,7 @@
 
 
 
-\iftoggle{cv}{
-  \newpage
-}{}
+
 
 % \begin{rSection}{Academic Research Experience}
 % \begin{rSection}{Academic Research}
@@ -481,8 +509,6 @@
     (philosophical database prototype)
     \hfill Summer 2016 to Summer 2017%
   }
-
-  % \iftoggle{cv}{\newpage}{}
 
   \iftoggle{cv}{
     \COMP
@@ -567,6 +593,8 @@
     }{}
   }
 
+  \newpage
+
   \iftoggle{cv}{
     \begin{rSubSection}
     {Shepherd Artisan Coffee}
@@ -576,8 +604,6 @@
     \item Learned to make cappuccinos.
     \end{rSubSection}
   }
-
-  \iftoggle{cv}{\newpage}{}
 
   \iftoggle{cv}{
     \begin{rSubSection}
@@ -612,7 +638,7 @@
 
 
 
-\iftoggle{cv}{% \iftoggle{cv}{\newpage}{}
+\iftoggle{cv}{
 
   \begin{rSection}{Extracurriculars}%
   % \begin{rSection}{Extracurricular Activities}%
@@ -655,10 +681,9 @@
 
   \end{rSection}
 
-  % \iftoggle{cv}{\newpage}{}
-
   \begin{rSection}{Awards / Honors}
 
+  \Event{UCR Graduate Division Outstanding Teaching Assistant Award}{Spring 2023}\\
   \Event{Max Kade Travel Grant}{Summer 2018}\\
   \Event{Brandeis GSAS Scholarship Grant}{Fall 2017}\\
   \Event{Sid Richardson Athenian Award}{Spring 2016}\\
@@ -680,8 +705,6 @@
 
 \iftoggle{cv}{
 
-  \newpage
-
   % \begin{rSection}{Coursework / Transcript}
   \begin{rSection}{Coursework}
 
@@ -691,8 +714,12 @@
 
         \BeginDeptEvents
 
-        \Event{Love~\tab\tab\tab\tab\tab\tab{Myisha Cherry}\tab{audit}}{Winter 2023}\\
-        \Event{Wittgenstein, Hanson, Kuhn~\tab\tab{Erich Reck}\tab\tab{audit}}{Winter 2023}\\
+        \Event{Monism~\tab\tab\tab\tab\tab{Adam Harmer}\tab{audit}}{Spring 2023}\\
+        \Event{Logic --- Frege vs Kant~\tab\tab\tab{Alexandra Newton}\tab{audit}}{Spring 2023}\\
+        \Event{Caring, Valuing, \& Reasoning~\tab\tab{Agnieszka Jaworska}\tab{audit}}{Spring 2023}\\
+        \Event{Aristotle --- Metaphysics Theta~\tab\tab{\jozef}\tab\tab{audit}}{Spring 2023}\\
+        \Event{Seeing As --- Witt., Hanson, Kuhn~\tab{Erich Reck}\tab\tab{audit}}{Winter 2023}\\
+        \Event{Love in Politics~\tab\tab\tab\tab{Myisha Cherry}\tab{audit}}{Winter 2023}\\
         \Event{(\emph{Writing Workshop})~\tab\tab\tab\tab{Luca Ferrero}\tab\tab{audit}}{Winter 2023}\\
         \Event{Pragmatic Genealogy --- Queloz~\tab\tab{Erich Reck}\tab\tab{audit}}{Fall 2022}\\
         \Event{Bugbee --- The Inward Morning~\tab\tab{Howard Wettstein}\tab{audit}}{Fall 2022}\\
@@ -710,7 +737,7 @@
         \Event{Informal Reasoning~\tab\tab\tab\tab{Larry Wright}\tab\tab{audit}}{Fall 2021}\\
         \Event{Plotinus --- Ennead 6.8~\tab\tab\tab{\jozef}\tab\tab{audit}}{Spring 2021}\\
         \Event{Nietzsche --- `Bildung'~\tab\tab\tab{Maude Clark}\tab\tab{audit}}{Spring 2021}\\
-        \Event{(\emph{Writing Workshop})~\tab\tab\tab\tab{Pierre Keller}\tab\tab{audit}}{Spring 2021}\\
+        \Event{(\emph{Translating Workshop})~\tab\tab\tab{Pierre Keller}\tab\tab{audit}}{Spring 2021}\\
         \Event{Kant --- The Doctrine Of Method~\tab{Pierre Keller}\tab\tab{audit}}{Winter 2021}\\
         \Event{German Translation~\tab\tab\tab{Pierre Keller}\tab\tab{audit}}{Winter 2021}\\
         \Event{Moral Address~\tab\tab\tab\tab{Coleen Macnamara}\tab{\texttt{A}}}{Winter 2021}\\
@@ -743,8 +770,6 @@
     %     \Event{The Metaphysics Of Consciousness~\tab{Alex Moran}\tab\tab{audit}}{Winter 2021}
     %     \EndDeptEvents
 
-    % \newpage
-
     \Brandeis
 
       \PHIL
@@ -776,8 +801,6 @@
         \Event{Existentialism --- Sartre \& Beauvoir~\tab\beri\tab{\texttt{A}}}{Fall 2017}
         \EndDeptEvents
 
-    % \newpage
-
       \other
 
         \BeginDeptEvents
@@ -785,6 +808,8 @@
         \Event{(\texttt{ARTS}) History Of Photography~\tab\tab{Peter Kalb}\tab\tab{audit}}{Spring 2019}\\
         \Event{(\texttt{POLI}) Marx, Nietzsche, \& Radicalism~\tab{Bernard Yack}\tab\tab{\texttt{A-}}}{Fall 2017}
         \EndDeptEvents
+
+    \newpage
 
     \Rice
 
@@ -795,8 +820,6 @@
         \Event{History Of Philosophy~\tab\tab\tab{Charles Siewert}\tab{\texttt{B+}}}{Fall 2013}\\
         \Event{Social \& Political Philosophy~\tab\tab{George Sher}\tab\tab{\texttt{A-}}}{Spring 2013}
         \EndDeptEvents
-
-      \newpage
 
       \COMP
 
@@ -816,8 +839,6 @@
         \Event{Algorithmic Thinking~\tab\tab\tab{Luay Nakhleh}\tab{\texttt{A-}}}{Spring 2013}\\
         \Event{Computational Thinking~\tab\tab\tab{D.~Subramanian}\tab{\texttt{A}}}{Fall 2012}
         \EndDeptEvents
-
-% \iftoggle{cv}{\newpage}{}
 
       \other
 
@@ -842,8 +863,6 @@
 
 
 
-
-  % \newpage
 
   \begin{rSection}{Standardized Test Scores}
 
@@ -895,8 +914,6 @@
 
 
 
-
-  \newpage
 
   \begin{rSection}{Language Proficiency}
 
