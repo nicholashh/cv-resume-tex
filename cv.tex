@@ -42,8 +42,8 @@
 }{
   \title{%
   ``they/them/their''\\
-  \texttt{\{www.nicholashh.com\}}\\
-  \texttt{\{nicholas.hanson.holtry@gmail.com\}}
+  \texttt{www.nicholashh.com}\\
+  \texttt{nicholas.hanson.holtry@gmail.com}
   }
 }
 
@@ -108,9 +108,9 @@
   % \item Dissertation:~TBD
   % \end{rSubSection}
 
-  \iftoggle{cv}{
+    \iftoggle{cv}{
     \begin{rSubSection}
-    % \EventWithSubtitle
+  }{\EventWithSubtitle}
     % {Brandeis \normalfont University}
     {\normalfont Brandeis University}
     {Boston, Massachusetts}
@@ -127,11 +127,10 @@
       \item Thesis:~``Reasoning--First~Rationality''
       % \item Philosophy GPA:~\tab{$4.00/4.00$}
       % \item Overall GPA:~\tab{$3.97/4.00$}
-    }{
-      \item GPA:~$3.97/4.00$
-    }
-    \end{rSubSection}
-  }{}
+    }{}%
+    \iftoggle{cv}{
+    \end{rSubSection}}{}
+  % }{}
 
   % \iftoggle{cv}{
   %   \begin{rSubSection}
@@ -366,8 +365,8 @@
 
   \begin{rSection}{Recent Personal Projects}
 
-    \Event{\texttt{\{https://nicholashh.github.io/phil-ranker\}}}{Fall 2018}%\\
-    % \Event{\texttt{\{https://github.com/nicholashh/arch/blob/master/note\}}}{Summer 2019}
+    \Event{\texttt{https://nicholashh.github.io/phil-ranker}}{Fall 2018}%\\
+    % \Event{\texttt{https://github.com/nicholashh/arch/blob/master/note}}{Summer 2019}
 
   \end{rSection}
 
@@ -465,7 +464,8 @@
     \PHIL
   }{
     \begin{rSubSection}
-    {\normalfont Rice University}
+    % {\normalfont Rice University}
+    {}
     {}
     {}
     {}
@@ -971,7 +971,7 @@
     % about my pertinent coursework, awards and honors, standardized test scores, etc,\\
     % my full CV (\emph{curriculum vitae}) is available online at \{www.nicholashh.com/cv\}.
 
-    My full CV (\emph{curriculum vitae}) is available online at \texttt{\{http://www.nicholashh.com/cv\}}.
+    My full \emph{curriculum vitae} is available on my website.
 
   \end{rSection}
 
