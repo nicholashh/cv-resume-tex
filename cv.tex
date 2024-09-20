@@ -14,6 +14,9 @@
 \newcommand{\UCR}[0]{\UniversityTitle{University of California at Riverside}{}}
 \newcommand{\Oxford}[0]{\UniversityTitle{University of Oxford}{}}
 
+\newcommand{\asPI}[0]{{\bf Role: Primary Instructor}\\~\\}
+\newcommand{\asTA}[0]{{\bf Role: Teaching Assistant}\\~\\}
+
 \newcommand{\ToPresent}[0]{\textbf{to present}}
 
 \newcommand{\maru}[0]{Maru{\v s}i{\' c}}
@@ -29,19 +32,28 @@
 
 % \newcommand{\pronouns}[0]{pronouns:~``they / them''}
 % \newcommand{\pronouns}[0]{pronouns:~``they / them / their''}
-\newcommand{\pronounsShort}[0]{pronouns:~``they/them/their''}
-\newcommand{\pronounsLong}[0]{pronouns:~``~they~/~them~/~their~''}
+% \newcommand{\pronounsShort}[0]{pronouns:~``they/them/their''}
+% \newcommand{\pronounsLong}[0]{pronouns:~``~they~/~them~/~their~''}
+% \newcommand{\pronounsShort}[0]{``they/them/their''}
+% \newcommand{\pronounsLong}[0]{``~they~/~them~/~their~''}
+\newcommand{\pronounsShort}[0]{``they/them''}
+\newcommand{\pronounsLong}[0]{``~they~/~them~''}
 
 \iftoggle{cv}{
   \title{%
-  \pronounsShort\\~\\ % double return
-  \texttt{nicholas.hanson.holtry@gmail.com}\\
-  \texttt{www.nicholashh.com}
+  \texttt{nicholas.hanson.holtry@gmail.com}\\~\\ % double return
+  \texttt{www.nicholashh.com}\\~\\ % double return
+  \emph{\pronounsShort}\\~\\ % double return
   % \texttt{\{503.360.3148\}}}
   }
 }{
+  % \title{%
+  % ``they/them/their''\\
+  % \texttt{www.nicholashh.com}\\
+  % \texttt{nicholas.hanson.holtry@gmail.com}
+  % }
   \title{%
-  ``they/them/their''\\
+  \emph{\pronounsShort}\\
   \texttt{www.nicholashh.com}\\
   \texttt{nicholas.hanson.holtry@gmail.com}
   }
@@ -86,7 +98,8 @@
 
 
 \iftoggle{cv}{
-\begin{rSection}{Education / Learning}
+% \begin{rSection}{Education / Learning}
+\begin{rSection}{Education}
 }{\begin{rSection}{Education}}
 
   % \begin{rSubSection}
@@ -97,10 +110,12 @@
   {Los Angeles, California}
   % {\bf Doctor \normalfont of Philosophy in \bf Philosophy}
   % {\bf Ph.D \normalfont in \bf Philosophy}
-  {\bf PhD in Philosophy}
+  % {\bf PhD in Philosophy}
+  {graduate work in philosophy}
   % {Philosophy MA}
   % {Fall 2017 \ToPresent}%
-  {Fall 2019 \ToPresent}%
+  % {Fall 2019 \ToPresent}%
+  {Fall 2019 to Spring 2024}%
   % \iftoggle{cv}{
   %   \item ?
   % }{
@@ -119,7 +134,8 @@
     {Boston, Massachusetts}
     % {\bf Master \normalfont of Arts in \bf Philosophy}
     % {\bf M.A. \normalfont in \bf Philosophy}
-    {\bf MA in Philosophy}
+    % {\bf MA in Philosophy}
+    {\bf M.A.~in Philosophy}
     {Fall 2017 to Spring 2019}%
     \iftoggle{cv}{
       % \item Thesis:~``Reasoning First Rationality''
@@ -146,7 +162,8 @@
   {Houston, Texas}
   % {\bf Bachelor \normalfont of Science in \bf Computer Science}
   % {\bf B.S. \normalfont in \bf Computer Science}
-  {\bf BS in Computer Science}
+  % {\bf BS in Computer Science}
+  {\bf B.S.~in Computer Science}
   {Fall 2012 to Spring 2016}%
   % \iftoggle{cv}{
   %   \item Comp Sci GPA:~\tab{$3.68/4.00$}
@@ -208,11 +225,17 @@
 
 
 \iftoggle{cv}{
-  \begin{rSection}{Teaching Experience as the Primary Instructor} % https://tex.stackexchange.com/questions/225267/how-to-set-not-italic-or-not-bold -- \textmd{} \textup{}
+  % \begin{rSection}{Teaching Experience as the Primary Instructor}
+  \vspace{1em}
+  \begin{rSection}{Teaching Experience}
+  % https://tex.stackexchange.com/questions/225267/how-to-set-not-italic-or-not-bold -- \textmd{} \textup{}
+    \asPI
     \UCR
       \PHIL
         \begin{UnivDeptItem}
-        {the philosophy of Social Justice }
+        % {the philosophy of Social Justice }
+        {{\normalfont (the philosophy of)} Social Justice }
+        % {Social Justice }
         {Summer 2023}
         {}
         {}%
@@ -222,19 +245,43 @@
         \end{UnivDeptItem}
       % end phil
     % end ucr
-  \end{rSection}
+  % \end{rSection}
 }{} % end cv
 
-\newpage
-
 \iftoggle{cv}{
-  \begin{rSection}{Teaching Experience as a Teaching Assistant}
-
+  \newpage
+  % \begin{rSection}{Teaching Experience as a Teaching Assistant}
     \iftoggle{cv}{
-
+      \asTA
       \UCR
-
         \PHIL
+
+          \begin{UnivDeptItem}
+          {Race}
+          {Spring 2024}
+          {with Myisha Cherry}
+          {}%
+          % \newpage
+          \item Taught 3 ``discussion sections'' (recitations) of 25 students\\ once per week, held office hours, graded essays \& exams, etc.
+          \end{UnivDeptItem}
+
+          \begin{UnivDeptItem}
+          {Sophomore Seminar}
+          {Winter 2024}
+          {with Joshua Wood}
+          {}%
+          % \newpage
+          \item (similar responsibilities\\ as the description above)
+          \end{UnivDeptItem}
+
+          \begin{UnivDeptItem}
+          {Plants \& Animals \& Machines}
+          {Fall 2023}
+          {with Evan Sommers}
+          {}%
+          % \newpage
+          \item (similar responsibilities)
+          \end{UnivDeptItem}
 
           \begin{UnivDeptItem}
           {Early Modern Philosophy}
@@ -242,9 +289,8 @@
           {with Adam Harmer}
           {}%
           % \newpage
-          \item Guest-lectured the main class twice.
-          \item Taught 3 discussion-sections of 20--25 students once per week.
-          \item Held office hours, graded essays \& exams, etc.
+          \item (similar responsibilities)
+          \item ALSO guest-lectured the main class twice.
           \end{UnivDeptItem}
 
           \begin{UnivDeptItem}
@@ -252,8 +298,7 @@
           {Winter 2023}
           {with Coleen Macnamara}
           {}%
-          \item Taught 2 discussion-sections of 20--25 students once per week.
-          \item Held office hours, graded exams, etc.
+          \item (similar responsibilities)
           \end{UnivDeptItem}
 
           \begin{UnivDeptItem}
@@ -261,19 +306,17 @@
           {Fall 2022}
           {with Eric Schwitzgebel}
           {}%
-          \item Taught 3 discussion-sections of 20--25 students once per week.
-          \item Held office hours, graded essays \& exams, etc.
+          \item (similar responsibilities)
           \end{UnivDeptItem}
 
           % \newpage
 
           \begin{UnivDeptItem}
-          {Introduction to Philosophy}
+          {Intro}
           {Spring 2022}
           {with John Fischer}
           {}%
-          \item Taught 3 discussion-sections of 20--25 students once per week.
-          \item Held office hours, graded exams, etc.
+          \item (similar responsibilities)
           \end{UnivDeptItem}
 
           \begin{UnivDeptItem}
@@ -282,8 +325,7 @@
           {Fall 2020 \& Winter 2022}
           {with Patrick Londen}
           {}%
-          \item Taught 3 discussion-sections of 20--25 students once per week.
-          \item Held office hours, graded essays, etc.
+          \item (similar responsibilities)
           \end{UnivDeptItem}
 
           \begin{UnivDeptItem}
@@ -291,8 +333,7 @@
           {Winter 2021, Spring 2021, \& Fall 2021}
           {with Kim Frost \& Avery Snelson}
           {}%
-          \item Taught 2--3 discussion-sections of 20--25 students once per week.
-          \item Held office hours, graded essays, etc.
+          \item (similar responsibilities)
           \end{UnivDeptItem}
 
       \newpage
@@ -339,8 +380,8 @@
           {}%
           \item Guest-lectured the main class a handful of times.
           \item Taught 1 recitation of $\sim$15 students $\sim$1 time/week.
-          \item Created and assigned 2 original homework assignments.
           \item Held office hours, graded assignments \& exams, etc.
+          \item Created and assigned 2 original homework assignments.
           \end{UnivDeptItem}
 
         % \newpage
@@ -688,16 +729,17 @@
 
   \begin{rSection}{Awards / Honors}
 
-  \Event{UCR Graduate Division Outstanding Teaching Assistant Award}{Spring 2023}\\
-  \Event{Max Kade Travel Grant}{Summer 2018}\\
-  \Event{Brandeis GSAS Scholarship Grant}{Fall 2017}\\
-  \Event{Sid Richardson Athenian Award}{Spring 2016}\\
-  \Event{Rice Alumni Pride Award}{Fall 2015}\\
-  \Event{Rice President's Honor Roll}{Fall 2014, Fall 2015}\\
-  \Event{John and Harriet Millington Scholarship}{Fall 2014, Fall 2015}\\
+  \Event{Outstanding Teaching Award --- UCR Philosophy Dept}{Spring 2024}\\
+  \Event{Outstanding Teaching Award --- UCR Humanities Grad Div}{Spring 2023}\\
+  % \Event{Max Kade Travel Grant}{Summer 2018}\\
+  % \Event{Brandeis GSAS Scholarship Grant}{Fall 2017}\\
+  \Event{Sid Richardson Athenian Service Award}{Spring 2016}\\
+  \Event{Rice Alumni PRIDE Award}{Fall 2015}\\
+  % \Event{Rice President's Honor Roll}{Fall 2014, Fall 2015}\\
+  % \Event{John and Harriet Millington Scholarship}{Fall 2014, Fall 2015}\\
   \Event{Lon Wilson Service Award}{Spring 2015}\\
-  \Event{Genevieve Parkhill Lykes Scholarship}{Fall 2014}\\
-  \Event{Bracht-Verlander Scholarship}{Fall 2012}\\
+  % \Event{Genevieve Parkhill Lykes Scholarship}{Fall 2014}\\
+  % \Event{Bracht-Verlander Scholarship}{Fall 2012}\\
   \Event{National Merit Quarterfinalist}{Spring 2012}\\
   % \Event{AP Scholar with Honor}{Spring 2012}\\
   \Event{National Honor Society}{2011-2012}
@@ -719,6 +761,11 @@
 
         \BeginDeptEvents
 
+        \Event{Living Well~\tab\tab\tab\tab\tab{Adam Harmer}\tab{audit}}{Spring 2024}\\
+        \Event{Schopenhauer~\tab\tab\tab\tab{Maude Clark}\tab\tab{audit}}{Winter 2024}\\
+        \Event{Neurodiversity~\tab\tab\tab\tab{Kim Frost}\tab\tab{audit}}{Winter 2024}\\
+        \Event{Frankfurt --- Love~\tab\tab\tab\tab{Howard Wettstein}\tab{audit}}{Fall 2023}\\
+        \Event{Love \& Sex~\tab\tab\tab\tab\tab{Michael Nelson}\tab{audit}}{Fall 2023}\\
         \Event{Monism~\tab\tab\tab\tab\tab{Adam Harmer}\tab{audit}}{Spring 2023}\\
         \Event{Logic --- Frege vs Kant~\tab\tab\tab{Alexandra Newton}\tab{audit}}{Spring 2023}\\
         \Event{Caring, Valuing, \& Reasoning~\tab\tab{Agnieszka Jaworska}\tab{audit}}{Spring 2023}\\
@@ -944,9 +991,10 @@
 
   % pronouns:~``they'' ( / ``them'' / ``their'')
   % pronouns:~``they / them / their''
-  \pronounsLong
+  % \pronounsLong
+  % pronouns:~\pronounsLong
 
-  gender:~agender ( / nonbinary / queer / trans )
+  gender:~agender / nonbinary / queer
 
   sex:~male ( / amab / xy )
 
@@ -970,8 +1018,11 @@
   % Myers--Briggs:~INTJ $\to$ INFJ (~$\to$ INFP )
   % Myers--Briggs:~(( INTJ $\to$ ) INFJ $\to$ ) INFP ( $\to$ ENFP ( $\to$ ESFP ))
   % Myers--Briggs:~(( INTJ $\to$ ) INFJ $\to$ ) INFP
-  Myers--Briggs:~( INTJ $\to$ ) INFJ\\
-    \hspace*{5em}( $\to$ INFP ( $\to$ INTP ))
+
+  % Myers--Briggs:~( INTJ $\to$ ) INFJ\\
+  %   \hspace*{5em}( $\to$ INFP ( $\to$ INTP ))
+
+  Myers--Briggs:~INFJ
 
   favorite zoo animal:~giraffe
 
@@ -993,7 +1044,7 @@
     % about my pertinent coursework, awards and honors, standardized test scores, etc,\\
     % my full CV (\emph{curriculum vitae}) is available online at \{www.nicholashh.com/cv\}.
 
-    My full \emph{curriculum vitae} is available on my website.
+    My full \emph{curriculum vitae} is available on my website!
 
   \end{rSection}
 

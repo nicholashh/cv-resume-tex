@@ -128,10 +128,10 @@ headsep    = 0.25 in
   \begin{center}
     \iftoggle{cv}{
 
-      \begin{large}
-      \emph{ \CV}
-      \vspace*{-0.5ex}
-      \end{large}
+      % \begin{large}
+      % \emph{ \CV}
+      % \vspace*{-0.5ex}
+      % \end{large}
 
       \vspace*{0.25in}
       
