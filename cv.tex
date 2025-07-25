@@ -37,7 +37,8 @@
 % \newcommand{\pronounsShort}[0]{``they/them/their''}
 % \newcommand{\pronounsLong}[0]{``~they~/~them~/~their~''}
 \newcommand{\pronounsShort}[0]{``they/them''}
-\newcommand{\pronounsLong}[0]{``~they~/~them~''}
+% \newcommand{\pronounsLong}[0]{``~they~/~them~''}
+% \newcommand{\pronounsShort}[0]{``they''}
 
 \iftoggle{cv}{
   \title{%
@@ -111,7 +112,8 @@
   % {\bf Doctor \normalfont of Philosophy in \bf Philosophy}
   % {\bf Ph.D \normalfont in \bf Philosophy}
   % {\bf PhD in Philosophy}
-  {graduate work in philosophy}
+  % {graduate work in philosophy}
+  {progress towards PhD in Philosophy}
   % {Philosophy MA}
   % {Fall 2017 \ToPresent}%
   % {Fall 2019 \ToPresent}%
@@ -123,6 +125,7 @@
   % }
   % \item Advisors:~Adam Harmer, Pierre Keller, \& \ldots
   % \item Dissertation:~TBD
+  % \item areas of study:~metaphysics, \ldots
   % \end{rSubSection}
 
     % \iftoggle{cv}{
@@ -315,8 +318,8 @@
 
           \begin{UnivDeptItem}
           % {Intro}
-          {Intro to phil}
-          % {Intro to Phil}
+          % {Intro to phil}
+          {Intro to Phil}
           {Spring 2022}
           {with John Fischer}
           {}%
@@ -441,12 +444,12 @@
 
 \iftoggle{cv}{}{
 
-  \begin{rSection}{Recent Personal Projects}
+  % \begin{rSection}{Recent Personal Projects}
 
-    \Event{\texttt{https://nicholashh.github.io/phil-ranker}}{Fall 2018}%\\
-    % \Event{\texttt{https://github.com/nicholashh/arch/blob/master/note}}{Summer 2019}
+  %   \Event{\texttt{https://nicholashh.github.io/phil-ranker}}{Fall 2018}%\\
+  %   % \Event{\texttt{https://github.com/nicholashh/arch/blob/master/note}}{Summer 2019}
 
-  \end{rSection}
+  % \end{rSection}
 
 }
 
@@ -535,18 +538,19 @@
 
 % \begin{rSection}{Academic Research Experience}
 % \begin{rSection}{Academic Research}
-\begin{rSection}{Scientific Research}
+% \begin{rSection}{Scientific Research}
 
   \iftoggle{cv}{
+\begin{rSection}{Scientific Research}
     \Rice
     \PHIL
   }{
-    \begin{rSubSection}
-    % {\normalfont Rice University}
-    {}
-    {}
-    {}
-    {}
+    % \begin{rSubSection}
+    % % {\normalfont Rice University}
+    % {}
+    % {}
+    % {}
+    % {}
   }
 
   \iftoggle{cv}{
@@ -555,9 +559,9 @@
     arguments and assertions made by professional philosophers.
     \end{UnivDeptItem}
   }{
-    \item {\bf Timothy Schroeder}
-    (philosophical database prototype)
-    \hfill Summer 2016 to Summer 2017%
+    % \item {\bf Timothy Schroeder}
+    % (philosophical database prototype)
+    % \hfill Summer 2016 to Summer 2017%
   }
 
   \iftoggle{cv}{
@@ -572,9 +576,9 @@
     \item Investigated \emph{post hoc} verification of fairness.
     \end{UnivDeptItem}
   }{
-    \item {\bf Swarat Chaudhuri}
-    (program verification + fairness)
-    \hfill Summer 2015 to Fall 2015%
+    % \item {\bf Swarat Chaudhuri}
+    % (program verification + fairness)
+    % \hfill Summer 2015 to Fall 2015%
   }
 
   \iftoggle{cv}{
@@ -583,9 +587,9 @@
     \item Contributed to the parallel computing suite Habanero Java.
     \end{UnivDeptItem}
   }{
-    \item {\bf Vivek Sarkar}
-    (parallel computation suite development)
-    \hfill Spring 2015%
+    % \item {\bf Vivek Sarkar}
+    % (parallel computation suite development)
+    % \hfill Spring 2015%
   }
 
   \iftoggle{cv}{
@@ -596,9 +600,9 @@
     \item Identified previously unknown introgressed gene candidates.
     \end{UnivDeptItem}
   }{
-    \item {\bf Luay Nakhleh}
-    (bioinformatics + graph theory)
-    \hfill Summer 2014%
+    % \item {\bf Luay Nakhleh}
+    % (bioinformatics + graph theory)
+    % \hfill Summer 2014%
   }
 
   \iftoggle{cv}{
@@ -606,16 +610,18 @@
     \item Applied machine learning algorithms to medical data.
     \end{UnivDeptItem}
   }{
-    \item {\bf Devika Subramanian}
-    (machine learning + medicine)
-    \hfill Spring 2013%
+    % \item {\bf Devika Subramanian}
+    % (machine learning + medicine)
+    % \hfill Spring 2013%
   }
 
   \iftoggle{cv}{}{
-    \end{rSubSection}
+    % \end{rSubSection}
   }
 
+\iftoggle{cv}{
 \end{rSection}
+}{}
 
 
 
@@ -624,7 +630,7 @@
 % \begin{rSection}{Professional Work History}
 \begin{rSection}{Professional Work}
 
-  \iftoggle{cv}{
+  % \iftoggle{cv}{
     \iftoggle{cv}{
       \vspace{1ex}
       \begin{rSubSection}
@@ -635,32 +641,37 @@
     }
     {online + Miami, Florida}
     % {Contractor / Certified Tutor}
-    {Tutor}
+    % {Tutor}
+    {High School \& College Tutor}
     {Fall 2016 to Summer 2017}%
     \iftoggle{cv}{
       \item Tutored high school and undergraduate students in a variety of\\
       subjects, including programming, essay writing, and SAT test prep.
       \end{rSubSection}
     }{}
-  }
+  % }
 
   % \newpage
-
-  \iftoggle{cv}{
-    \begin{rSubSection}
-    {Shepherd Artisan Coffee}
-    {Miami, Florida}
-    {Barista}
-    {Fall 2016}%
-    \item Learned to make cappuccinos.
-    \end{rSubSection}
-  }
 
   \iftoggle{cv}{
     \begin{rSubSection}
   }{
     \EventWithSubtitle
   }
+  {Shepherd Artisan Coffee}
+  {Miami, Florida}
+  {Barista}
+  {Fall 2016}%
+  \iftoggle{cv}{
+    \item Learned to make cappuccinos.
+    \end{rSubSection}
+  }{}
+
+  \iftoggle{cv}{
+    \begin{rSubSection}
+  % }{
+  %   \EventWithSubtitle
+  % }
   {Jones McClure Publishing}
   {Houston, Texas}
   {Software Development Intern}
@@ -669,19 +680,24 @@
     \item Prototyped a mobile version of the existing desktop website.
     \end{rSubSection}
   }{}
+  }{}
 
   \iftoggle{cv}{
     \begin{rSubSection}
-    {Tualatin Hills Park \& Recreation District:\\%
-    Conestoga Recreation \& Aquatic Center}
-    {Portland, Oregon}
-    {Swim Coach / Swim Instructor / Lifeguard}
-    {Summer 2010 to Summer 2012}%
+  }{
+    \EventWithSubtitle
+  }
+  {Tualatin Hills Park \& Recreation District:\\%
+  Conestoga Recreation \& Aquatic Center}
+  {Portland, Oregon}
+  {Swim Coach / Swim Instructor / Lifeguard}
+  {Summer 2010 to Summer 2012}%
+  \iftoggle{cv}{
     \item Coached the age-group swim team.
     \item Taught swim lessons.
     \item Guarded lives.
     \end{rSubSection}
-  }
+  }{}
 
 \end{rSection}
 
@@ -917,17 +933,26 @@
 
 }{}
 
+}{}
 
 
 
 
-  \begin{rSection}{Standardized Test Scores}
 
+  % \begin{rSection}{Standardized Test Scores}
+  \iftoggle{cv}{
+    \begin{rSection}{Standardized Test Scores}
+  }{
+    \begin{rSection}{Test Scores}
+  }
+
+  \iftoggle{cv}{
   \begin{rSubSection}{GRE}{November 2015}{}{}
   \item Writing:~\tab\tab\tab{~$4.5/6.0$}\tab\tab{\nth{80} percentile}
   \item Verbal:~\tab\tab\tab{$161/170$}\tab\tab{\nth{87} percentile}
   \item Quantitative:~\tab\tab{$164/170$}\tab\tab{\nth{88} percentile}
   \end{rSubSection}
+  }{}
 
   \begin{rSubSection}{SAT\hspace{8.9em}$2,300/2,400$\hspace{4.3em}\normalfont\nth{99} percentile}{October 2011}{}{}
   \item Writing:~\tab\tab\tab{$760/800$}\tab\tab{\nth{99} percentile}
@@ -971,6 +996,8 @@
 
 
 
+
+\iftoggle{cv}{
 
   \begin{rSection}{Language Proficiency}
 
@@ -1043,7 +1070,8 @@
 
 }{
 
-  \begin{rSection}{Additional Information}
+  % \begin{rSection}{Additional Information}
+  \begin{rSection}{Additional Info}
 
     % For additional details about the information listed above, as well as information\\
     % about my pertinent coursework, awards and honors, standardized test scores, etc,\\
