@@ -639,7 +639,8 @@
       \EventWithSubtitle
       {Varsity Tutors}
     }
-    {online + Miami, Florida}
+    % {online + Miami, Florida}
+    {online}
     % {Contractor / Certified Tutor}
     % {Tutor}
     {High School \& College Tutor}
@@ -954,10 +955,10 @@
   \end{rSubSection}
   }{}
 
-  \begin{rSubSection}{SAT\hspace{8.9em}$2,300/2,400$\hspace{4.3em}\normalfont\nth{99} percentile}{October 2011}{}{}
-  \item Writing:~\tab\tab\tab{$760/800$}\tab\tab{\nth{99} percentile}
-  \item Reading:~\tab\tab\tab{$790/800$}\tab\tab{\nth{99} percentile}
-  \item Mathematics:~\tab\tab{$750/800$}\tab\tab{\nth{97} percentile}
+  \begin{rSubSection}{SAT\hspace{8.9em}$2,300/2,400$\hspace{4.3em}\normalfont\iftoggle{cv}{\nth{99} percentile}{}}{October 2011}{}{}
+  \item Writing:~\tab\tab\tab{$760/800$}\tab\tab{\iftoggle{cv}{\nth{99} percentile}{}}
+  \item Reading:~\tab\tab\tab{$790/800$}\tab\tab{\iftoggle{cv}{\nth{99} percentile}{}}
+  \item Mathematics:~\tab\tab{$750/800$}\tab\tab{\iftoggle{cv}{\nth{97} percentile}{}}
   \end{rSubSection}
 
   % \begin{rSubSection}{ACT\hspace{9.9em}$33/36$\hspace{5.9em}\normalfont(\nth{98} percentile)}{February 2010}{}{}
